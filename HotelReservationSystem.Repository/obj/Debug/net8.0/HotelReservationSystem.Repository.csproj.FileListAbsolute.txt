@@ -1,0 +1,11 @@
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\bin\Debug\net8.0\HotelReservationSystem.Repository.deps.json
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\bin\Debug\net8.0\HotelReservationSystem.Repository.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\bin\Debug\net8.0\HotelReservationSystem.Repository.pdb
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Debug\net8.0\HotelReservationSystem.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Debug\net8.0\HotelReservationSystem.Repository.AssemblyInfoInputs.cache
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Debug\net8.0\HotelReservationSystem.Repository.AssemblyInfo.cs
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Debug\net8.0\HotelReservationSystem.Repository.csproj.CoreCompileInputs.cache
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Debug\net8.0\HotelReservationSystem.Repository.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Debug\net8.0\refint\HotelReservationSystem.Repository.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Debug\net8.0\HotelReservationSystem.Repository.pdb
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Debug\net8.0\ref\HotelReservationSystem.Repository.dll

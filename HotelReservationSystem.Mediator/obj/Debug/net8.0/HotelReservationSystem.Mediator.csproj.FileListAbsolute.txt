@@ -1,0 +1,12 @@
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Mediator.deps.json
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Mediator.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Mediator.pdb
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.AssemblyInfoInputs.cache
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.AssemblyInfo.cs
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.csproj.CoreCompileInputs.cache
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.sourcelink.json
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\obj\Debug\net8.0\refint\HotelReservationSystem.Mediator.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.pdb
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\obj\Debug\net8.0\ref\HotelReservationSystem.Mediator.dll

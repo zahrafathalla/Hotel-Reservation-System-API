@@ -34,6 +34,7 @@ namespace HotelReservationSystem.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
@@ -201,16 +202,6 @@ namespace HotelReservationSystem.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_RoomFacility_FacilityId",
-                table: "RoomFacility",
-                column: "FacilityId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RoomFacility_RoomId",
-                table: "RoomFacility",
-                column: "RoomId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_feedBacks_CustomerId",
                 table: "feedBacks",
                 column: "CustomerId");
@@ -245,14 +236,21 @@ namespace HotelReservationSystem.Data.Migrations
                 name: "IX_reservations_StaffId",
                 table: "reservations",
                 column: "StaffId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RoomFacility_FacilityId",
+                table: "RoomFacility",
+                column: "FacilityId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RoomFacility_RoomId",
+                table: "RoomFacility",
+                column: "RoomId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "RoomFacility");
-
             migrationBuilder.DropTable(
                 name: "feedBacks");
 
@@ -260,10 +258,13 @@ namespace HotelReservationSystem.Data.Migrations
                 name: "invoices");
 
             migrationBuilder.DropTable(
-                name: "facilities");
+                name: "RoomFacility");
 
             migrationBuilder.DropTable(
                 name: "reservations");
+
+            migrationBuilder.DropTable(
+                name: "facilities");
 
             migrationBuilder.DropTable(
                 name: "customers");

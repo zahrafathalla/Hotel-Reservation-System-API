@@ -3,6 +3,7 @@ using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Repository.Interface;
 using HotelReservationSystem.Repository.Specification;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace HotelReservationSystem.Repository.Repository
 {
@@ -31,6 +32,10 @@ namespace HotelReservationSystem.Repository.Repository
         public async Task<IEnumerable<T>> GetAllAsync()
         {
             return await _dBContext.Set<T>().Where(x => !x.IsDeleted).ToListAsync();
+        }
+        public async Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>> expression)
+        {
+            return await _dBContext.Set<T>().Where(expression).ToListAsync();
         }
         public async Task<T?> GetByIdAsync(int id)
         {

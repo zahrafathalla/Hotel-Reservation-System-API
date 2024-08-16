@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelReservationSystem.API", "HotelReservationSystem.API\HotelReservationSystem.API.csproj", "{3332D5F4-5205-4337-8A1C-4DB21EC1E372}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationSystem.API", "HotelReservationSystem.API\HotelReservationSystem.API.csproj", "{3332D5F4-5205-4337-8A1C-4DB21EC1E372}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelReservationSystem.Data", "HotelReservationSystem.Data\HotelReservationSystem.Data.csproj", "{0BDE5B48-C946-442F-86EA-7D44E6070AC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationSystem.Data", "HotelReservationSystem.Data\HotelReservationSystem.Data.csproj", "{0BDE5B48-C946-442F-86EA-7D44E6070AC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelReservationSystem.Repository", "HotelReservationSystem.Repository\HotelReservationSystem.Repository.csproj", "{761A1A62-C68A-4105-B36D-61E8192E9C66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationSystem.Repository", "HotelReservationSystem.Repository\HotelReservationSystem.Repository.csproj", "{761A1A62-C68A-4105-B36D-61E8192E9C66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelReservationSystem.Service", "HotelReservationSystem.Service\HotelReservationSystem.Service.csproj", "{1B677A5E-9E43-4266-B10C-207F79D20E7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationSystem.Service", "HotelReservationSystem.Service\HotelReservationSystem.Service.csproj", "{1B677A5E-9E43-4266-B10C-207F79D20E7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelReservationSystem.Mediator", "HotelReservationSystem.Mediator\HotelReservationSystem.Mediator.csproj", "{BC9993B6-50F9-4D7A-B8D0-DCB50E24906D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{1B677A5E-9E43-4266-B10C-207F79D20E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B677A5E-9E43-4266-B10C-207F79D20E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B677A5E-9E43-4266-B10C-207F79D20E7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC9993B6-50F9-4D7A-B8D0-DCB50E24906D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC9993B6-50F9-4D7A-B8D0-DCB50E24906D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC9993B6-50F9-4D7A-B8D0-DCB50E24906D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC9993B6-50F9-4D7A-B8D0-DCB50E24906D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,6 @@
 ﻿using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Repository.Specification;
+using System.Linq.Expressions;
 
 namespace HotelReservationSystem.Repository.Interface
 {
@@ -8,6 +9,7 @@ namespace HotelReservationSystem.Repository.Interface
         Task<IEnumerable<T>> GetAllWithSpecAsync(ISpecification<T> Spec);
         Task<T?> GetByIdWithSpecAsync(ISpecification<T> Spec);
         Task<IEnumerable<T>> GetAllAsync();
+        Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>> expression);
         Task<T?> GetByIdAsync(int id);
         Task AddAsync(T entity);
         void Update(T entity);

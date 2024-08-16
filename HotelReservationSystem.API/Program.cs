@@ -1,5 +1,10 @@
 
 using HotelReservationSystem.Data.Context;
+using HotelReservationSystem.Repository.Interface;
+using HotelReservationSystem.Repository.Repository;
+using HotelReservationSystem.Service.Services.FacilityService;
+using HotelReservationSystem.Service.Services.Helper;
+using HotelReservationSystem.Service.Services.RoomService;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
@@ -27,6 +32,12 @@ namespace HotelReservationSystem.API
                 .EnableSensitiveDataLogging(); ;
             });
 
+            builder.Services.AddScoped<IunitOfWork, UnitOfWork>();
+            builder.Services.AddScoped<IFacilityService, FacilityService>();
+            builder.Services.AddScoped<IRoomService, RoomService>();
+
+            builder.Services.AddAutoMapper(typeof(MappingProfile));
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -37,7 +48,7 @@ namespace HotelReservationSystem.API
             }
 
             app.UseHttpsRedirection();
-
+            app.UseStaticFiles();
             app.UseAuthorization();
 
 

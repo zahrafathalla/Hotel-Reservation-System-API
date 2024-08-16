@@ -10,3 +10,4 @@ C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Data\
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Data\obj\Debug\net8.0\refint\HotelReservationSystem.Data.dll
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.pdb
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Data\obj\Debug\net8.0\ref\HotelReservationSystem.Data.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.sourcelink.json

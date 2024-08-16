@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HotelReservationSystem.Data.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20240815203847_init")]
+    [Migration("20240816211124_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -67,6 +67,9 @@ namespace HotelReservationSystem.Data.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 

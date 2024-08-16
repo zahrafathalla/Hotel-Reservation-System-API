@@ -9,3 +9,10 @@ C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Servi
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Service\obj\Debug\net8.0\refint\HotelReservationSystem.Service.dll
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Service\obj\Debug\net8.0\HotelReservationSystem.Service.pdb
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Service\obj\Debug\net8.0\ref\HotelReservationSystem.Service.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Service\obj\Debug\net8.0\HotelReservationSystem.Service.csproj.AssemblyReference.cache
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Service\obj\Debug\net8.0\HotelReservationSystem.Service.sourcelink.json
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Data.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Repository.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Repository.pdb
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Data.pdb
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Service\obj\Debug\net8.0\HotelReservationSystem.Service.csproj.CopyComplete

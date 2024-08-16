@@ -137,3 +137,10 @@ C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\o
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.pdb
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.genruntimeconfig.cache
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\obj\Debug\net8.0\ref\HotelReservationSystem.API.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.sourcelink.json
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\bin\Debug\net8.0\HotelReservationSystem.Repository.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\bin\Debug\net8.0\HotelReservationSystem.Service.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\bin\Debug\net8.0\HotelReservationSystem.Service.pdb
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\bin\Debug\net8.0\HotelReservationSystem.Repository.pdb
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\bin\Debug\net8.0\HotelReservationSystem.API.staticwebassets.runtime.json

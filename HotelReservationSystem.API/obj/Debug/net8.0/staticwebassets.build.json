@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "GBJVnLw2FHUxdtUehEaQOQqbJLBI7/m4f89BSRQBsrY=",
+  "Hash": "3pJ4TU/SJ6vkH+5MSulwpUVhYzooAs4mN+ianr9NxUY=",
   "Source": "HotelReservationSystem.API",
   "BasePath": "_content/HotelReservationSystem.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "HotelReservationSystem.API\\wwwroot",
+      "Source": "HotelReservationSystem.API",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "BasePath": "_content/HotelReservationSystem.API",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

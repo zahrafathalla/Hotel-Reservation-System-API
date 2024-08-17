@@ -37,10 +37,10 @@ namespace HotelReservationSystem.Service.Services.RoomService
 
             foreach (var facility in facilities)
             {
-                newRoom.RoomFacilities.Add(new RoomFacility 
+                newRoom.RoomFacilities.Add(new RoomFacility
                 {
-                    RoomId = newRoom.Id, 
-                    FacilityId = facility.Id 
+                    RoomId = newRoom.Id,
+                    FacilityId = facility.Id
                 });
             }
 
@@ -55,9 +55,10 @@ namespace HotelReservationSystem.Service.Services.RoomService
 
         public async Task<RoomToReturnDto> UpdateRoomAsync(int id, RoomDto roomDto)
         {
+
             var Spec = new RoomSpecification(id);
             var OldRoom = await _unitOfWork.Repository<Room>().GetByIdWithSpecAsync(Spec);
-            
+
             OldRoom.Type = roomDto.Type;
             OldRoom.Price = roomDto.Price;
             OldRoom.Status = roomDto.Status;
@@ -75,15 +76,15 @@ namespace HotelReservationSystem.Service.Services.RoomService
                 });
             }
 
-            var mappedRoom = _mapper.Map<RoomToReturnDto>(OldRoom);
-            mappedRoom.TotalPrice = CalculateRoomTotalPrice(roomDto.Price, facilities);
             _unitOfWork.Repository<Room>().Update(OldRoom);
             await _unitOfWork.CompleteAsync();
+            var mappedRoom = _mapper.Map<RoomToReturnDto>(OldRoom);
+            mappedRoom.TotalPrice = CalculateRoomTotalPrice(roomDto.Price, facilities);
 
             return mappedRoom;
 
-
         }
+
         private decimal CalculateRoomTotalPrice(decimal roomPrice, IEnumerable<Facility> facilities)
         {
             var facilitiesPrice = facilities.Sum(f => f.Price);

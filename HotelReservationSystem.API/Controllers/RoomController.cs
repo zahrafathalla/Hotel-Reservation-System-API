@@ -31,7 +31,7 @@ namespace HotelReservationSystem.API.Controllers
             var Room = await _roomService.UpdateRoomAsync(id, roomDto);
             if (Room is null) return BadRequest();
 
-            return Ok(roomDto);
+            return Ok(Room);
         }
     }
 }

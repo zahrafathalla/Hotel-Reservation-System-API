@@ -24,5 +24,14 @@ namespace HotelReservationSystem.API.Controllers
 
             return Ok(room);
         }
+
+        [HttpPut("Update Room")]
+        public async Task<ActionResult<RoomToReturnDto>> UpdatRoom(int id, RoomDto roomDto)
+        {
+            var Room = await _roomService.UpdateRoomAsync(id, roomDto);
+            if (Room is null) return BadRequest();
+
+            return Ok(roomDto);
+        }
     }
 }

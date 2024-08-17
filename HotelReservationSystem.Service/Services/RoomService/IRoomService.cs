@@ -11,5 +11,6 @@ namespace HotelReservationSystem.Service.Services.RoomService
     public interface IRoomService
     {
         Task<RoomToReturnDto> AddRoomAsync(RoomDto roomDto);
+        Task<RoomToReturnDto> UpdateRoomAsync(int id, RoomDto room);
     }
 }

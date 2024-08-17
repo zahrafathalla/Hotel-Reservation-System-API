@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj": {}
+    "C:\\Users\\20100\\Desktop\\FinalHotel\\Hotel-Reservation-System-API\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj": {
+    "C:\\Users\\20100\\Desktop\\FinalHotel\\Hotel-Reservation-System-API\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj",
+        "projectUniqueName": "C:\\Users\\20100\\Desktop\\FinalHotel\\Hotel-Reservation-System-API\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj",
         "projectName": "HotelReservationSystem.Mediator",
-        "projectPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj",
-        "packagesPath": "C:\\Users\\almagd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Mediator\\obj\\",
+        "projectPath": "C:\\Users\\20100\\Desktop\\FinalHotel\\Hotel-Reservation-System-API\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj",
+        "packagesPath": "C:\\Users\\20100\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\20100\\Desktop\\FinalHotel\\Hotel-Reservation-System-API\\HotelReservationSystem.Mediator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\almagd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\20100\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

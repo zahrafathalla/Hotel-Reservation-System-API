@@ -144,3 +144,5 @@ C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\b
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\bin\Debug\net8.0\HotelReservationSystem.Service.pdb
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\bin\Debug\net8.0\HotelReservationSystem.Repository.pdb
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\bin\Debug\net8.0\HotelReservationSystem.API.staticwebassets.runtime.json
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\bin\Debug\net8.0\HotelReservationSystem.Mediator.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\bin\Debug\net8.0\HotelReservationSystem.Mediator.pdb

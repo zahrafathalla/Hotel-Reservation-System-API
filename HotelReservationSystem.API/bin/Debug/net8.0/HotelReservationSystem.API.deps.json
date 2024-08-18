@@ -9,6 +9,7 @@
       "HotelReservationSystem.API/1.0.0": {
         "dependencies": {
           "HotelReservationSystem.Data": "1.0.0",
+          "HotelReservationSystem.Mediator": "1.0.0",
           "HotelReservationSystem.Service": "1.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.8",
           "Swashbuckle.AspNetCore": "6.4.0"
@@ -965,6 +966,14 @@
           "HotelReservationSystem.Data.dll": {}
         }
       },
+      "HotelReservationSystem.Mediator/1.0.0": {
+        "dependencies": {
+          "HotelReservationSystem.Service": "1.0.0"
+        },
+        "runtime": {
+          "HotelReservationSystem.Mediator.dll": {}
+        }
+      },
       "HotelReservationSystem.Repository/1.0.0": {
         "dependencies": {
           "HotelReservationSystem.Data": "1.0.0"
@@ -1622,6 +1631,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "HotelReservationSystem.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HotelReservationSystem.Mediator/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

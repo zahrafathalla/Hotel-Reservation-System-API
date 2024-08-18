@@ -1,4 +1,5 @@
-﻿using HotelReservationSystem.Service.Services.RoomService.Dtos;
+﻿using HotelReservationSystem.Data.Entities;
+using HotelReservationSystem.Service.Services.RoomService.Dtos;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace HotelReservationSystem.Service.Services.RoomService
 {
     public interface IRoomService
     {
-        Task<RoomToReturnDto> AddRoomAsync(RoomDto roomDto);
-        Task<RoomToReturnDto> UpdateRoomAsync(int id, RoomDto room);
+        Task<Room> AddRoomAsync(RoomDto roomDto);
+        Task<Room> UpdateRoomAsync(int id, RoomDto room);
     }
 }

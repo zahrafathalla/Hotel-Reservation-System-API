@@ -21,7 +21,7 @@ namespace HotelReservationSystem.Service.Services.RoomService
             _mapper = mapper;
         }
 
-        public async Task<RoomToReturnDto> AddRoomAsync(RoomDto roomDto)
+        public async Task<Room> AddRoomAsync(RoomDto roomDto)
         {
 
             var newRoom = new Room
@@ -32,64 +32,27 @@ namespace HotelReservationSystem.Service.Services.RoomService
                 PictureUrl = DocumentSetting.UploadFile(roomDto.PictureFile, "RoomImages")
             };
 
-            var facilities = await _unitOfWork.Repository<Facility>()
-                                     .GetAsync(f => roomDto.FacilityIds.Contains(f.Id));
-
-            foreach (var facility in facilities)
-            {
-                newRoom.RoomFacilities.Add(new RoomFacility
-                {
-                    RoomId = newRoom.Id,
-                    FacilityId = facility.Id
-                });
-            }
-
             await _unitOfWork.Repository<Room>().AddAsync(newRoom);
             await _unitOfWork.CompleteAsync();
 
-            var mappedRoom = _mapper.Map<RoomToReturnDto>(newRoom);
-            mappedRoom.TotalPrice = CalculateRoomTotalPrice(roomDto.Price, facilities);
-
-            return mappedRoom;
+            return newRoom;
         }
 
-        public async Task<RoomToReturnDto> UpdateRoomAsync(int id, RoomDto roomDto)
+        public async Task<Room> UpdateRoomAsync(int id, RoomDto roomDto)
         {
+            var oldRoom = await _unitOfWork.Repository<Room>().GetByIdAsync(id);
+            if (oldRoom == null)
+                return null;
 
-            var Spec = new RoomSpecification(id);
-            var OldRoom = await _unitOfWork.Repository<Room>().GetByIdWithSpecAsync(Spec);
+            oldRoom.Type = roomDto.Type;
+            oldRoom.Price = roomDto.Price;
+            oldRoom.Status = roomDto.Status;
+            oldRoom.PictureUrl = DocumentSetting.UpdateFile(roomDto.PictureFile, "RoomImages", oldRoom.PictureUrl);
 
-            OldRoom.Type = roomDto.Type;
-            OldRoom.Price = roomDto.Price;
-            OldRoom.Status = roomDto.Status;
-            OldRoom.PictureUrl = DocumentSetting.UploadFile(roomDto.PictureFile, "RoomImages");
-
-            var facilities = await _unitOfWork.Repository<Facility>()
-                            .GetAsync(f => roomDto.FacilityIds.Contains(f.Id));
-
-            foreach (var facility in facilities)
-            {
-                OldRoom.RoomFacilities.Add(new RoomFacility
-                {
-                    RoomId = OldRoom.Id,
-                    FacilityId = facility.Id
-                });
-            }
-
-            _unitOfWork.Repository<Room>().Update(OldRoom);
+            _unitOfWork.Repository<Room>().Update(oldRoom);
             await _unitOfWork.CompleteAsync();
-            var mappedRoom = _mapper.Map<RoomToReturnDto>(OldRoom);
-            mappedRoom.TotalPrice = CalculateRoomTotalPrice(roomDto.Price, facilities);
 
-            return mappedRoom;
-
-        }
-
-        private decimal CalculateRoomTotalPrice(decimal roomPrice, IEnumerable<Facility> facilities)
-        {
-            var facilitiesPrice = facilities.Sum(f => f.Price);
-
-            return roomPrice + facilitiesPrice;
+            return oldRoom;
         }
 
 

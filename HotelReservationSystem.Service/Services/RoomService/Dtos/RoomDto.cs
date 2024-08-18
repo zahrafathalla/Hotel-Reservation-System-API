@@ -17,6 +17,7 @@ namespace HotelReservationSystem.Service.Services.RoomService.Dtos
         [Required]
 
         public IFormFile PictureFile { get; set; }
+
         [Required]
 
         public List<int> FacilityIds { get; set; }

@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HotelReservationSystem.Service\HotelReservationSystem.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="RoomMediator\Dtos\" />
+  </ItemGroup>
+
 </Project>

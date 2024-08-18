@@ -10,3 +10,11 @@ C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Media
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\obj\Debug\net8.0\refint\HotelReservationSystem.Mediator.dll
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.pdb
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\obj\Debug\net8.0\ref\HotelReservationSystem.Mediator.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.csproj.AssemblyReference.cache
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Data.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Repository.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Service.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Service.pdb
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Data.pdb
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Repository.pdb
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.csproj.CopyComplete

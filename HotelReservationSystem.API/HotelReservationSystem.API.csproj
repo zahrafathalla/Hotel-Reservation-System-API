@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HotelReservationSystem.Data\HotelReservationSystem.Data.csproj" />
+    <ProjectReference Include="..\HotelReservationSystem.Mediator\HotelReservationSystem.Mediator.csproj" />
     <ProjectReference Include="..\HotelReservationSystem.Service\HotelReservationSystem.Service.csproj" />
   </ItemGroup>
 

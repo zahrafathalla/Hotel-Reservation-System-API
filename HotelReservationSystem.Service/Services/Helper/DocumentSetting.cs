@@ -25,5 +25,22 @@ namespace HotelReservationSystem.Service.Services.Helper
 
             return $"Files/{folderName}/{fileName}";
         }
+
+        public static void DeleteFile(string folderName, string fileName)
+        {
+            var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Files", folderName, fileName);
+
+            if(File.Exists(folderPath))
+            {
+                File.Delete(folderPath);
+            }
+        }
+        public static string UpdateFile(IFormFile file, string folderName, string fileName)
+        {
+            DeleteFile(folderName, fileName);
+
+            return UploadFile(file, folderName);
+        }
+
     }
 }

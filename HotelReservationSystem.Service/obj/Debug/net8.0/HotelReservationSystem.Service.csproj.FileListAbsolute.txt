@@ -16,3 +16,21 @@ C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Servi
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Repository.pdb
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Data.pdb
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Service\obj\Debug\net8.0\HotelReservationSystem.Service.csproj.CopyComplete
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Service.deps.json
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Service.dll
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Service.pdb
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Data.dll
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Repository.dll
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Repository.pdb
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Data.pdb
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\obj\Debug\net8.0\HotelReservationSystem.Service.csproj.AssemblyReference.cache
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\obj\Debug\net8.0\HotelReservationSystem.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\obj\Debug\net8.0\HotelReservationSystem.Service.AssemblyInfoInputs.cache
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\obj\Debug\net8.0\HotelReservationSystem.Service.AssemblyInfo.cs
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\obj\Debug\net8.0\HotelReservationSystem.Service.csproj.CoreCompileInputs.cache
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\obj\Debug\net8.0\HotelReservationSystem.Service.sourcelink.json
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\obj\Debug\net8.0\HotelRes.074D511B.Up2Date
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\obj\Debug\net8.0\HotelReservationSystem.Service.dll
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\obj\Debug\net8.0\refint\HotelReservationSystem.Service.dll
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\obj\Debug\net8.0\HotelReservationSystem.Service.pdb
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Service\obj\Debug\net8.0\ref\HotelReservationSystem.Service.dll

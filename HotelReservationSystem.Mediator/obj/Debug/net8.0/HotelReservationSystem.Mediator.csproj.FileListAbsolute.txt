@@ -18,3 +18,23 @@ C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Media
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Data.pdb
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Repository.pdb
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.csproj.CopyComplete
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Mediator.deps.json
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Mediator.dll
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Mediator.pdb
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Data.dll
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Repository.dll
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Service.dll
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Service.pdb
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Data.pdb
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Repository.pdb
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.csproj.AssemblyReference.cache
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.AssemblyInfoInputs.cache
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.AssemblyInfo.cs
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.csproj.CoreCompileInputs.cache
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.sourcelink.json
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelRes.811A71A3.Up2Date
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.dll
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\refint\HotelReservationSystem.Mediator.dll
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.pdb
+C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\ref\HotelReservationSystem.Mediator.dll

@@ -1,17 +1,25 @@
-﻿using HotelReservationSystem.Mediator.RoomMediator;
+﻿using AutoMapper;
+using HotelReservationSystem.Data.Entities;
+using HotelReservationSystem.Mediator.RoomMediator;
+using HotelReservationSystem.Service.Services.RoomService;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;
 
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelReservationSystem.API.Controllers
 {
+    [ApiController]
+    [Route("[controller]/[action]")]
     public class RoomController : BaseController
     {
         private readonly IRoomMediator _roomMediator;
-
-        public RoomController(IRoomMediator roomMediator)
+        private readonly IRoomService _roomService;
+        private readonly IMapper _mapper;
+        public RoomController(IRoomMediator roomMediator, IRoomService roomService, IMapper mapper)
         {
             _roomMediator = roomMediator;
+            _roomService = roomService;
+            _mapper = mapper;
         }
         [HttpPost]
         public async Task<ActionResult<RoomToReturnDto>> AddRoom(RoomDto roomDto)
@@ -29,6 +37,15 @@ namespace HotelReservationSystem.API.Controllers
             if (Room is null) return BadRequest();
 
             return Ok(Room);
+        }
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<RoomViewModel>>> GetAllRooms()
+        {
+            var roomsDtos = await _roomService.GetAllAsync();
+            var roomsViewModel = _mapper.Map<IEnumerable<RoomViewModel>>(roomsDtos);
+            if (roomsViewModel is null) return BadRequest();
+
+            return Ok(roomsViewModel);
         }
         //private readonly IRoomService _roomService;
 

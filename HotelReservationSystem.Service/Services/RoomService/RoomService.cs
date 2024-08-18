@@ -55,6 +55,11 @@ namespace HotelReservationSystem.Service.Services.RoomService
             return oldRoom;
         }
 
-
+        public async Task<IEnumerable<ShowRoomDto>> GetAllAsync()
+        {
+            var rooms = await _unitOfWork.Repository<Room>().GetAllAsync();
+            var roomDtos = _mapper.Map<IEnumerable<ShowRoomDto>>(rooms);
+            return roomDtos;
+        }
     }
 }

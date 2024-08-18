@@ -36,10 +36,12 @@ namespace HotelReservationSystem.API
             builder.Services.AddScoped<IunitOfWork, UnitOfWork>();
             builder.Services.AddScoped<IFacilityService, FacilityService>();
             builder.Services.AddScoped<IRoomService, RoomService>();
-            builder.Services.AddScoped<IRoomFacilityService, RoomFacilityService>();            builder.Services.AddScoped<IRoomFacilityService, RoomFacilityService>();
+            builder.Services.AddScoped<IRoomFacilityService, RoomFacilityService>();            
+            builder.Services.AddScoped<IRoomFacilityService, RoomFacilityService>();
             builder.Services.AddScoped<IRoomMediator, RoomMediator>();
 
             builder.Services.AddAutoMapper(typeof(MappingProfile));
+            builder.Services.AddAutoMapper(typeof(RoomProfile));
 
             var app = builder.Build();
 

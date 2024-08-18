@@ -12,18 +12,15 @@ namespace HotelReservationSystem.Mediator.RoomMediator
         private readonly IRoomService _roomService;
         private readonly IRoomFacilityService _roomFacilityService;
         private readonly IMapper _mapper;
-        private readonly IunitOfWork _unitOfWork;
 
         public RoomMediator(
             IRoomService roomService,
             IRoomFacilityService roomFacilityService,
-            IMapper mapper,
-            IunitOfWork unitOfWork)
+            IMapper mapper)
         {
             _roomService = roomService;
             _roomFacilityService = roomFacilityService;
             _mapper = mapper;
-            _unitOfWork = unitOfWork;
         }
         public async Task<RoomToReturnDto> AddRoomAsync(RoomDto roomDto)
         {
@@ -31,11 +28,7 @@ namespace HotelReservationSystem.Mediator.RoomMediator
 
             await _roomFacilityService.AddOrUpdateFacilitiesToRoomAsync(newRoom.Id, roomDto.FacilityIds);
 
-            var facilities = await _unitOfWork.Repository<Facility>()
-                        .GetAsync(f => roomDto.FacilityIds.Contains(f.Id));
-
             var mappedRoom = _mapper.Map<RoomToReturnDto>(newRoom);
-            mappedRoom.TotalPrice = CalculateRoomTotalPrice(newRoom.Price, facilities);
 
             return mappedRoom;
         }
@@ -46,22 +39,18 @@ namespace HotelReservationSystem.Mediator.RoomMediator
 
             await _roomFacilityService.AddOrUpdateFacilitiesToRoomAsync(updatedRoom.Id, roomDto.FacilityIds);
 
-            var facilities = await _unitOfWork.Repository<Facility>()
-              .GetAsync(f => roomDto.FacilityIds.Contains(f.Id));
-
             var mappedRoom = _mapper.Map<RoomToReturnDto>(updatedRoom);
-            mappedRoom.TotalPrice = CalculateRoomTotalPrice(updatedRoom.Price, facilities);
 
             return mappedRoom;
         }
 
 
-        private  decimal CalculateRoomTotalPrice(decimal roomPrice, IEnumerable<Facility> facilities)
-        { 
+        //private  decimal CalculateRoomTotalPrice(decimal roomPrice, IEnumerable<Facility> facilities)
+        //{ 
 
-            var facilitiesPrice = facilities.Sum(f => f.Price);
+        //    var facilitiesPrice = facilities.Sum(f => f.Price);
 
-            return roomPrice + facilitiesPrice;
-        }
+        //    return roomPrice + facilitiesPrice;
+        //}
     }
 }

@@ -1,4 +1,5 @@
 ﻿using HotelReservationSystem.Data.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,11 @@ namespace HotelReservationSystem.Repository.Specification.RoomSpecifications
     {
         public RoomSpecification() : base()
         {
+            Includes.Add(r => r.Include(r => r.RoomFacilities)
+                           .ThenInclude(rf => rf.Facility)); 
+
             AddOrderByDesc(R => R.Price);
         }
 
-        public RoomSpecification(int id) :base(R=>R.Id == id) 
-        {
-            AddOrderByDesc(R => R.Price);
-        }
     }
 }

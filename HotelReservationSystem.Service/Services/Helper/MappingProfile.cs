@@ -10,15 +10,18 @@ using System.Threading.Tasks;
 
 namespace HotelReservationSystem.Service.Services.Helper
 {
-    public class MappingProfile: Profile
+    public class MappingProfile : Profile
     {
         public MappingProfile()
         {
             CreateMap<Facility, FacilityDto>();
 
             CreateMap<Room, RoomToReturnDto>()
-                .ForMember(d=>d.Facility , opt=>opt.MapFrom(s=>s.RoomFacilities.Select(rf=>rf.Facility)))
-                .ForMember(d=>d.PictureUrl, opt=>opt.MapFrom<PictureResolver>());
+                .ForMember(d => d.Facility, opt => opt.MapFrom(s => s.RoomFacilities.Select(rf => rf.Facility)))
+                .ForMember(d => d.PictureUrl, opt => opt.MapFrom<PictureResolver>());
+
+            CreateMap<RoomDto, Room>()
+                .ForMember(d => d.PictureUrl, opt => opt.Ignore());
         }
     }
 }

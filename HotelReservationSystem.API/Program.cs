@@ -36,13 +36,28 @@ namespace HotelReservationSystem.API
             builder.Services.AddScoped<IunitOfWork, UnitOfWork>();
             builder.Services.AddScoped<IFacilityService, FacilityService>();
             builder.Services.AddScoped<IRoomService, RoomService>();
-            builder.Services.AddScoped<IRoomFacilityService, RoomFacilityService>();            builder.Services.AddScoped<IRoomFacilityService, RoomFacilityService>();
+            builder.Services.AddScoped<IRoomFacilityService, RoomFacilityService>();            
+            builder.Services.AddScoped<IRoomFacilityService, RoomFacilityService>();
             builder.Services.AddScoped<IRoomMediator, RoomMediator>();
 
             builder.Services.AddAutoMapper(typeof(MappingProfile));
 
             var app = builder.Build();
-
+            #region Apply All Pending Migrations[Update-Database] and Data Seeding
+            using var scoped = app.Services.CreateScope();
+            var services = scoped.ServiceProvider;
+            var _dbcontext = services.GetRequiredService<ApplicationDBContext>();
+            var loggerFactory = services.GetRequiredService<ILoggerFactory>();
+            try
+            {
+                _dbcontext.Database.MigrateAsync();
+            }
+            catch (Exception ex)
+            {
+                var logger = loggerFactory.CreateLogger<Program>();
+                logger.LogError(ex, "an error has been occured during apply the migration");
+            }
+            #endregion
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {

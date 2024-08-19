@@ -1,5 +1,6 @@
 ﻿using HotelReservationSystem.Data.Entities;
 using Microsoft.EntityFrameworkCore;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace HotelReservationSystem.Repository.Specification
 {
@@ -7,25 +8,25 @@ namespace HotelReservationSystem.Repository.Specification
     {
         public static IQueryable<T> GetQuery(IQueryable<T> inputQuery, ISpecification<T> spec)
         {
-            var Query = inputQuery;
+            var query = inputQuery;
+
 
             if (spec.Criteria is not null)
             {
-                Query = Query.Where(spec.Criteria);
+                query = query.Where(spec.Criteria);
             }
 
             if (spec.OrderBy is not null)
             {
-                Query = Query.OrderBy(spec.OrderBy);
+                query = query.OrderBy(spec.OrderBy);
             }
 
             if (spec.OrderByDesc is not null)
             {
-                Query = Query.OrderByDescending(spec.OrderByDesc);
+                query = query.OrderByDescending(spec.OrderByDesc);
             }
-            Query = spec.Includes.Aggregate(Query, (CurrentQuery, includeExprition)
-                  => CurrentQuery.Include(includeExprition));
-            return Query;
+            query = spec.Includes.Aggregate(query, (current, include) => include(current));
+            return query;
         }
 
     }

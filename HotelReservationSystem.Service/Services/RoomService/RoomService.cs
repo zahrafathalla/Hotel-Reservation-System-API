@@ -24,13 +24,9 @@ namespace HotelReservationSystem.Service.Services.RoomService
         public async Task<Room> AddRoomAsync(RoomDto roomDto)
         {
 
-            var newRoom = new Room
-            {
-                Type = roomDto.Type,
-                Status = roomDto.Status,
-                Price = roomDto.Price,
-                PictureUrl = DocumentSetting.UploadFile(roomDto.PictureFile, "RoomImages")
-            };
+            var newRoom = _mapper.Map<Room>(roomDto);
+
+            newRoom.PictureUrl = DocumentSetting.UploadFile(roomDto.PictureFile, "RoomImages");
 
             await _unitOfWork.Repository<Room>().AddAsync(newRoom);
             await _unitOfWork.CompleteAsync();
@@ -44,9 +40,8 @@ namespace HotelReservationSystem.Service.Services.RoomService
             if (oldRoom == null)
                 return null;
 
-            oldRoom.Type = roomDto.Type;
-            oldRoom.Price = roomDto.Price;
-            oldRoom.Status = roomDto.Status;
+            _mapper.Map(roomDto, oldRoom);
+
             oldRoom.PictureUrl = DocumentSetting.UpdateFile(roomDto.PictureFile, "RoomImages", oldRoom.PictureUrl);
 
             _unitOfWork.Repository<Room>().Update(oldRoom);
@@ -55,6 +50,28 @@ namespace HotelReservationSystem.Service.Services.RoomService
             return oldRoom;
         }
 
+        public async Task<IEnumerable<RoomToReturnDto>> GetAllAsync()
+        {
+            var spec = new RoomSpecification();
+            var rooms = await _unitOfWork.Repository<Room>().GetAllWithSpecAsync(spec);
 
+            var roomDtos = _mapper.Map<IEnumerable<RoomToReturnDto>>(rooms);
+
+            return roomDtos;
+        }
+        public async Task<bool> DeleteRoomAsync(int id)  
+        {
+            var room = await _unitOfWork.Repository<Room>().GetByIdAsync(id);
+            if (room == null)
+            {
+                return false;
+            }
+
+            DocumentSetting.DeleteFile("RoomImages", Path.GetFileName(room.PictureUrl));
+            _unitOfWork.Repository<Room>().Delete(room);
+            await _unitOfWork.CompleteAsync();
+
+            return true;
+        }
     }
 }

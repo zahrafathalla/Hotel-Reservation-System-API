@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Repository.Interface;
+using HotelReservationSystem.Repository.Repository;
 using HotelReservationSystem.Service.Services.RoomFacilityService;
 using HotelReservationSystem.Service.Services.RoomService;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;
@@ -45,8 +46,8 @@ namespace HotelReservationSystem.Mediator.RoomMediator
         }
 
 
-        //private  decimal CalculateRoomTotalPrice(decimal roomPrice, IEnumerable<Facility> facilities)
-        //{ 
+        //private decimal CalculateRoomTotalPrice(decimal roomPrice, IEnumerable<Facility> facilities)
+        //{
 
         //    var facilitiesPrice = facilities.Sum(f => f.Price);
 

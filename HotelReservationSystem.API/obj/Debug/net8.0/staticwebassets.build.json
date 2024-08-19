@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5aShjPmKb0mjw6DNBBHtAiFMwCLCKhcvIEh0nfOxCC8=",
+  "Hash": "WIHgkZV4XryxBADq4SiFhrnbP12pvBWErUG8psNjMvk=",
   "Source": "HotelReservationSystem.API",
   "BasePath": "_content/HotelReservationSystem.API",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\42a3433a-8b99-40f9-8000-115fc07783e2-.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\48bb6b94-102a-41cc-a3f9-9e0f22a41159-.jpg",
+      "SourceId": "HotelReservationSystem.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "BasePath": "_content/HotelReservationSystem.API",
+      "RelativePath": "Files/RoomImages/48bb6b94-102a-41cc-a3f9-9e0f22a41159-.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\48bb6b94-102a-41cc-a3f9-9e0f22a41159-.jpg"
     },
     {
       "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\5203e561-c650-4225-95d0-d32b0658b304-.jpg",

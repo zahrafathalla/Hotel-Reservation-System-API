@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KM+kXznEwCaZ+94txAcaJUBFa3PV6fv3v8ahMidgNdACm21OPiJur16hOvbnGjiVEt8XBKmUUNEF42eq80hL5A==",
+  "dgSpecHash": "giBb7Mm6tIr0c6QCILzHpNKmt0P99fNNcp1O1mLJwSM50jAtdmBEJ5Fv4XaMrsrKMLsqIgHPH2dbao7EZ0u/ww==",
   "success": true,
-  "projectFilePath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj",
+  "projectFilePath": "C:\\Users\\almagd\\Source\\Repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\almagd\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\almagd\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

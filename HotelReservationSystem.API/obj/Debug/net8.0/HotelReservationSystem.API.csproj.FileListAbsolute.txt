@@ -293,3 +293,14 @@ C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\o
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.pdb
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.genruntimeconfig.cache
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\obj\Debug\net8.0\ref\HotelReservationSystem.API.dll
+C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.csproj.AssemblyReference.cache
+C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.AssemblyInfoInputs.cache
+C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.AssemblyInfo.cs
+C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.csproj.CoreCompileInputs.cache
+C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.sourcelink.json
+C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.dll
+C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.API\obj\Debug\net8.0\refint\HotelReservationSystem.API.dll
+C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.pdb

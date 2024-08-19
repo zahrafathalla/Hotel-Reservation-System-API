@@ -62,7 +62,7 @@ namespace HotelReservationSystem.Service.Services.RoomService
         public async Task<bool> DeleteRoomAsync(int id)  
         {
             var room = await _unitOfWork.Repository<Room>().GetByIdAsync(id);
-            if (room == null)
+            if (room == null || room.IsDeleted)
             {
                 return false;
             }

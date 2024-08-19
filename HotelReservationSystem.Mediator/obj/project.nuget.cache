@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fYi8Op8/6Zx3UkVRlxWvnzgSjo4+nghSXLBTxbgTmHqRfqHQaKjZERdm7zL+M1urtrgSssbHF1qVLMAd3Lo5iA==",
+  "dgSpecHash": "0t54dPek+HrE5qlRazgN0vZkItZodoZqi2LROAQvaL8phvLCQh4O+1D8ZIybPjCew4KuHVysHG4sMsu1myvU5Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj",
+  "projectFilePath": "C:\\Users\\almagd\\Source\\Repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\almagd\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\almagd\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

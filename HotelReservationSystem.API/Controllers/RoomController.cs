@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Mediator.RoomMediator;
 using HotelReservationSystem.Service.Services.RoomService;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;

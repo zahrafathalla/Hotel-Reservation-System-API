@@ -18,7 +18,7 @@ namespace HotelReservationSystem.Repository.Repository
 
         public async Task<IEnumerable<T>> GetAllWithSpecAsync(ISpecification<T> Spec)
         {
-            return await ApplySpecification(Spec).ToListAsync();
+            return await ApplySpecification(Spec).Where(x => !x.IsDeleted).ToListAsync();
         }
         public async Task<T?> GetByIdWithSpecAsync(ISpecification<T> Spec)
         {

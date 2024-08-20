@@ -7,28 +7,40 @@
       "RelativeMoniker": "D:0:0:{3332D5F4-5205-4337-8A1C-4DB21EC1E372}|HotelReservationSystem.API\\HotelReservationSystem.API.csproj|solutionrelative:hotelreservationsystem.api\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3332D5F4-5205-4337-8A1C-4DB21EC1E372}|HotelReservationSystem.API\\HotelReservationSystem.API.csproj|c:\\marwy\\programming courses\\backend.net\\demos\\projects\\hotel-reservation-system-api\\hotelreservationsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3332D5F4-5205-4337-8A1C-4DB21EC1E372}|HotelReservationSystem.API\\HotelReservationSystem.API.csproj|solutionrelative:hotelreservationsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{761A1A62-C68A-4105-B36D-61E8192E9C66}|HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj|c:\\marwy\\programming courses\\backend.net\\demos\\projects\\hotel-reservation-system-api\\hotelreservationsystem.repository\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{761A1A62-C68A-4105-B36D-61E8192E9C66}|HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj|solutionrelative:hotelreservationsystem.repository\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3332D5F4-5205-4337-8A1C-4DB21EC1E372}|HotelReservationSystem.API\\HotelReservationSystem.API.csproj|c:\\marwy\\programming courses\\backend.net\\demos\\projects\\hotel-reservation-system-api\\hotelreservationsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3332D5F4-5205-4337-8A1C-4DB21EC1E372}|HotelReservationSystem.API\\HotelReservationSystem.API.csproj|solutionrelative:hotelreservationsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{761A1A62-C68A-4105-B36D-61E8192E9C66}|HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj|c:\\marwy\\programming courses\\backend.net\\demos\\projects\\hotel-reservation-system-api\\hotelreservationsystem.repository\\specification\\specificationevaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{761A1A62-C68A-4105-B36D-61E8192E9C66}|HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj|solutionrelative:hotelreservationsystem.repository\\specification\\specificationevaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B677A5E-9E43-4266-B10C-207F79D20E7F}|HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj|c:\\marwy\\programming courses\\backend.net\\demos\\projects\\hotel-reservation-system-api\\hotelreservationsystem.service\\services\\roomservice\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B677A5E-9E43-4266-B10C-207F79D20E7F}|HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj|solutionrelative:hotelreservationsystem.service\\services\\roomservice\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{761A1A62-C68A-4105-B36D-61E8192E9C66}|HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj|c:\\marwy\\programming courses\\backend.net\\demos\\projects\\hotel-reservation-system-api\\hotelreservationsystem.repository\\specification\\basespecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{761A1A62-C68A-4105-B36D-61E8192E9C66}|HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj|solutionrelative:hotelreservationsystem.repository\\specification\\basespecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B677A5E-9E43-4266-B10C-207F79D20E7F}|HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj|c:\\marwy\\programming courses\\backend.net\\demos\\projects\\hotel-reservation-system-api\\hotelreservationsystem.service\\services\\roomservice\\dtos\\roomviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B677A5E-9E43-4266-B10C-207F79D20E7F}|HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj|solutionrelative:hotelreservationsystem.service\\services\\roomservice\\dtos\\roomviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{761A1A62-C68A-4105-B36D-61E8192E9C66}|HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj|c:\\marwy\\programming courses\\backend.net\\demos\\projects\\hotel-reservation-system-api\\hotelreservationsystem.repository\\specification\\ispecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{761A1A62-C68A-4105-B36D-61E8192E9C66}|HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj|solutionrelative:hotelreservationsystem.repository\\specification\\ispecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B677A5E-9E43-4266-B10C-207F79D20E7F}|HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj|c:\\marwy\\programming courses\\backend.net\\demos\\projects\\hotel-reservation-system-api\\hotelreservationsystem.service\\services\\roomservice\\dtos\\showroomdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1B677A5E-9E43-4266-B10C-207F79D20E7F}|HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj|solutionrelative:hotelreservationsystem.service\\services\\roomservice\\dtos\\showroomdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1B677A5E-9E43-4266-B10C-207F79D20E7F}|HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj|c:\\marwy\\programming courses\\backend.net\\demos\\projects\\hotel-reservation-system-api\\hotelreservationsystem.service\\services\\roomservice\\dtos\\roomviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B677A5E-9E43-4266-B10C-207F79D20E7F}|HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj|solutionrelative:hotelreservationsystem.service\\services\\roomservice\\dtos\\roomviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1B677A5E-9E43-4266-B10C-207F79D20E7F}|HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj|c:\\marwy\\programming courses\\backend.net\\demos\\projects\\hotel-reservation-system-api\\hotelreservationsystem.service\\services\\roomservice\\dtos\\roomdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1B677A5E-9E43-4266-B10C-207F79D20E7F}|HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj|solutionrelative:hotelreservationsystem.service\\services\\roomservice\\dtos\\roomdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3332D5F4-5205-4337-8A1C-4DB21EC1E372}|HotelReservationSystem.API\\HotelReservationSystem.API.csproj|c:\\marwy\\programming courses\\backend.net\\demos\\projects\\hotel-reservation-system-api\\hotelreservationsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3332D5F4-5205-4337-8A1C-4DB21EC1E372}|HotelReservationSystem.API\\HotelReservationSystem.API.csproj|solutionrelative:hotelreservationsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3332D5F4-5205-4337-8A1C-4DB21EC1E372}|HotelReservationSystem.API\\HotelReservationSystem.API.csproj|c:\\marwy\\programming courses\\backend.net\\demos\\projects\\hotel-reservation-system-api\\hotelreservationsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3332D5F4-5205-4337-8A1C-4DB21EC1E372}|HotelReservationSystem.API\\HotelReservationSystem.API.csproj|solutionrelative:hotelreservationsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,32 +50,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\appsettings.json",
-              "RelativeDocumentMoniker": "HotelReservationSystem.API\\appsettings.json",
-              "ToolTip": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\appsettings.json",
-              "RelativeToolTip": "HotelReservationSystem.API\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-18T19:54:05.674Z",
-              "EditorCaption": ""
+              "DocumentIndex": 2,
+              "Title": "SpecificationEvaluator.cs",
+              "DocumentMoniker": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\Specification\\SpecificationEvaluator.cs",
+              "RelativeDocumentMoniker": "HotelReservationSystem.Repository\\Specification\\SpecificationEvaluator.cs",
+              "ToolTip": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\Specification\\SpecificationEvaluator.cs",
+              "RelativeToolTip": "HotelReservationSystem.Repository\\Specification\\SpecificationEvaluator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T15:42:31.465Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\Program.cs",
-              "RelativeDocumentMoniker": "HotelReservationSystem.API\\Program.cs",
-              "ToolTip": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\Program.cs",
-              "RelativeToolTip": "HotelReservationSystem.API\\Program.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAywDQAAAANAAAA",
+              "DocumentIndex": 4,
+              "Title": "ISpecification.cs",
+              "DocumentMoniker": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\Specification\\ISpecification.cs",
+              "RelativeDocumentMoniker": "HotelReservationSystem.Repository\\Specification\\ISpecification.cs",
+              "ToolTip": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\Specification\\ISpecification.cs",
+              "RelativeToolTip": "HotelReservationSystem.Repository\\Specification\\ISpecification.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T19:52:08.23Z"
+              "WhenOpened": "2024-08-19T15:42:27.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BaseSpecification.cs",
+              "DocumentMoniker": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\Specification\\BaseSpecification.cs",
+              "RelativeDocumentMoniker": "HotelReservationSystem.Repository\\Specification\\BaseSpecification.cs",
+              "ToolTip": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\Specification\\BaseSpecification.cs",
+              "RelativeToolTip": "HotelReservationSystem.Repository\\Specification\\BaseSpecification.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T15:41:57.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\Repository\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "HotelReservationSystem.Repository\\Repository\\GenericRepository.cs",
+              "ToolTip": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\Repository\\GenericRepository.cs",
+              "RelativeToolTip": "HotelReservationSystem.Repository\\Repository\\GenericRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T15:27:58.248Z"
             },
             {
               "$type": "Document",
@@ -79,7 +114,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "RoomController.cs",
+              "DocumentMoniker": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\Controllers\\RoomController.cs",
+              "RelativeDocumentMoniker": "HotelReservationSystem.API\\Controllers\\RoomController.cs",
+              "ToolTip": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\Controllers\\RoomController.cs",
+              "RelativeToolTip": "HotelReservationSystem.API\\Controllers\\RoomController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAIwAAAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T17:41:19.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\Program.cs",
+              "RelativeDocumentMoniker": "HotelReservationSystem.API\\Program.cs",
+              "ToolTip": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\Program.cs",
+              "RelativeToolTip": "HotelReservationSystem.API\\Program.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAywDQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T19:52:08.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\appsettings.json",
+              "RelativeDocumentMoniker": "HotelReservationSystem.API\\appsettings.json",
+              "ToolTip": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\appsettings.json",
+              "RelativeToolTip": "HotelReservationSystem.API\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-18T19:54:05.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "RoomViewModel.cs",
               "DocumentMoniker": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Service\\Services\\RoomService\\Dtos\\RoomViewModel.cs",
               "RelativeDocumentMoniker": "HotelReservationSystem.Service\\Services\\RoomService\\Dtos\\RoomViewModel.cs",
@@ -91,39 +163,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RoomController.cs",
-              "DocumentMoniker": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\Controllers\\RoomController.cs",
-              "RelativeDocumentMoniker": "HotelReservationSystem.API\\Controllers\\RoomController.cs",
-              "ToolTip": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\Controllers\\RoomController.cs",
-              "RelativeToolTip": "HotelReservationSystem.API\\Controllers\\RoomController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAABPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T17:41:19.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RoomService.cs",
-              "DocumentMoniker": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Service\\Services\\RoomService\\RoomService.cs",
-              "RelativeDocumentMoniker": "HotelReservationSystem.Service\\Services\\RoomService\\RoomService.cs",
-              "ToolTip": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Service\\Services\\RoomService\\RoomService.cs",
-              "RelativeToolTip": "HotelReservationSystem.Service\\Services\\RoomService\\RoomService.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAywDwAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T17:41:19.511Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "RoomDto.cs",
               "DocumentMoniker": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Service\\Services\\RoomService\\Dtos\\RoomDto.cs",
               "RelativeDocumentMoniker": "HotelReservationSystem.Service\\Services\\RoomService\\Dtos\\RoomDto.cs",
               "ToolTip": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Service\\Services\\RoomService\\Dtos\\RoomDto.cs",
               "RelativeToolTip": "HotelReservationSystem.Service\\Services\\RoomService\\Dtos\\RoomDto.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAyAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-18T17:41:19.514Z"
             }

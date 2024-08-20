@@ -8,14 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HotelReservationSystem.Repository
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.Repository\
-=======
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.Repository\
-=======
-build_property.ProjectDir = C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\
->>>>>>> 54960b0c497297f35f6062eb668b0534b6f04ef2
->>>>>>> a27e02cbeb230b4d3ab68ae388a9f06a80d9dc91
+build_property.ProjectDir = C:\Users\20100\Desktop\FinalHotel\Hotel-Reservation-System-API\HotelReservationSystem.Repository\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

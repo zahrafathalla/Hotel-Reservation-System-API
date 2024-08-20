@@ -44,10 +44,7 @@ namespace HotelReservationSystem.API.Controllers
             var rooms = await _roomService.GetAllAsync();
             return Ok(rooms);
         }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a27e02cbeb230b4d3ab68ae388a9f06a80d9dc91
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteRoom(int id)
         {
@@ -59,10 +56,6 @@ namespace HotelReservationSystem.API.Controllers
 
             return NoContent();  
         }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54960b0c497297f35f6062eb668b0534b6f04ef2
->>>>>>> a27e02cbeb230b4d3ab68ae388a9f06a80d9dc91
+
     }
 }

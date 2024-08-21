@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace HotelReservationSystem.Service.Services.Helper
 {
-    public class PictureResolver : IValueResolver<Room, RoomToReturnDto, string>
+    public class PictureResolver : IValueResolver<Room, RoomToReturnDto, IEnumerable<string>>
     {
         private readonly IConfiguration _configuration;
 
@@ -18,15 +18,15 @@ namespace HotelReservationSystem.Service.Services.Helper
         {
             _configuration = configuration;
         }
-        public string Resolve(Room source, RoomToReturnDto destination, string destMember, ResolutionContext context)
+
+        public IEnumerable<string> Resolve(Room source, RoomToReturnDto destination, IEnumerable<string> destMember, ResolutionContext context)
         {
-            if(!string.IsNullOrEmpty(source.PictureUrl))
+            if (source.PictureUrls != null && source.PictureUrls.Any())
             {
-                return $"{_configuration["BaseUrl"]}/{source.PictureUrl}";
+                return source.PictureUrls.Select(p => $"{_configuration["BaseUrl"]}/Files/RoomImages/{p.Url}");
             }
 
-            return string.Empty;
-
+            return Enumerable.Empty<string>();
         }
     }
 }

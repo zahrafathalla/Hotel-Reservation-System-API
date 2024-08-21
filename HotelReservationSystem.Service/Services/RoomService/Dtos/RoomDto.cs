@@ -16,10 +16,6 @@ namespace HotelReservationSystem.Service.Services.RoomService.Dtos
         public decimal Price { get; set; }
         [Required]
 
-        public IFormFile PictureFile { get; set; }
-
-        [Required]
-
         public List<int> FacilityIds { get; set; }
     }
 }

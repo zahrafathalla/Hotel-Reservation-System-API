@@ -14,6 +14,8 @@ namespace HotelReservationSystem.Repository.Specification.RoomSpecifications
         {
             Includes.Add(r => r.Include(r => r.RoomFacilities)
                            .ThenInclude(rf => rf.Facility));
+            Includes.Add(r => r.Include(r => r.PictureUrls));
+
 
             if (!string.IsNullOrEmpty(spec.Sort))
             {
@@ -48,8 +50,10 @@ namespace HotelReservationSystem.Repository.Specification.RoomSpecifications
         {
             Includes.Add(r => r.Include(r => r.RoomFacilities)
                            .ThenInclude(rf => rf.Facility));
+            Includes.Add(r => r.Include(r => r.PictureUrls));
+
         }
-        
+
 
 
     }

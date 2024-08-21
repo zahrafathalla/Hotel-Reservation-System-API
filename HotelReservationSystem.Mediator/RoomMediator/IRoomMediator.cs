@@ -6,9 +6,10 @@ namespace HotelReservationSystem.Mediator.RoomMediator
 {
     public interface IRoomMediator
     {
-        Task<RoomToReturnDto> AddRoomAsync (RoomDto roomDto);
+        Task<RoomcreatedToReturnDto> AddRoomAsync (RoomDto roomDto);
 
-        Task<RoomToReturnDto> UpdateRoomAsync(int id, RoomDto roomDto);
+        Task<RoomcreatedToReturnDto> UpdateRoomAsync(int id, RoomDto roomDto);
+        Task<bool> RemoveRoomAsync(int id);
 
     }
 }

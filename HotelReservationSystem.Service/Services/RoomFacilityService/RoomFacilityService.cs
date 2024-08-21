@@ -11,18 +11,25 @@ namespace HotelReservationSystem.Service.Services.RoomFacilityService
         {
             _unitOfWork = unitOfWork;
         }
-        public async Task AddOrUpdateFacilitiesToRoomAsync(int roomId, List<int> facilityIds)
+
+        public async Task AddFacilitiesToRoomAsync(int roomId, List<int> facilityIds)
         {
             var roomFacilityRepo = _unitOfWork.Repository<RoomFacility>();
 
-            var existingFacilities = await roomFacilityRepo.GetAsync(rf => rf.RoomId == roomId && rf.IsDeleted ==false);
-            foreach (var facility in existingFacilities)
+            var existingFacilities = await roomFacilityRepo.GetAsync(rf => rf.RoomId == roomId && rf.IsDeleted == false);
+
+            var facilitiesToAdd = new List<int>();
+
+            foreach (var facilityId in facilityIds)
             {
-                roomFacilityRepo.Delete(facility);
+                if (!existingFacilities.Any(rf => rf.FacilityId == facilityId))
+                {
+                    facilitiesToAdd.Add(facilityId);
+                }
             }
 
             var facilities = await _unitOfWork.Repository<Facility>()
-                      .GetAsync(f => facilityIds.Contains(f.Id));
+                    .GetAsync(f => facilitiesToAdd.Contains(f.Id));
 
             var room = await _unitOfWork.Repository<Room>().GetByIdAsync(roomId);
             foreach (var facility in facilities)
@@ -39,20 +46,18 @@ namespace HotelReservationSystem.Service.Services.RoomFacilityService
         }
 
 
-        public async Task RemoveFacilityFromRoomAsync(int roomId, List<int> facilityIds)
+        public async Task<bool> RemoveFacilityFromRoomAsync(int roomId)
         {
-            var roomFacilityRepo = _unitOfWork.Repository<RoomFacility>();
-            var existingFacilities = await roomFacilityRepo
-                            .GetAsync(rf => rf.RoomId == roomId && facilityIds.Contains(rf.FacilityId));
+            var roomFacilityRepository = _unitOfWork.Repository<RoomFacility>();
+            var existingFacilities = await roomFacilityRepository.GetAsync(rf => rf.RoomId == roomId);
 
-            foreach (var roomFacility in existingFacilities)
+            foreach (var facility in existingFacilities)
             {
-                roomFacilityRepo.Delete(roomFacility);
+                roomFacilityRepository.Delete(facility);
             }
 
-            await _unitOfWork.CompleteAsync();
+            var result = await _unitOfWork.CompleteAsync();
+            return result > 0;
         }
-
-
     }
 }

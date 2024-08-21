@@ -1,11 +1,14 @@
 ﻿using AutoMapper;
 using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Repository.Interface;
-using HotelReservationSystem.Repository.Specification;
 using HotelReservationSystem.Repository.Specification.RoomSpecifications;
 using HotelReservationSystem.Service.Services.Helper;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;
-using Microsoft.AspNetCore.Http;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace HotelReservationSystem.Service.Services.RoomService
 {
@@ -24,40 +27,75 @@ namespace HotelReservationSystem.Service.Services.RoomService
 
         public async Task<Room> AddRoomAsync(RoomDto roomDto)
         {
+            var room = _mapper.Map<Room>(roomDto);
 
-            var newRoom = _mapper.Map<Room>(roomDto);
+            await _unitOfWork.Repository<Room>().AddAsync(room);
 
-            newRoom.PictureUrl = DocumentSetting.UploadFile(roomDto.PictureFile, "RoomImages");
-
-            await _unitOfWork.Repository<Room>().AddAsync(newRoom);
             await _unitOfWork.CompleteAsync();
-
-            return newRoom;
+            return room;
         }
+        public async Task<bool> AddPicturesToRoomAsync(PictureDto pictureDto)
+        {
+            var room = await _unitOfWork.Repository<Room>().GetByIdAsync(pictureDto.RoomId);
+            if (room == null)
+                return false;
 
+            foreach (var file in pictureDto.pictureUrls)
+            {
+                var fileName = DocumentSetting.UploadFile(file, "RoomImages");
+
+                var picture = new Picture
+                {
+                    Url = fileName,
+                    RoomId = pictureDto.RoomId,
+                };
+
+                await _unitOfWork.Repository<Picture>().AddAsync(picture);
+            }
+
+            var result = await _unitOfWork.CompleteAsync();
+            return result > 0;
+        }
         public async Task<Room> UpdateRoomAsync(int id, RoomDto roomDto)
         {
-            var oldRoom = await _unitOfWork.Repository<Room>().GetByIdAsync(id);
-            if (oldRoom == null)
+            var spec = new RoomSpecification(id);
+            var room = await _unitOfWork.Repository<Room>().GetByIdWithSpecAsync(spec);
+            if (room == null)
                 return null;
 
-            _mapper.Map(roomDto, oldRoom);
+            _mapper.Map(roomDto, room); 
 
-            oldRoom.PictureUrl = DocumentSetting.UpdateFile(roomDto.PictureFile, "RoomImages", oldRoom.PictureUrl);
-
-            _unitOfWork.Repository<Room>().Update(oldRoom);
+            _unitOfWork.Repository<Room>().Update(room);
             await _unitOfWork.CompleteAsync();
-
-            return oldRoom;
+            return room;
         }
-         
+        public async Task<bool> DeleteRoomAsync(int id)
+        {
+            var spec = new RoomSpecification(id);
+            var room = await _unitOfWork.Repository<Room>().GetByIdWithSpecAsync(spec);
+            if (room == null)
+                return false;
+
+            foreach (var picture in room.PictureUrls)
+            {
+                DocumentSetting.DeleteFile("RoomImages", Path.GetFileName(picture.Url));
+                _unitOfWork.Repository<Picture>().Delete(picture);
+            }
+
+            _unitOfWork.Repository<Room>().Delete(room);
+
+            var result = await _unitOfWork.CompleteAsync();
+            return result > 0;
+        }
+
         public async Task<IEnumerable<RoomToReturnDto>> GetAllAsync(RoomSpecParams roomSpec)
         {
             var spec = new RoomSpecification(roomSpec);
-            var rooms = await _unitOfWork.Repository<Room>().GetAllWithSpecAsync(spec); 
+
+            var rooms = await _unitOfWork.Repository<Room>().GetAllWithSpecAsync(spec);
+
             var roomDtos = _mapper.Map<IEnumerable<RoomToReturnDto>>(rooms);
-            
-            return  roomDtos;
+            return roomDtos;
         }
 
         public async Task<IEnumerable<RoomToReturnDto>> GetAllRoomsIsAvaliableAsync()
@@ -68,20 +106,5 @@ namespace HotelReservationSystem.Service.Services.RoomService
             return roomDtos;
         }
 
-        public async Task<bool> DeleteRoomAsync(int id)  
-        {
-            var room = await _unitOfWork.Repository<Room>().GetByIdAsync(id);
-            if (room == null || room.IsDeleted)
-            {
-                return false;
-            }
-
-            DocumentSetting.DeleteFile("RoomImages", Path.GetFileName(room.PictureUrl));
-            _unitOfWork.Repository<Room>().Delete(room);
-            await _unitOfWork.CompleteAsync();
-
-            return true;
-        }
-        
     }
 }

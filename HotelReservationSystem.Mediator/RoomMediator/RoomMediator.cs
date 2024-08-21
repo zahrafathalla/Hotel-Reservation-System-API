@@ -23,28 +23,40 @@ namespace HotelReservationSystem.Mediator.RoomMediator
             _roomFacilityService = roomFacilityService;
             _mapper = mapper;
         }
-        public async Task<RoomToReturnDto> AddRoomAsync(RoomDto roomDto)
+        public async Task<RoomcreatedToReturnDto> AddRoomAsync(RoomDto roomDto)
         {
             var newRoom = await _roomService.AddRoomAsync(roomDto);
 
-            await _roomFacilityService.AddOrUpdateFacilitiesToRoomAsync(newRoom.Id, roomDto.FacilityIds);
+            await _roomFacilityService.AddFacilitiesToRoomAsync(newRoom.Id, roomDto.FacilityIds);
 
-            var mappedRoom = _mapper.Map<RoomToReturnDto>(newRoom);
+            var mappedRoom = _mapper.Map<RoomcreatedToReturnDto>(newRoom);
 
             return mappedRoom;
         }
 
-        public async Task<RoomToReturnDto> UpdateRoomAsync(int id, RoomDto roomDto)
+        public async Task<RoomcreatedToReturnDto> UpdateRoomAsync(int id, RoomDto roomDto)
         {
             var updatedRoom = await _roomService.UpdateRoomAsync(id, roomDto);
-            await _roomFacilityService.AddOrUpdateFacilitiesToRoomAsync(updatedRoom.Id, roomDto.FacilityIds);
+            await _roomFacilityService.AddFacilitiesToRoomAsync(updatedRoom.Id, roomDto.FacilityIds);
 
-            var mappedRoom = _mapper.Map<RoomToReturnDto>(updatedRoom);
+            var mappedRoom = _mapper.Map<RoomcreatedToReturnDto>(updatedRoom);
 
             return mappedRoom;
         }
+        public async Task<bool> RemoveRoomAsync(int id)
+        {
+            var roomDeleted = await _roomService.DeleteRoomAsync(id);
+
+            if (!roomDeleted)
+            {
+                return false;
+            }
+
+            var facilitiesRemoved = await _roomFacilityService.RemoveFacilityFromRoomAsync(id);
+
+            return facilitiesRemoved;
+        }
 
 
-       
     }
 }

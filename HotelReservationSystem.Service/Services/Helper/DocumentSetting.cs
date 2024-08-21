@@ -23,14 +23,15 @@ namespace HotelReservationSystem.Service.Services.Helper
             using var fileStream = new FileStream(filePath, FileMode.Create);
             file.CopyTo(fileStream);
 
-            return $"Files/{folderName}/{fileName}";
+            return fileName;
+            //return $"Files/{folderName}/{fileName}";
         }
 
         public static void DeleteFile(string folderName, string fileName)
         {
             var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Files", folderName, fileName);
 
-            if(File.Exists(folderPath))
+            if (File.Exists(folderPath))
             {
                 File.Delete(folderPath);
             }
@@ -41,6 +42,8 @@ namespace HotelReservationSystem.Service.Services.Helper
 
             return UploadFile(file, folderName);
         }
+
+
 
     }
 }

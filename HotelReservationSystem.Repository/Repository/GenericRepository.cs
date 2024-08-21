@@ -35,11 +35,16 @@ namespace HotelReservationSystem.Repository.Repository
         }
         public async Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>> expression)
         {
-            return await _dBContext.Set<T>().Where(expression).ToListAsync();
+            var query = _dBContext.Set<T>().AsQueryable();
+            query = query.Where(x => !x.IsDeleted);
+            query = query.Where(expression);
+            return await query.ToListAsync();
+
+            //return await _dBContext.Set<T>().Where(expression).ToListAsync();
         }
         public async Task<T?> GetByIdAsync(int id)
         {
-            return await _dBContext.Set<T>().FirstOrDefaultAsync(x => x.Id == id);
+            return await _dBContext.Set<T>().Where(x => !x.IsDeleted).FirstOrDefaultAsync(x => x.Id == id);
         }
         public async Task AddAsync(T entity)
         {

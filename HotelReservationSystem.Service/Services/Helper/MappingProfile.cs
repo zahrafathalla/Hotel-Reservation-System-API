@@ -18,10 +18,13 @@ namespace HotelReservationSystem.Service.Services.Helper
 
             CreateMap<Room, RoomToReturnDto>()
                 .ForMember(d => d.Facility, opt => opt.MapFrom(s => s.RoomFacilities.Select(rf => rf.Facility)))
-                .ForMember(d => d.PictureUrl, opt => opt.MapFrom<PictureResolver>());
+                .ForMember(d => d.PictureUrls, opt => opt.MapFrom<PictureResolver>());
 
-            CreateMap<RoomDto, Room>()
-                .ForMember(d => d.PictureUrl, opt => opt.Ignore());
+            CreateMap<Room, RoomcreatedToReturnDto>()
+                 .ForMember(d => d.Facility, opt => opt.MapFrom(s => s.RoomFacilities.Select(rf => rf.Facility)));
+
+            CreateMap<RoomDto, Room>();
+
         }
     }
 }

@@ -10,6 +10,9 @@ namespace HotelReservationSystem.Repository.Specification
         public List<Func<IQueryable<T>, IIncludableQueryable<T, object>>> Includes { get; set; } = new List<Func<IQueryable<T>, IIncludableQueryable<T, object>>>();
         public Expression<Func<T, object>> OrderBy { get; set; }
         public Expression<Func<T, object>> OrderByDesc { get; set; }
+        public int Skip { get; set; } = 0;
+        public int Take { get; set; } = 0;
+        public bool IsPaginationEnabled { get; set; } = false;
 
         public BaseSpecifications()
         {
@@ -33,6 +36,12 @@ namespace HotelReservationSystem.Repository.Specification
         {
 
             OrderByDesc = OrderByDescExpression;
+
+        }
+        public void ApplyPagination(int skip, int take)
+        {
+            Skip = skip;
+            Take = take;
 
         }
 

@@ -10,13 +10,47 @@ namespace HotelReservationSystem.Repository.Specification.RoomSpecifications
 {
     public class RoomSpecification : BaseSpecifications<Room>
     {
-        public RoomSpecification() : base()
+        public RoomSpecification(RoomSpecParams spec) : base()
         {
             Includes.Add(r => r.Include(r => r.RoomFacilities)
-                           .ThenInclude(rf => rf.Facility)); 
+                           .ThenInclude(rf => rf.Facility));
 
-            AddOrderByDesc(R => R.Price);
+            if (!string.IsNullOrEmpty(spec.Sort))
+            {
+
+                switch (spec.Sort)
+                {
+                    case "priceAsc":
+                        AddOrderBy(R => R.Price);
+                        break;
+
+                    case "priceDesc":
+                        AddOrderByDesc(R => R.Price);
+                        break;
+
+                    default:
+                        AddOrderBy(R => R.IsDeleted==false);
+                        break;
+
+                }
+
+            }
+            else
+            {
+                AddOrderBy(R => R.IsDeleted == false);
+            }
+
+
+           
         }
+
+        public RoomSpecification(int id) : base(R=>R.Id==id) 
+        {
+            Includes.Add(r => r.Include(r => r.RoomFacilities)
+                           .ThenInclude(rf => rf.Facility));
+        }
+        
+
 
     }
 }

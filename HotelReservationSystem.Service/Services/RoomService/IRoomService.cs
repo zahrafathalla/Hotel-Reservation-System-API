@@ -1,4 +1,5 @@
 ﻿using HotelReservationSystem.Data.Entities;
+using HotelReservationSystem.Repository.Specification.RoomSpecifications;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;
 using Microsoft.AspNetCore.Http;
 using System;
@@ -13,8 +14,8 @@ namespace HotelReservationSystem.Service.Services.RoomService
     {
         Task<Room> AddRoomAsync(RoomDto roomDto);
         Task<Room> UpdateRoomAsync(int id, RoomDto room);
-        Task<IEnumerable<RoomToReturnDto>> GetAllAsync();
-
+        Task<IEnumerable<RoomToReturnDto>> GetAllAsync(RoomSpecParams specParams);
+        Task<IEnumerable<RoomToReturnDto>> GetAllRoomsIsAvaliableAsync();
         Task<bool> DeleteRoomAsync(int id);
 
         

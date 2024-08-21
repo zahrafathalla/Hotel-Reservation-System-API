@@ -37,7 +37,6 @@ namespace HotelReservationSystem.Mediator.RoomMediator
         public async Task<RoomToReturnDto> UpdateRoomAsync(int id, RoomDto roomDto)
         {
             var updatedRoom = await _roomService.UpdateRoomAsync(id, roomDto);
-
             await _roomFacilityService.AddOrUpdateFacilitiesToRoomAsync(updatedRoom.Id, roomDto.FacilityIds);
 
             var mappedRoom = _mapper.Map<RoomToReturnDto>(updatedRoom);
@@ -46,12 +45,6 @@ namespace HotelReservationSystem.Mediator.RoomMediator
         }
 
 
-        //private decimal CalculateRoomTotalPrice(decimal roomPrice, IEnumerable<Facility> facilities)
-        //{
-
-        //    var facilitiesPrice = facilities.Sum(f => f.Price);
-
-        //    return roomPrice + facilitiesPrice;
-        //}
+       
     }
 }

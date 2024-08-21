@@ -1,3 +1,5 @@
+using HotelReservationSystem.API.Errors;
+using HotelReservationSystem.API.MiddleWare;
 using HotelReservationSystem.Data.Context;
 using HotelReservationSystem.Mediator.RoomMediator;
 using HotelReservationSystem.Repository.Interface;
@@ -6,6 +8,7 @@ using HotelReservationSystem.Service.Services.FacilityService;
 using HotelReservationSystem.Service.Services.Helper;
 using HotelReservationSystem.Service.Services.RoomFacilityService;
 using HotelReservationSystem.Service.Services.RoomService;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
@@ -17,14 +20,15 @@ namespace HotelReservationSystem.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            
+            #region Add services to the container.
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-          
+
 
             builder.Services.AddDbContext<ApplicationDBContext>(options =>
             {
@@ -36,13 +40,39 @@ namespace HotelReservationSystem.API
             builder.Services.AddScoped<IunitOfWork, UnitOfWork>();
             builder.Services.AddScoped<IFacilityService, FacilityService>();
             builder.Services.AddScoped<IRoomService, RoomService>();
-            builder.Services.AddScoped<IRoomFacilityService, RoomFacilityService>();            
+            builder.Services.AddScoped<IRoomFacilityService, RoomFacilityService>();
             builder.Services.AddScoped<IRoomFacilityService, RoomFacilityService>();
             builder.Services.AddScoped<IRoomMediator, RoomMediator>();
 
             builder.Services.AddAutoMapper(typeof(MappingProfile));
 
+
+            builder.Services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.InvalidModelStateResponseFactory = (ActionContext) =>
+                {
+                    var errors = ActionContext.ModelState.Where(p => p.Value.Errors.Count() > 0)
+                                                       .SelectMany(p => p.Value.Errors)
+                                                       .Select(E => E.ErrorMessage)
+                                                       .ToList();
+
+                    var response = new ApiValidationErrorssResponse()
+                    {
+                        Errors = errors
+                    };
+
+                    return new BadRequestObjectResult(response);
+                };
+
+
+
+            }); 
+            #endregion
+
+
             var app = builder.Build();
+
+
             #region Apply All Pending Migrations[Update-Database] and Data Seeding
             using var scoped = app.Services.CreateScope();
             var services = scoped.ServiceProvider;
@@ -58,19 +88,21 @@ namespace HotelReservationSystem.API
                 logger.LogError(ex, "an error has been occured during apply the migration");
             }
             #endregion
-            // Configure the HTTP request pipeline.
+            
+
+            #region Configure the HTTP request pipeline.[middleWare]
+            app.UseMiddleware<ExceptionMiddleWare>();
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            app.UseStatusCodePagesWithReExecute("/Errors/{0}");
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseAuthorization();
-
-
-            app.MapControllers();
+            app.MapControllers(); 
+            #endregion
 
             app.Run();
         }

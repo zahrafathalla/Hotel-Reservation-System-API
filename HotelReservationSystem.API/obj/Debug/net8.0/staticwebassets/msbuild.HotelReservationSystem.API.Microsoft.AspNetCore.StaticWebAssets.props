@@ -400,6 +400,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Files\RoomImages\f45a8e8b-f769-4cd3-8fb2-eb49b024b9db-.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Files\RoomImages\f5943bdd-880d-4b60-82df-46e2acc238ce-.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelReservationSystem.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelReservationSystem.API</BasePath>
+      <RelativePath>Files/RoomImages/f5943bdd-880d-4b60-82df-46e2acc238ce-.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Files\RoomImages\f5943bdd-880d-4b60-82df-46e2acc238ce-.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Files\RoomImages\f9f9c219-4fc3-4ec7-ac02-87cd38598633-.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>HotelReservationSystem.API</SourceId>

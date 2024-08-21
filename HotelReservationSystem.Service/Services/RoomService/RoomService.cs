@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Repository.Interface;
+using HotelReservationSystem.Repository.Specification;
 using HotelReservationSystem.Repository.Specification.RoomSpecifications;
 using HotelReservationSystem.Service.Services.Helper;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;
@@ -49,16 +50,24 @@ namespace HotelReservationSystem.Service.Services.RoomService
 
             return oldRoom;
         }
-
-        public async Task<IEnumerable<RoomToReturnDto>> GetAllAsync()
+         
+        public async Task<IEnumerable<RoomToReturnDto>> GetAllAsync(RoomSpecParams roomSpec)
         {
-            var spec = new RoomSpecification();
-            var rooms = await _unitOfWork.Repository<Room>().GetAllWithSpecAsync(spec);
+            var spec = new RoomSpecification(roomSpec);
+            var rooms = await _unitOfWork.Repository<Room>().GetAllWithSpecAsync(spec); 
+            var roomDtos = _mapper.Map<IEnumerable<RoomToReturnDto>>(rooms);
+            
+            return  roomDtos;
+        }
 
+        public async Task<IEnumerable<RoomToReturnDto>> GetAllRoomsIsAvaliableAsync()
+        {
+            var rooms = await _unitOfWork.Repository<Room>().GetAsync(R => R.Status == RoomStatus.Available);
             var roomDtos = _mapper.Map<IEnumerable<RoomToReturnDto>>(rooms);
 
             return roomDtos;
         }
+
         public async Task<bool> DeleteRoomAsync(int id)  
         {
             var room = await _unitOfWork.Repository<Room>().GetByIdAsync(id);
@@ -73,5 +82,6 @@ namespace HotelReservationSystem.Service.Services.RoomService
 
             return true;
         }
+        
     }
 }

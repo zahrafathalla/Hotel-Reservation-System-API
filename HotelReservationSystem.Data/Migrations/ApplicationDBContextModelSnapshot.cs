@@ -43,7 +43,7 @@ namespace HotelReservationSystem.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("customers");
+                    b.ToTable("customers", (string)null);
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.Facility", b =>
@@ -70,7 +70,7 @@ namespace HotelReservationSystem.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("facilities");
+                    b.ToTable("facilities", (string)null);
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.FeedBack", b =>
@@ -111,7 +111,7 @@ namespace HotelReservationSystem.Data.Migrations
 
                     b.HasIndex("StaffId");
 
-                    b.ToTable("feedBacks");
+                    b.ToTable("feedBacks", (string)null);
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.Invoice", b =>
@@ -139,7 +139,7 @@ namespace HotelReservationSystem.Data.Migrations
                     b.HasIndex("ReservationId")
                         .IsUnique();
 
-                    b.ToTable("invoices");
+                    b.ToTable("invoices", (string)null);
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.Reservation", b =>
@@ -189,7 +189,7 @@ namespace HotelReservationSystem.Data.Migrations
 
                     b.HasIndex("StaffId");
 
-                    b.ToTable("reservations");
+                    b.ToTable("reservations", (string)null);
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.Room", b =>
@@ -224,7 +224,7 @@ namespace HotelReservationSystem.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("rooms");
+                    b.ToTable("rooms", (string)null);
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.RoomFacility", b =>
@@ -250,7 +250,7 @@ namespace HotelReservationSystem.Data.Migrations
 
                     b.HasIndex("RoomId");
 
-                    b.ToTable("RoomFacility");
+                    b.ToTable("RoomFacility", (string)null);
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.Staff", b =>
@@ -278,7 +278,7 @@ namespace HotelReservationSystem.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("staff");
+                    b.ToTable("staff", (string)null);
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.FeedBack", b =>

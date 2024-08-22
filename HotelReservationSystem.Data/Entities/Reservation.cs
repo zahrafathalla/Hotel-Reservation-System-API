@@ -12,7 +12,7 @@ namespace HotelReservationSystem.Data.Entities
         public DateTime CheckInDate { get; set; }
         public DateTime CheckOutDate { get; set; }
         public decimal TotalAmount { get; set; }
-        public ReservationStatus Status { get; set; }
+        public ReservationStatus Status { get; set; } = ReservationStatus.Pending;
         public string? PaymentIntentId { get; set; }
         public string? ClientSecret { get; set; }
         public int RoomId { get; set; }

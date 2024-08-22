@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rWsAMm4LUoltVj3FTQAXC4HXnWdp9VqhcDx5VI4yALR/ydYRe+AXJk53feVQXOWs3oyBF2lwlfp+2TnTQ15OmQ==",
+  "dgSpecHash": "mmLWMWM33H9gAo1/5e2NUrc+AoVdsT2TKNMryKE8njonY1Hxjyj9DDgv7zHuEdAqIepieOkxAPy1DV5a+U9K/Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\HotelReservationSystem.API.csproj",
   "expectedPackageFiles": [
@@ -55,6 +55,8 @@
     "C:\\Users\\almagd\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\almagd\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\almagd\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\almagd\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\almagd\\.nuget\\packages\\stripe.net\\45.8.0\\stripe.net.45.8.0.nupkg.sha512",
     "C:\\Users\\almagd\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\almagd\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\almagd\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",

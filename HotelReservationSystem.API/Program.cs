@@ -6,6 +6,7 @@ using HotelReservationSystem.Repository.Interface;
 using HotelReservationSystem.Repository.Repository;
 using HotelReservationSystem.Service.Services.FacilityService;
 using HotelReservationSystem.Service.Services.Helper;
+using HotelReservationSystem.Service.Services.PaymentService;
 using HotelReservationSystem.Service.Services.RoomFacilityService;
 using HotelReservationSystem.Service.Services.RoomService;
 using Microsoft.AspNetCore.Mvc;
@@ -43,6 +44,8 @@ namespace HotelReservationSystem.API
             builder.Services.AddScoped<IRoomFacilityService, RoomFacilityService>();
             builder.Services.AddScoped<IRoomFacilityService, RoomFacilityService>();
             builder.Services.AddScoped<IRoomMediator, RoomMediator>();
+            builder.Services.AddScoped<IPaymentService, PaymentService>();
+
 
             builder.Services.AddAutoMapper(typeof(MappingProfile));
 

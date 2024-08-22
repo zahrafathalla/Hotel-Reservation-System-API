@@ -175,6 +175,10 @@
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
               "version": "[2.2.2, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[45.8.0, )"
             }
           },
           "imports": [

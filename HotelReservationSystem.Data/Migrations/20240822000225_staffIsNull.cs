@@ -1,0 +1,59 @@
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace HotelReservationSystem.Data.Migrations
+{
+    /// <inheritdoc />
+    public partial class staffIsNull : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropForeignKey(
+                name: "FK_reservations_staff_StaffId",
+                table: "reservations");
+
+            migrationBuilder.AlterColumn<int>(
+                name: "StaffId",
+                table: "reservations",
+                type: "int",
+                nullable: true,
+                oldClrType: typeof(int),
+                oldType: "int");
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_reservations_staff_StaffId",
+                table: "reservations",
+                column: "StaffId",
+                principalTable: "staff",
+                principalColumn: "Id");
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropForeignKey(
+                name: "FK_reservations_staff_StaffId",
+                table: "reservations");
+
+            migrationBuilder.AlterColumn<int>(
+                name: "StaffId",
+                table: "reservations",
+                type: "int",
+                nullable: false,
+                defaultValue: 0,
+                oldClrType: typeof(int),
+                oldType: "int",
+                oldNullable: true);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_reservations_staff_StaffId",
+                table: "reservations",
+                column: "StaffId",
+                principalTable: "staff",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
+        }
+    }
+}

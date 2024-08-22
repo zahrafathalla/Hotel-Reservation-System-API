@@ -27,7 +27,7 @@ namespace HotelReservationSystem.Mediator.RoomMediator
         {
             var newRoom = await _roomService.AddRoomAsync(roomDto);
 
-            await _roomFacilityService.AddOrUpdateFacilitiesToRoomAsync(newRoom.Id, roomDto.FacilityIds);
+            await _roomFacilityService.AddFacilitiesToRoomAsync(newRoom.Id, roomDto.FacilityIds);
 
             var mappedRoom = _mapper.Map<RoomToReturnDto>(newRoom);
 
@@ -38,7 +38,7 @@ namespace HotelReservationSystem.Mediator.RoomMediator
         {
             var updatedRoom = await _roomService.UpdateRoomAsync(id, roomDto);
 
-            await _roomFacilityService.AddOrUpdateFacilitiesToRoomAsync(updatedRoom.Id, roomDto.FacilityIds);
+            await _roomFacilityService.UpdateFacilitiesInRoomAsync(updatedRoom.Id, roomDto.FacilityIds);
 
             var mappedRoom = _mapper.Map<RoomToReturnDto>(updatedRoom);
 

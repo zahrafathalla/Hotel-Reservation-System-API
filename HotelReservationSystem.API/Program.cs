@@ -4,6 +4,7 @@ using HotelReservationSystem.Repository.Interface;
 using HotelReservationSystem.Repository.Repository;
 using HotelReservationSystem.Service.Services.FacilityService;
 using HotelReservationSystem.Service.Services.Helper;
+using HotelReservationSystem.Service.Services.ReservationService;
 using HotelReservationSystem.Service.Services.RoomFacilityService;
 using HotelReservationSystem.Service.Services.RoomService;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +20,10 @@ namespace HotelReservationSystem.API
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+            }); ;
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -39,6 +43,7 @@ namespace HotelReservationSystem.API
             builder.Services.AddScoped<IRoomFacilityService, RoomFacilityService>();            
             builder.Services.AddScoped<IRoomFacilityService, RoomFacilityService>();
             builder.Services.AddScoped<IRoomMediator, RoomMediator>();
+            builder.Services.AddScoped<IReservationService, ReservationService>();
 
             builder.Services.AddAutoMapper(typeof(MappingProfile));
 

@@ -1,6 +1,7 @@
 using HotelReservationSystem.API.Errors;
 using HotelReservationSystem.API.MiddleWare;
 using HotelReservationSystem.Data.Context;
+using HotelReservationSystem.Mediator.ReservationMediator;
 using HotelReservationSystem.Mediator.RoomMediator;
 using HotelReservationSystem.Repository.Interface;
 using HotelReservationSystem.Repository.Repository;
@@ -47,6 +48,7 @@ namespace HotelReservationSystem.API
             builder.Services.AddScoped<IRoomMediator, RoomMediator>();
             builder.Services.AddScoped<IPaymentService, PaymentService>();
             builder.Services.AddScoped<IReservationService, ReservationService>();
+            builder.Services.AddScoped< IReservationMediator, ReservationMediator >();
 
 
 

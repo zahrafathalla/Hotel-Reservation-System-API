@@ -20,7 +20,6 @@ namespace HotelReservationSystem.Service.Services.RoomService
         Task<IEnumerable<RoomToReturnDto>> GetAllRoomsIsAvaliableAsync();
         Task<bool> DeleteRoomAsync(int id);
 
-        
-
+        Task<RoomToReturnDto> GetRoomByIDAsync(int id);
     }
 }

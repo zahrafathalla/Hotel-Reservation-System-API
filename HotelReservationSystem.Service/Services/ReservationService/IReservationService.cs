@@ -1,4 +1,5 @@
-﻿using HotelReservationSystem.Service.Services.ReservationService.Dtos;
+﻿using HotelReservationSystem.Data.Entities;
+using HotelReservationSystem.Service.Services.ReservationService.Dtos;
 
 namespace HotelReservationSystem.Service.Services.ReservationService
 {
@@ -6,5 +7,6 @@ namespace HotelReservationSystem.Service.Services.ReservationService
     {
         Task<ReservationToReturnDto> MakeReservationAsync(ReservationDto request);
         Task<bool> CancelReservationAsync(int reservationId); 
+        Task<Reservation> UpdateReservationAsync(int id, ReservationDto reservation,decimal roomPrice);
     }
 }

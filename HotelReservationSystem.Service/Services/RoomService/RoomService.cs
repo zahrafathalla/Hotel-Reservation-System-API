@@ -106,5 +106,11 @@ namespace HotelReservationSystem.Service.Services.RoomService
             return roomDtos;
         }
 
+        public  async Task<RoomToReturnDto> GetRoomByIDAsync(int id)
+        {
+            var room = await _unitOfWork.Repository<Room>().GetByIdAsync(id);
+            var roomDto= _mapper.Map<RoomToReturnDto>(room);
+            return roomDto;
+        }
     }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj": {}
+    "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj": {
+    "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj",
+        "projectUniqueName": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj",
         "projectName": "HotelReservationSystem.Data",
-        "projectPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj",
-        "packagesPath": "C:\\Users\\almagd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Data\\obj\\",
+        "projectPath": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj",
+        "packagesPath": "C:\\Users\\marwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\almagd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -65,21 +71,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj": {
+    "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj",
+        "projectUniqueName": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj",
         "projectName": "HotelReservationSystem.Mediator",
-        "projectPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj",
-        "packagesPath": "C:\\Users\\almagd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Mediator\\obj\\",
+        "projectPath": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Mediator\\HotelReservationSystem.Mediator.csproj",
+        "packagesPath": "C:\\Users\\marwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Mediator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\almagd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,14 +93,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj": {
-                "projectPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj"
+              "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj": {
+                "projectPath": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj"
               }
             }
           }
@@ -103,6 +110,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -124,21 +136,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj": {
+    "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj",
+        "projectUniqueName": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj",
         "projectName": "HotelReservationSystem.Repository",
-        "projectPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj",
-        "packagesPath": "C:\\Users\\almagd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Repository\\obj\\",
+        "projectPath": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj",
+        "packagesPath": "C:\\Users\\marwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\almagd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -146,14 +158,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj": {
-                "projectPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj"
+              "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj": {
+                "projectPath": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj"
               }
             }
           }
@@ -162,6 +175,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -183,21 +201,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj": {
+    "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj",
+        "projectUniqueName": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj",
         "projectName": "HotelReservationSystem.Service",
-        "projectPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj",
-        "packagesPath": "C:\\Users\\almagd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Service\\obj\\",
+        "projectPath": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj",
+        "packagesPath": "C:\\Users\\marwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\almagd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -205,14 +223,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj": {
-                "projectPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj"
+              "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj": {
+                "projectPath": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj"
               }
             }
           }
@@ -221,6 +240,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -256,7 +280,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

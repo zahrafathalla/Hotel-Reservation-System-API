@@ -10,6 +10,7 @@ namespace HotelReservationSystem.Service.Services.ReservationService.Dtos
     public class ReservationToReturnDto
     {
         public int ReservationId { get; set; }
+        public decimal TotalAmount { get; set; }
         public string Message { get; set; }
     }
 }

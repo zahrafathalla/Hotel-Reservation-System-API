@@ -1,14 +1,8 @@
-﻿
-
-using AutoMapper;
+﻿using AutoMapper;
 using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Repository.Interface;
+using HotelReservationSystem.Repository.Specification.RoomSpecifications;
 using HotelReservationSystem.Service.Services.ReservationService.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HotelReservationSystem.Service.Services.ReservationService
 {
@@ -23,16 +17,14 @@ namespace HotelReservationSystem.Service.Services.ReservationService
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
-
-
         public async Task<ReservationToReturnDto> MakeReservationAsync(ReservationDto reservationDto)
-
         {
             if (reservationDto.CheckInDate >= reservationDto.CheckOutDate)
                 return null;
 
             var roomRepo = _unitOfWork.Repository<Room>();
-            var room = await roomRepo.GetByIdAsync(reservationDto.RoomId);
+            var spec = new RoomSpecification(reservationDto.RoomId);
+            var room = await roomRepo.GetByIdWithSpecAsync(spec);
 
             if (room == null)
                 return null;
@@ -40,20 +32,45 @@ namespace HotelReservationSystem.Service.Services.ReservationService
             var conflictingReservations = await _unitOfWork.Repository<Reservation>().GetAsync(r =>
                 r.RoomId == reservationDto.RoomId &&
                 r.CheckInDate < reservationDto.CheckOutDate &&
-                r.CheckOutDate > reservationDto.CheckInDate
+                r.CheckOutDate > reservationDto.CheckInDate &&
+                r.Status != ReservationStatus.Cancelled
                 );
 
             if (conflictingReservations.Any())
                 return null;
 
-
             var reservation = _mapper.Map<Reservation>(reservationDto);
+
+            var roomPrice = room.Price;
+            decimal facilityTotalPrice = 0m;
+
+
+            var roomFacilities = await _unitOfWork.Repository<RoomFacility>()
+                    .GetAsync(rf => rf.RoomId == reservationDto.RoomId);
+
+
+            foreach (var facilityId in reservationDto.Facilities)
+            {
+                if (!roomFacilities.Any(rf => rf.FacilityId == facilityId))
+                {
+                    var facility = await _unitOfWork.Repository<Facility>().GetByIdAsync(facilityId);
+                    if (facility != null)
+                    {
+                        reservation.ReservationFacilities.Add(new ReservationFacility
+                        {
+                            ReservationId = reservation.Id,
+                            FacilityId = facility.Id
+                        });
+                        facilityTotalPrice += facility.Price;
+                    }
+                }
+            }
+            reservation.TotalAmount = CalculaterReservationTotalCost(roomPrice + facilityTotalPrice, reservation);
             await _unitOfWork.Repository<Reservation>().AddAsync(reservation);
             await _unitOfWork.CompleteAsync();
 
             var mappedReservation = _mapper.Map<ReservationToReturnDto>(reservation);
             return mappedReservation;
-
         }
 
         public async Task<bool> CancelReservationAsync(int reservationId)
@@ -74,17 +91,12 @@ namespace HotelReservationSystem.Service.Services.ReservationService
 
             return true;
         }
-        public decimal CalculaterReservationTotalCost(decimal roomPrice, Reservation reservation)
-        {
-            var stayingDays = (decimal)(reservation.CheckOutDate - reservation.CheckInDate).TotalDays;
-            return stayingDays * roomPrice;
-        }
         public async Task<Reservation> UpdateReservationAsync(int id, ReservationDto reservation, decimal roomPrice)
         {
-
             var oldReservation = await _unitOfWork.Repository<Reservation>().GetByIdAsync(id);
             if (oldReservation == null)
                 return null;
+
             var newReservation = _mapper.Map<Reservation>(reservation);
             oldReservation.CheckInDate = newReservation.CheckInDate;
             oldReservation.CheckOutDate = newReservation.CheckOutDate;
@@ -92,6 +104,11 @@ namespace HotelReservationSystem.Service.Services.ReservationService
             oldReservation.TotalAmount = CalculaterReservationTotalCost(roomPrice, newReservation);
             await _unitOfWork.CompleteAsync();
             return oldReservation;
+        }
+        private decimal CalculaterReservationTotalCost(decimal roomPrice, Reservation reservation)
+        {
+            var stayingDays = (decimal)(reservation.CheckOutDate - reservation.CheckInDate).TotalDays;
+            return stayingDays * roomPrice;
         }
     }
 }

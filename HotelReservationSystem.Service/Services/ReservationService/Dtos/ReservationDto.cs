@@ -13,5 +13,6 @@ namespace HotelReservationSystem.Service.Services.ReservationService.Dtos
         public int CustomerId { get; set; }
         public DateTime CheckInDate { get; set; }
         public DateTime CheckOutDate { get; set; }
+        public List<int> Facilities { get; set; }
     }
 }

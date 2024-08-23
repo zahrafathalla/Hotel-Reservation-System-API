@@ -22,6 +22,7 @@ namespace HotelReservationSystem.Service.Services.ReservationService
             _mapper = mapper;
         }
 
+
         public async Task<ReservationToReturnDto> MakeReservationAsync(ReservationDto reservationDto)
         {
             if (reservationDto.CheckInDate >= reservationDto.CheckOutDate)
@@ -49,6 +50,23 @@ namespace HotelReservationSystem.Service.Services.ReservationService
 
             var mappedReservation = _mapper.Map<ReservationToReturnDto>(reservation);
             return mappedReservation;
+        }
+        public async Task<bool> CancelReservationAsync(int reservationId)
+        {
+            var reservationRepo = _unitOfWork.Repository<Reservation>();
+            var reservation = await reservationRepo.GetByIdAsync(reservationId);
+
+            if (reservation == null)
+                return false;
+
+            if (reservation.Status == ReservationStatus.CheckedOut || reservation.Status == ReservationStatus.Cancelled)
+                return false;
+
+            reservation.Status = ReservationStatus.Cancelled;
+            reservationRepo.Update(reservation);
+            await _unitOfWork.CompleteAsync();
+
+            return true;
         }
     }
 }

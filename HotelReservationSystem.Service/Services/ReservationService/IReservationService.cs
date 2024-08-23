@@ -5,6 +5,6 @@ namespace HotelReservationSystem.Service.Services.ReservationService
     public interface IReservationService
     {
         Task<ReservationToReturnDto> MakeReservationAsync(ReservationDto request);
-
+        Task<bool> CancelReservationAsync(int reservationId); 
     }
 }

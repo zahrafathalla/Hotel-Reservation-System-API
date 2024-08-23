@@ -23,5 +23,11 @@ namespace HotelReservationSystem.API.Controllers
                 return BadRequest(new ApiResponse(400));
             return Ok(reservation);
         }
+
+        [HttpDelete("{Id}")]
+        public async Task<ActionResult<bool>> CancelReservationAsync(int Id)
+        {
+            return Ok(await _reservationService.CancelReservationAsync(Id));
+        }
     }
 }

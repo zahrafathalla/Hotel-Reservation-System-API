@@ -1,9 +1,11 @@
 using HotelReservationSystem.Data.Context;
+using HotelReservationSystem.Mediator.ReservationMediator;
 using HotelReservationSystem.Mediator.RoomMediator;
 using HotelReservationSystem.Repository.Interface;
 using HotelReservationSystem.Repository.Repository;
 using HotelReservationSystem.Service.Services.FacilityService;
 using HotelReservationSystem.Service.Services.Helper;
+using HotelReservationSystem.Service.Services.ReservationService;
 using HotelReservationSystem.Service.Services.RoomFacilityService;
 using HotelReservationSystem.Service.Services.RoomService;
 using Microsoft.EntityFrameworkCore;
@@ -39,6 +41,8 @@ namespace HotelReservationSystem.API
             builder.Services.AddScoped<IRoomFacilityService, RoomFacilityService>();            
             builder.Services.AddScoped<IRoomFacilityService, RoomFacilityService>();
             builder.Services.AddScoped<IRoomMediator, RoomMediator>();
+            builder.Services.AddScoped< IReservationMediator, ReservationMediator >();
+            builder.Services.AddScoped<IReservationService, ReservationService>();
 
             builder.Services.AddAutoMapper(typeof(MappingProfile));
             builder.Services.AddAutoMapper(typeof(RoomProfile));

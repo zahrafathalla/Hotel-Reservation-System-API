@@ -452,3 +452,5 @@ C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\o
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.pdb
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.genruntimeconfig.cache
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\obj\Debug\net8.0\ref\HotelReservationSystem.API.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\bin\Debug\net8.0\Stripe.net.dll

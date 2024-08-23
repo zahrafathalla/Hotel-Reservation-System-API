@@ -466,6 +466,26 @@
           }
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
+      "Stripe.net/45.8.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "System.Configuration.ConfigurationManager": "6.0.1"
+        },
+        "runtime": {
+          "lib/net6.0/Stripe.net.dll": {
+            "assemblyVersion": "45.8.0.0",
+            "fileVersion": "45.8.0.0"
+          }
+        }
+      },
       "System.Buffers/4.5.0": {},
       "System.Configuration.ConfigurationManager/6.0.1": {
         "dependencies": {
@@ -662,7 +682,8 @@
         "dependencies": {
           "AutoMapper": "13.0.1",
           "HotelReservationSystem.Repository": "1.0.0",
-          "Microsoft.AspNetCore.Http": "2.2.2"
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "Stripe.net": "45.8.0"
         },
         "runtime": {
           "HotelReservationSystem.Service.dll": {}
@@ -948,6 +969,20 @@
       "sha512": "sha512-hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "Stripe.net/45.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MX4tByNC9ElsYV/4Fbp8iQ3pFabBHMlN15kZqg2c2zbWIKhMjijVEQbm31BG27HD0aIMwk/RTA//NVcgK3I8kQ==",
+      "path": "stripe.net/45.8.0",
+      "hashPath": "stripe.net.45.8.0.nupkg.sha512"
     },
     "System.Buffers/4.5.0": {
       "type": "package",

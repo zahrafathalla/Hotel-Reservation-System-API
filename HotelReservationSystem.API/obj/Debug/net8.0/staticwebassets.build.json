@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zeh4xZkSRxCQJgu78v9BL2XE7D0Rj39VNUunDdoECJg=",
+  "Hash": "3pJ4TU/SJ6vkH+5MSulwpUVhYzooAs4mN+ianr9NxUY=",
   "Source": "HotelReservationSystem.API",
   "BasePath": "_content/HotelReservationSystem.API",
   "Mode": "Default",
@@ -15,44 +15,5 @@
       "Pattern": "**"
     }
   ],
-  "Assets": [
-    {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\ad6ffaf4-d59c-46b3-a682-0f4b2f431051-.jpg",
-      "SourceId": "HotelReservationSystem.API",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
-      "BasePath": "_content/HotelReservationSystem.API",
-      "RelativePath": "Files/RoomImages/ad6ffaf4-d59c-46b3-a682-0f4b2f431051-.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\ad6ffaf4-d59c-46b3-a682-0f4b2f431051-.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\c5374c7e-52f8-46b5-ae71-344ac9fcc85d-.jpg",
-      "SourceId": "HotelReservationSystem.API",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
-      "BasePath": "_content/HotelReservationSystem.API",
-      "RelativePath": "Files/RoomImages/c5374c7e-52f8-46b5-ae71-344ac9fcc85d-.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\c5374c7e-52f8-46b5-ae71-344ac9fcc85d-.jpg"
-    }
-  ]
+  "Assets": []
 }

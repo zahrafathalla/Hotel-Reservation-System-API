@@ -42,6 +42,8 @@ namespace HotelReservationSystem.Repository.Specification.RoomSpecifications
                 AddOrderBy(R => R.IsDeleted == false);
             }
 
+            ApplyPagination(spec.PageSize*(spec.PageIndex-1),spec.PageSize);
+
 
            
         }

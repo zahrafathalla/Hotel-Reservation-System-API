@@ -10,6 +10,7 @@ namespace HotelReservationSystem.Repository.Interface
         Task<T?> GetByIdWithSpecAsync(ISpecification<T> Spec);
         Task<IEnumerable<T>> GetAllAsync();
         Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>> expression);
+        Task<int> GetCountWithSpecAsync(ISpecification<T> Spec);
         Task<T?> GetByIdAsync(int id);
         Task AddAsync(T entity);
         void Update(T entity);

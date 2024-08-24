@@ -3,6 +3,7 @@ using HotelReservationSystem.API.Errors;
 using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Mediator.RoomMediator;
 using HotelReservationSystem.Repository.Specification.RoomSpecifications;
+using HotelReservationSystem.Service.Services.Helper.ResulteViewModel;
 using HotelReservationSystem.Service.Services.RoomService;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;
 
@@ -60,20 +61,23 @@ namespace HotelReservationSystem.API.Controllers
         [ProducesResponseType(typeof(RoomToReturnDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<RoomToReturnDto>>> GetAllRooms([FromQuery] RoomSpecParams roomSpec)
+        public async Task<ActionResult<ResultViewModels<RoomToReturnDto>>> GetAllRooms([FromQuery] RoomSpecParams roomSpec)
         {
             var rooms = await _roomService.GetAllAsync(roomSpec);
-            return Ok(rooms);
+            if (rooms is null) return BadRequest(new ApiResponse(400));
+            var count =await _roomService.GetCount(roomSpec);
+            return Ok(new ResultViewModels<RoomToReturnDto>(roomSpec.PageSize ,roomSpec.PageIndex, count, rooms));
         }
 
         [ProducesResponseType(typeof(RoomToReturnDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<RoomToReturnDto>>> GetAllRoomsAvalibale()
+        public async Task<ActionResult<ResultViewModels<RoomToReturnDto>>> GetAllRoomsAvalibale([FromQuery] RoomSpecParams roomSpec)
         {
             var rooms = await _roomService.GetAllRoomsIsAvaliableAsync();
             if (rooms is null) return NotFound(new ApiResponse(404));
-            return Ok(rooms);
+            var count = await _roomService.GetCount(roomSpec);
+            return Ok(new ResultViewModels<RoomToReturnDto>(roomSpec.PageSize, roomSpec.PageIndex, count, rooms));
         }
 
         [HttpDelete("{id}")]

@@ -23,6 +23,8 @@ namespace HotelReservationSystem.Service.Services.PaymentService
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
+
+
         public async Task<ReservationToReturnDto> CreatePaymentIntentAsync(int reservationId)
         {
             StripeConfiguration.ApiKey = _configuration["Stripe:SecretKey"];
@@ -70,6 +72,20 @@ namespace HotelReservationSystem.Service.Services.PaymentService
             var mappedReservation = _mapper.Map<ReservationToReturnDto>(reservation);
             return mappedReservation;
         }
+
+        public async Task ConfirmPaymentAsync(string paymentIntentId , string paymentMethodId)
+        {
+            StripeConfiguration.ApiKey = _configuration["Stripe:SecretKey"];
+
+            var service = new PaymentIntentService();
+            var options = new PaymentIntentConfirmOptions
+            {
+                PaymentMethod = paymentMethodId
+            };
+
+            PaymentIntent paymentIntent = await service.ConfirmAsync(paymentIntentId, options);
+        }
+
 
         public async Task<Reservation> UpdateReservationStatusAsync(string paymnetIntentId, bool isPaid)
         {

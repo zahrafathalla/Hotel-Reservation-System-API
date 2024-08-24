@@ -12,7 +12,7 @@ namespace HotelReservationSystem.API.Controllers
     public class PaymentController : BaseController
     {
         private readonly IPaymentService _paymentService;
-        private readonly ILogger<PaymentController> _logger;
+        private readonly ILogger<PaymentController> _logger; 
         private const string endpointSecret = "whsec_f757a9f10b80d4d0d50a426962cd866ef4be5f417beef34bfd7e5da9e2ea06ba";
 
         public PaymentController(
@@ -29,7 +29,12 @@ namespace HotelReservationSystem.API.Controllers
             var reservation = await _paymentService.CreatePaymentIntentAsync(reservationId);
             return Ok(reservation);
         }
-
+        [HttpPost("confirm-payment/{paymentIntentId}")]
+        public async Task<IActionResult> ConfirmPayment(string paymentIntentId, string paymentMethodId)
+        {
+            await _paymentService.ConfirmPaymentAsync(paymentIntentId, paymentMethodId);
+            return Ok();
+        }
 
         [HttpPost("webhook")]
         public async Task<IActionResult> Index()

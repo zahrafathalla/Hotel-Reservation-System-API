@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Service.Services.FacilityService.Dtos;
+using HotelReservationSystem.Service.Services.PaymentService.Dtos;
 using HotelReservationSystem.Service.Services.ReservationService.Dtos;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;
 
@@ -23,10 +24,12 @@ namespace HotelReservationSystem.Service.Services.Helper
 
             CreateMap<ReservationDto, Reservation>();
 
-            CreateMap<Reservation, ReservationToReturnDto>()
+            CreateMap<Reservation, ReservationCreatedToReturnDto>()
                 .ForMember(dest => dest.ReservationId, opt => opt.MapFrom(src => src.Id))
                 .ForMember(dest => dest.Message, opt => opt.MapFrom(src => "Reservation successful"));
             CreateMap<ReservationDto, Reservation>();
+
+            CreateMap<Reservation, ReservationToReturnDto>();
         }
     }
 }

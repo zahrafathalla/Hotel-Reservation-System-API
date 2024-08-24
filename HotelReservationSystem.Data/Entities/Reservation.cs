@@ -19,7 +19,6 @@ namespace HotelReservationSystem.Data.Entities
         public Room Room { get; set; }
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
-
         public ICollection<ReservationFacility> ReservationFacilities { get; set; } = new List<ReservationFacility>();
     }
 }

@@ -16,11 +16,11 @@ namespace HotelReservationSystem.Mediator.ReservationMediator
             _roomService = roomService; 
             _mapper = mapper;
         }
-        public async Task<ReservationToReturnDto> UpdateReservationAsync(int id, ReservationDto reservationDto)
+        public async Task<ReservationCreatedToReturnDto> UpdateReservationAsync(int id, ReservationDto reservationDto)
         {
            var room =  await _roomService.GetRoomByIDAsync(reservationDto.RoomId);
             var reservation = await _reservationService.UpdateReservationAsync(id,reservationDto,room.Price);
-          return  _mapper.Map<ReservationToReturnDto>(reservation);
+          return  _mapper.Map<ReservationCreatedToReturnDto>(reservation);
         }
     }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.Serialization;
 
 namespace HotelReservationSystem.Data.Entities
 {
@@ -19,6 +14,9 @@ namespace HotelReservationSystem.Data.Entities
         CheckedOut,
 
         [EnumMember(Value = "Cancelled")]
-        Cancelled
+        Cancelled,
+
+        [EnumMember(Value = "Failed")]
+        Failed
     }
 }

@@ -17,7 +17,7 @@ namespace HotelReservationSystem.Service.Services.ReservationService
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
-        public async Task<ReservationToReturnDto> MakeReservationAsync(ReservationDto reservationDto)
+        public async Task<ReservationCreatedToReturnDto> MakeReservationAsync(ReservationDto reservationDto)
         {
             if (reservationDto.CheckInDate >= reservationDto.CheckOutDate)
                 return null;
@@ -69,7 +69,7 @@ namespace HotelReservationSystem.Service.Services.ReservationService
             await _unitOfWork.Repository<Reservation>().AddAsync(reservation);
             await _unitOfWork.CompleteAsync();
 
-            var mappedReservation = _mapper.Map<ReservationToReturnDto>(reservation);
+            var mappedReservation = _mapper.Map<ReservationCreatedToReturnDto>(reservation);
             return mappedReservation;
         }
 

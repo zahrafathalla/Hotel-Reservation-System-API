@@ -20,7 +20,7 @@ namespace HotelReservationSystem.API.Controllers
 
         }
         [HttpPost]
-        public async Task<ActionResult<ReservationToReturnDto>> MakeReservation(ReservationDto reservationDto)
+        public async Task<ActionResult<ReservationCreatedToReturnDto>> MakeReservation(ReservationDto reservationDto)
         {
             var reservation = await _reservationService.MakeReservationAsync(reservationDto);
             if (reservation == null)
@@ -34,7 +34,7 @@ namespace HotelReservationSystem.API.Controllers
             return Ok(await _reservationService.CancelReservationAsync(Id));
         }
         [HttpPut]
-        public async Task<ActionResult<ReservationToReturnDto>> UpdateResevation(int id, ReservationDto reservationDto)
+        public async Task<ActionResult<ReservationCreatedToReturnDto>> UpdateResevation(int id, ReservationDto reservationDto)
         {
             var reservation = await _reservationMediator.UpdateReservationAsync(id, reservationDto);
             if (reservation is null) return BadRequest();

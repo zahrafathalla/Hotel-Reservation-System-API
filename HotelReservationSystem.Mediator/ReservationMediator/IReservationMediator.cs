@@ -4,6 +4,6 @@ namespace HotelReservationSystem.Mediator.ReservationMediator
 {
     public interface IReservationMediator
     {
-        Task<ReservationToReturnDto> UpdateReservationAsync(int id, ReservationDto reservationDto);
+        Task<ReservationCreatedToReturnDto> UpdateReservationAsync(int id, ReservationDto reservationDto);
     }
 }

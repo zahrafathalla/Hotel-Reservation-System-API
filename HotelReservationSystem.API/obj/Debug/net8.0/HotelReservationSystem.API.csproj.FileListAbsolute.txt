@@ -456,3 +456,6 @@ C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System
 C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.pdb
 C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.genruntimeconfig.cache
 C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.API\obj\Debug\net8.0\ref\HotelReservationSystem.API.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll

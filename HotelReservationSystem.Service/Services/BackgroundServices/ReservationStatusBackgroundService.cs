@@ -19,7 +19,9 @@ namespace HotelReservationSystem.Service.Services.BackgroundServices
                 using (var scope = _serviceScopeFactory.CreateScope())
                 {
                     var reservationService = scope.ServiceProvider.GetRequiredService<IReservationService>();
-                    await reservationService.UpdateReservationStatusAsync();
+                    await reservationService.UpdateCheckInStatusesAsync();
+                    await reservationService.UpdateCheckOutStatusesAsync();
+
                 }
 
                 await Task.Delay(TimeSpan.FromMinutes(2), stoppingToken); 

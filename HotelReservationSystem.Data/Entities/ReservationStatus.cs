@@ -7,6 +7,9 @@ namespace HotelReservationSystem.Data.Entities
         [EnumMember(Value = "Pending")]
         Pending,
 
+        [EnumMember(Value = "PaymentReceived")]
+        PaymentReceived,
+
         [EnumMember(Value = "CheckedIn")]
         CheckedIn,
 
@@ -14,9 +17,6 @@ namespace HotelReservationSystem.Data.Entities
         CheckedOut,
 
         [EnumMember(Value = "Cancelled")]
-        Cancelled,
-
-        [EnumMember(Value = "Failed")]
-        Failed
+        Cancelled
     }
 }

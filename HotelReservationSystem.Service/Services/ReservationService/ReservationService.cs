@@ -33,7 +33,8 @@ namespace HotelReservationSystem.Service.Services.ReservationService
                 r.RoomId == reservationDto.RoomId &&
                 r.CheckInDate < reservationDto.CheckOutDate &&
                 r.CheckOutDate > reservationDto.CheckInDate &&
-                r.Status != ReservationStatus.Cancelled
+                r.Status != ReservationStatus.Cancelled  &&
+                r.Status != ReservationStatus.CheckedOut 
                 );
 
             if (conflictingReservations.Any())
@@ -105,25 +106,83 @@ namespace HotelReservationSystem.Service.Services.ReservationService
             await _unitOfWork.CompleteAsync();
             return oldReservation;
         }
-        private decimal CalculaterReservationTotalCost(decimal roomPrice, Reservation reservation)
-        {
-            var stayingDays = (decimal)(reservation.CheckOutDate - reservation.CheckInDate).TotalDays;
-            return stayingDays * roomPrice;
-        }
 
-        public async Task UpdateReservationStatusAsync()
+        //public async Task UpdateReservationStatusAsync()
+        //{
+        //    var reservations = await _unitOfWork.Repository<Reservation>()
+        //                                .GetAsync(r => r.Status == ReservationStatus.CheckedIn && DateTime.Now >= r.CheckOutDate);
+
+
+        //    foreach(var reservation in reservations)
+        //    {
+        //        reservation.Status = ReservationStatus.CheckedOut;
+        //        _unitOfWork.Repository<Reservation>().Update(reservation);
+
+        //        var room = await _unitOfWork.Repository<Room>().GetByIdAsync(reservation.RoomId);
+        //        if (room != null)
+        //        {
+        //            room.Status = RoomStatus.Available;
+        //            _unitOfWork.Repository<Room>().Update(room);
+        //        }
+
+        //    }
+        //    await _unitOfWork.CompleteAsync();
+        //}
+        public async Task UpdateCheckInStatusesAsync()
         {
             var reservations = await _unitOfWork.Repository<Reservation>()
-                                        .GetAsync(r => r.Status == ReservationStatus.CheckedIn && DateTime.Now >= r.CheckOutDate);
+                        .GetAsync(r => r.Status == ReservationStatus.PaymentReceived &&
+                                       r.CheckInDate.Date == DateTime.Now.Date);
+
+            foreach (var reservation in reservations)
+            {
+
+                reservation.Status = ReservationStatus.CheckedIn;
+                _unitOfWork.Repository<Reservation>().Update(reservation);
+
+                var room = await _unitOfWork.Repository<Room>().GetByIdAsync(reservation.RoomId);
+                if (room != null)
+                {
+                    room.Status = RoomStatus.Occupied;
+                    _unitOfWork.Repository<Room>().Update(room);
+                }
+
+            }
+
+            await _unitOfWork.CompleteAsync();
 
 
-            foreach(var reservation in reservations)
+        }
+
+        public async Task UpdateCheckOutStatusesAsync()
+        {
+            var reservations = await _unitOfWork.Repository<Reservation>()
+                      .GetAsync(r => r.Status == ReservationStatus.CheckedIn &&
+                                     r.CheckOutDate.Date == DateTime.Now.Date);
+
+            foreach (var reservation in reservations)
             {
                 reservation.Status = ReservationStatus.CheckedOut;
                 _unitOfWork.Repository<Reservation>().Update(reservation);
 
+                var room = await _unitOfWork.Repository<Room>().GetByIdAsync(reservation.RoomId);
+                if (room != null)
+                {
+                    room.Status = RoomStatus.Available;
+                    _unitOfWork.Repository<Room>().Update(room);
+                }
             }
+
             await _unitOfWork.CompleteAsync();
         }
+
+        private decimal CalculaterReservationTotalCost(decimal roomPrice, Reservation reservation)
+        {
+            var stayingDays = (reservation.CheckOutDate.Date - reservation.CheckInDate.Date).Days;
+
+            stayingDays= stayingDays == 0 ? 1: stayingDays;
+            return stayingDays * roomPrice;
+        }
+
     }
 }

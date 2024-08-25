@@ -101,14 +101,14 @@ namespace HotelReservationSystem.Service.Services.PaymentService
             {
                 if (reservation.Status == ReservationStatus.Pending)
                 {
-                    reservation.Status = ReservationStatus.CheckedIn;
+                    reservation.Status = ReservationStatus.PaymentReceived;
                 }
             }
             else
             {
                 if (reservation.Status != ReservationStatus.CheckedOut && reservation.Status != ReservationStatus.Cancelled)
                 {
-                    reservation.Status = ReservationStatus.Failed;
+                    reservation.Status = ReservationStatus.Cancelled;
                 }
             }
 

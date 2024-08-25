@@ -7,7 +7,10 @@ namespace HotelReservationSystem.Service.Services.ReservationService
     {
         Task<ReservationCreatedToReturnDto> MakeReservationAsync(ReservationDto request);
         Task<bool> CancelReservationAsync(int reservationId);
-        Task UpdateReservationStatusAsync();
+        //Task UpdateReservationStatusAsync();
         Task<Reservation> UpdateReservationAsync(int id, ReservationDto reservation,decimal roomPrice);
+        Task UpdateCheckInStatusesAsync();
+        Task UpdateCheckOutStatusesAsync();
+
     }
 }

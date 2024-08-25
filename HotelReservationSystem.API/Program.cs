@@ -5,6 +5,7 @@ using HotelReservationSystem.Mediator.ReservationMediator;
 using HotelReservationSystem.Mediator.RoomMediator;
 using HotelReservationSystem.Repository.Interface;
 using HotelReservationSystem.Repository.Repository;
+using HotelReservationSystem.Service.Services.BackgroundServices;
 using HotelReservationSystem.Service.Services.FacilityService;
 using HotelReservationSystem.Service.Services.Helper;
 using HotelReservationSystem.Service.Services.PaymentService;
@@ -52,8 +53,7 @@ namespace HotelReservationSystem.API
             builder.Services.AddScoped<IPaymentService, PaymentService>();
             builder.Services.AddScoped<IReservationService, ReservationService>();
             builder.Services.AddScoped< IReservationMediator, ReservationMediator >();
-
-
+            builder.Services.AddHostedService<ReservationStatusBackgroundService>();
 
             builder.Services.AddAutoMapper(typeof(MappingProfile));
 

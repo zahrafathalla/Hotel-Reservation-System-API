@@ -33,7 +33,7 @@ namespace HotelReservationSystem.API.Controllers
         {
             return Ok(await _reservationService.CancelReservationAsync(Id));
         }
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<ActionResult<ReservationCreatedToReturnDto>> UpdateResevation(int id, ReservationDto reservationDto)
         {
             var reservation = await _reservationMediator.UpdateReservationAsync(id, reservationDto);

@@ -110,5 +110,20 @@ namespace HotelReservationSystem.Service.Services.ReservationService
             var stayingDays = (decimal)(reservation.CheckOutDate - reservation.CheckInDate).TotalDays;
             return stayingDays * roomPrice;
         }
+
+        public async Task UpdateReservationStatusAsync()
+        {
+            var reservations = await _unitOfWork.Repository<Reservation>()
+                                        .GetAsync(r => r.Status == ReservationStatus.CheckedIn && DateTime.Now >= r.CheckOutDate);
+
+
+            foreach(var reservation in reservations)
+            {
+                reservation.Status = ReservationStatus.CheckedOut;
+                _unitOfWork.Repository<Reservation>().Update(reservation);
+
+            }
+            await _unitOfWork.CompleteAsync();
+        }
     }
 }

@@ -11,6 +11,7 @@ using HotelReservationSystem.Service.Services.PaymentService;
 using HotelReservationSystem.Service.Services.ReservationService;
 using HotelReservationSystem.Service.Services.RoomFacilityService;
 using HotelReservationSystem.Service.Services.RoomService;
+using HotelReservationSystem.Service.Services.InvoiceService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
@@ -49,6 +50,7 @@ namespace HotelReservationSystem.API
             builder.Services.AddScoped<IPaymentService, PaymentService>();
             builder.Services.AddScoped<IReservationService, ReservationService>();
             builder.Services.AddScoped< IReservationMediator, ReservationMediator >();
+            builder.Services.AddScoped<IInvoiceService,InvoiceService>();
 
 
 

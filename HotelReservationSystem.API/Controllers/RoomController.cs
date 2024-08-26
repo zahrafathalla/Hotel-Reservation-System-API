@@ -11,8 +11,7 @@ using System.Collections.Generic;
 
 namespace HotelReservationSystem.API.Controllers
 {
-    [ApiController]
-    [Route("[controller]/[action]")]
+    
     public class RoomController : BaseController
     {
         private readonly IRoomMediator _roomMediator;
@@ -57,14 +56,14 @@ namespace HotelReservationSystem.API.Controllers
             return Ok(Room);
         }
 
-        [ProducesResponseType(typeof(RoomToReturnDto), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<RoomToReturnDto>>> GetAllRooms([FromQuery] RoomSpecParams roomSpec)
-        {
-            var rooms = await _roomService.GetAllAsync(roomSpec);
-            return Ok(rooms);
-        }
+        //[ProducesResponseType(typeof(RoomToReturnDto), StatusCodes.Status200OK)]
+        //[ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<RoomToReturnDto>>> GetAllRooms([FromQuery] RoomSpecParams roomSpec)
+        //{
+        //    var rooms = await _roomService.GetAllAsync(roomSpec);
+        //    return Ok(rooms);
+        //}
 
         [ProducesResponseType(typeof(RoomToReturnDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]

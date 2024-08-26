@@ -4,11 +4,6 @@ using HotelReservationSystem.Repository.Interface;
 using HotelReservationSystem.Repository.Specification.RoomSpecifications;
 using HotelReservationSystem.Service.Services.Helper;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HotelReservationSystem.Service.Services.RoomService
 {
@@ -17,9 +12,7 @@ namespace HotelReservationSystem.Service.Services.RoomService
         private readonly IunitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public RoomService(
-            IunitOfWork unitOfWork,
-            IMapper mapper)
+        public RoomService(IunitOfWork unitOfWork,IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
@@ -87,30 +80,40 @@ namespace HotelReservationSystem.Service.Services.RoomService
             var result = await _unitOfWork.CompleteAsync();
             return result > 0;
         }
-
         public async Task<IEnumerable<RoomToReturnDto>> GetAllAsync(RoomSpecParams roomSpec)
         {
             var spec = new RoomSpecification(roomSpec);
-
             var rooms = await _unitOfWork.Repository<Room>().GetAllWithSpecAsync(spec);
-
-            var roomDtos = _mapper.Map<IEnumerable<RoomToReturnDto>>(rooms);
+            var roomDtos = _mapper.Map<IEnumerable<RoomToReturnDto>>(rooms );
+            
             return roomDtos;
         }
-
         public async Task<IEnumerable<RoomToReturnDto>> GetAllRoomsIsAvaliableAsync()
         {
-            var rooms = await _unitOfWork.Repository<Room>().GetAsync(R => R.Status == RoomStatus.Available);
+            var spec = new RoomSpecificationWithStatus();
+            var rooms = await _unitOfWork.Repository<Room>().GetAllWithSpecAsync(spec);
             var roomDtos = _mapper.Map<IEnumerable<RoomToReturnDto>>(rooms);
 
             return roomDtos;
         }
-
         public  async Task<RoomToReturnDto> GetRoomByIDAsync(int id)
         {
             var room = await _unitOfWork.Repository<Room>().GetByIdAsync(id);
             var roomDto= _mapper.Map<RoomToReturnDto>(room);
             return roomDto;
+        }
+        public async Task<int> GetCount(RoomSpecParams roomSpec )
+        {
+            var CountRoom = new CountRoomWithSpec(roomSpec);
+            var Count =await _unitOfWork.Repository<Room>().GetCountWithSpecAsync(CountRoom);
+            return Count;
+        }
+
+        public async Task<decimal> GetRoomPriceAsync(int id)
+        {
+            var room = await _unitOfWork.Repository<Room>().GetByIdAsync(id);
+
+            return room.Price;
         }
     }
 }

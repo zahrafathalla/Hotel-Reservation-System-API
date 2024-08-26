@@ -259,6 +259,10 @@
               "target": "Package",
               "version": "[2.2.2, )"
             },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Stripe.net": {
               "target": "Package",
               "version": "[45.8.0, )"

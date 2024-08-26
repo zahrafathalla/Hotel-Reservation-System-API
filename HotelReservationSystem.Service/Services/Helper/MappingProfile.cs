@@ -2,6 +2,7 @@
 using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Service.Services.FacilityService.Dtos;
 using HotelReservationSystem.Service.Services.InvoiceService.Dtos;
+using HotelReservationSystem.Service.Services.PaymentService.Dtos;
 using HotelReservationSystem.Service.Services.ReservationService.Dtos;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;
 
@@ -23,11 +24,16 @@ namespace HotelReservationSystem.Service.Services.Helper
             CreateMap<RoomDto, Room>();
 
             CreateMap<ReservationDto, Reservation>();
+            CreateMap<ReservationUpdatedDto, Reservation>();
+
 
             CreateMap<Reservation, ReservationToReturnDto>()
-                .ForMember(dest => dest.ReservationId, opt => opt.MapFrom(src => src.Id))
-                .ForMember(dest => dest.Message, opt => opt.MapFrom(src => "Reservation successful"));
+                .ForMember(dest => dest.ReservationId, opt => opt.MapFrom(src => src.Id)).ReverseMap();
+
             CreateMap<ReservationDto, Reservation>();
+
+            CreateMap<Reservation, ReservationForPaymentToReturnDto>();
+
             CreateMap<Invoice, InvoiceToReturnDto>();
         }
     }

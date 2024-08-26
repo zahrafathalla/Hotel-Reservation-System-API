@@ -19,7 +19,5 @@ namespace HotelReservationSystem.Data.Entities
         public Room Room { get; set; }
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
-        public int? StaffId { get; set; }
-        public Staff Staff { get; set; }
     }
 }

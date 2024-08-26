@@ -1,14 +1,7 @@
-﻿
-
-using AutoMapper;
+﻿using AutoMapper;
 using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Repository.Interface;
 using HotelReservationSystem.Service.Services.ReservationService.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HotelReservationSystem.Service.Services.ReservationService
 {
@@ -23,39 +16,37 @@ namespace HotelReservationSystem.Service.Services.ReservationService
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
-
-
-        public async Task<ReservationToReturnDto> MakeReservationAsync(ReservationDto reservationDto)
-
+        public async Task<bool> IsReservationConflictAsync(ReservationDto reservationDto)
         {
-            if (reservationDto.CheckInDate >= reservationDto.CheckOutDate)
-                return null;
-
-            var roomRepo = _unitOfWork.Repository<Room>();
-            var room = await roomRepo.GetByIdAsync(reservationDto.RoomId);
-
-            if (room == null)
-                return null;
-
             var conflictingReservations = await _unitOfWork.Repository<Reservation>().GetAsync(r =>
                 r.RoomId == reservationDto.RoomId &&
                 r.CheckInDate < reservationDto.CheckOutDate &&
-                r.CheckOutDate > reservationDto.CheckInDate
+                r.CheckOutDate > reservationDto.CheckInDate &&
+                r.Status != ReservationStatus.Cancelled &&
+                r.Status != ReservationStatus.CheckedOut
                 );
 
-            if (conflictingReservations.Any())
-                return null;
+            return conflictingReservations.Any();
+        }
 
-
+        public async Task<ReservationToReturnDto> MakeReservationAsync(ReservationDto reservationDto, decimal totalAmount)
+        {
             var reservation = _mapper.Map<Reservation>(reservationDto);
+            reservation.TotalAmount = totalAmount;
+
             await _unitOfWork.Repository<Reservation>().AddAsync(reservation);
             await _unitOfWork.CompleteAsync();
 
             var mappedReservation = _mapper.Map<ReservationToReturnDto>(reservation);
             return mappedReservation;
-
         }
 
+        public async Task<ReservationToReturnDto> ViewReservationDetailsAsync(int reservationId)
+        {
+            var reservation = await _unitOfWork.Repository<Reservation>().GetByIdAsync(reservationId);
+            var mappedReservation = _mapper.Map<ReservationToReturnDto>(reservation);
+            return mappedReservation;
+        }
         public async Task<bool> CancelReservationAsync(int reservationId)
         {
             var reservationRepo = _unitOfWork.Repository<Reservation>();
@@ -74,24 +65,95 @@ namespace HotelReservationSystem.Service.Services.ReservationService
 
             return true;
         }
-        public decimal CalculaterReservationTotalCost(decimal roomPrice, Reservation reservation)
+        public async Task<bool> IsReservationConflictOnUpdateAsync(int reservationId, ReservationDto reservationDto)
         {
-            var stayingDays = (decimal)(reservation.CheckOutDate - reservation.CheckInDate).TotalDays;
-            return stayingDays * roomPrice;
-        }
-        public async Task<Reservation> UpdateReservationAsync(int id, ReservationDto reservation, decimal roomPrice)
-        {
+            var existingReservation = await _unitOfWork.Repository<Reservation>().GetByIdAsync(reservationId);
+            if (existingReservation == null)
+                return false;
 
+            bool roomChanged = existingReservation.RoomId != reservationDto.RoomId;
+            bool datesChanged = existingReservation.CheckInDate != reservationDto.CheckInDate ||
+                                existingReservation.CheckOutDate != reservationDto.CheckOutDate;
+
+            if (!roomChanged && !datesChanged)
+                return false;
+
+            int roomToCheck = roomChanged ? reservationDto.RoomId : existingReservation.RoomId;
+
+            var conflictingReservations = await _unitOfWork.Repository<Reservation>().GetAsync(r =>
+                r.RoomId == roomToCheck &&
+                r.CheckInDate < reservationDto.CheckOutDate &&
+                r.CheckOutDate > reservationDto.CheckInDate &&
+                r.Status != ReservationStatus.Cancelled &&
+                r.Status != ReservationStatus.CheckedOut &&
+                r.Id != reservationId 
+            );
+
+            return conflictingReservations.Any();
+        }
+        public async Task<ReservationToReturnDto> UpdateReservationAsync(int id, ReservationDto reservationDto, decimal totalAmount)
+        {
             var oldReservation = await _unitOfWork.Repository<Reservation>().GetByIdAsync(id);
             if (oldReservation == null)
                 return null;
-            var newReservation = _mapper.Map<Reservation>(reservation);
-            oldReservation.CheckInDate = newReservation.CheckInDate;
-            oldReservation.CheckOutDate = newReservation.CheckOutDate;
-            oldReservation.RoomId = newReservation.RoomId;
-            oldReservation.TotalAmount = CalculaterReservationTotalCost(roomPrice, newReservation);
+
+            _mapper.Map(reservationDto, oldReservation);
+            oldReservation.TotalAmount = totalAmount;
+
+            _unitOfWork.Repository<Reservation>().Update(oldReservation);
             await _unitOfWork.CompleteAsync();
-            return oldReservation;
+
+            var mappedReservation = _mapper.Map<ReservationToReturnDto>(oldReservation);
+            return mappedReservation;
         }
+
+        public async Task UpdateCheckInStatusesAsync()
+        {
+            var reservations = await _unitOfWork.Repository<Reservation>()
+                        .GetAsync(r => r.Status == ReservationStatus.PaymentReceived &&
+                                       r.CheckInDate.Date == DateTime.Now.Date);
+
+            foreach (var reservation in reservations)
+            {
+
+                reservation.Status = ReservationStatus.CheckedIn;
+                _unitOfWork.Repository<Reservation>().Update(reservation);
+
+                var room = await _unitOfWork.Repository<Room>().GetByIdAsync(reservation.RoomId);
+                if (room != null)
+                {
+                    room.Status = RoomStatus.Occupied;
+                    _unitOfWork.Repository<Room>().Update(room);
+                }
+
+            }
+
+            await _unitOfWork.CompleteAsync();
+
+
+        }
+        public async Task UpdateCheckOutStatusesAsync()
+        {
+            var reservations = await _unitOfWork.Repository<Reservation>()
+                      .GetAsync(r => r.Status == ReservationStatus.CheckedIn &&
+                                     r.CheckOutDate.Date == DateTime.Now.Date);
+
+            foreach (var reservation in reservations)
+            {
+                reservation.Status = ReservationStatus.CheckedOut;
+                _unitOfWork.Repository<Reservation>().Update(reservation);
+
+                var room = await _unitOfWork.Repository<Room>().GetByIdAsync(reservation.RoomId);
+                if (room != null)
+                {
+                    room.Status = RoomStatus.Available;
+                    _unitOfWork.Repository<Room>().Update(room);
+                }
+            }
+
+            await _unitOfWork.CompleteAsync();
+        }
+       
+
     }
 }

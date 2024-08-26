@@ -10,9 +10,6 @@ namespace HotelReservationSystem.Service.Services.RoomService.Dtos
         public RoomType Type { get; set; }
         [Required]
 
-        public RoomStatus Status { get; set; }
-        [Required]
-
         public decimal Price { get; set; }
         [Required]
 

@@ -5,6 +5,7 @@ using HotelReservationSystem.Mediator.ReservationMediator;
 using HotelReservationSystem.Mediator.RoomMediator;
 using HotelReservationSystem.Repository.Interface;
 using HotelReservationSystem.Repository.Repository;
+using HotelReservationSystem.Service.Services.BackgroundServices;
 using HotelReservationSystem.Service.Services.FacilityService;
 using HotelReservationSystem.Service.Services.Helper;
 using HotelReservationSystem.Service.Services.PaymentService;
@@ -27,7 +28,10 @@ namespace HotelReservationSystem.API
             
             #region Add services to the container.
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers().AddNewtonsoftJson(option =>
+            {
+                option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -53,6 +57,7 @@ namespace HotelReservationSystem.API
             builder.Services.AddScoped<IInvoiceService,InvoiceService>();
 
 
+            builder.Services.AddHostedService<ReservationStatusBackgroundService>();
 
             builder.Services.AddAutoMapper(typeof(MappingProfile));
 

@@ -23,5 +23,6 @@ namespace HotelReservationSystem.API.Controllers
                 return BadRequest();
             return Ok(facility);
         }
+
     }
 }

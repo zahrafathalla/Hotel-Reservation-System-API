@@ -1,5 +1,7 @@
 ﻿using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Repository.Interface;
+using HotelReservationSystem.Repository.Specification.RoomFacilitySpecification;
+using HotelReservationSystem.Repository.Specification.RoomSpecifications;
 
 namespace HotelReservationSystem.Service.Services.RoomFacilityService
 {
@@ -45,6 +47,17 @@ namespace HotelReservationSystem.Service.Services.RoomFacilityService
             await _unitOfWork.CompleteAsync();
         }
 
+        public async Task<IEnumerable<Facility>> GetFacilitiesByRoomIdAsync(int roomId)
+        {
+            var spec = new RoomFacilitySpecification(roomId);
+
+            var roomFacilities = await _unitOfWork.Repository<RoomFacility>()
+                .GetAllWithSpecAsync(spec);
+
+            var facilities = roomFacilities.Select(rf => rf.Facility);
+
+            return facilities;
+        }
 
         public async Task<bool> RemoveFacilityFromRoomAsync(int roomId)
         {

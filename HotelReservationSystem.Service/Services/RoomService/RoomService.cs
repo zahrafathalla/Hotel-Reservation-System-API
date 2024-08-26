@@ -90,7 +90,8 @@ namespace HotelReservationSystem.Service.Services.RoomService
         }
         public async Task<IEnumerable<RoomToReturnDto>> GetAllRoomsIsAvaliableAsync()
         {
-            var rooms = await _unitOfWork.Repository<Room>().GetAsync(R => R.Status == RoomStatus.Available);
+            var spec = new RoomSpecificationWithStatus();
+            var rooms = await _unitOfWork.Repository<Room>().GetAllWithSpecAsync(spec);
             var roomDtos = _mapper.Map<IEnumerable<RoomToReturnDto>>(rooms);
 
             return roomDtos;
@@ -106,6 +107,13 @@ namespace HotelReservationSystem.Service.Services.RoomService
             var CountRoom = new CountRoomWithSpec(roomSpec);
             var Count =await _unitOfWork.Repository<Room>().GetCountWithSpecAsync(CountRoom);
             return Count;
+        }
+
+        public async Task<decimal> GetRoomPriceAsync(int id)
+        {
+            var room = await _unitOfWork.Repository<Room>().GetByIdAsync(id);
+
+            return room.Price;
         }
     }
 }

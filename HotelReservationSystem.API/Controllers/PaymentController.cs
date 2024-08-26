@@ -24,7 +24,7 @@ namespace HotelReservationSystem.API.Controllers
         }
 
         [HttpPost("{reservationId}")]
-        public async Task<ActionResult<ReservationToReturnDto>> CreatePaymentAsync(int reservationId)
+        public async Task<ActionResult<ReservationForPaymentToReturnDto>> CreatePaymentAsync(int reservationId)
         {
             var reservation = await _paymentService.CreatePaymentIntentAsync(reservationId);
             return Ok(reservation);

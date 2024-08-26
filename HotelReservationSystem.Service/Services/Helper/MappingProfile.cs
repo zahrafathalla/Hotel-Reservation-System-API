@@ -23,13 +23,16 @@ namespace HotelReservationSystem.Service.Services.Helper
             CreateMap<RoomDto, Room>();
 
             CreateMap<ReservationDto, Reservation>();
+            CreateMap<ReservationUpdatedDto, Reservation>();
 
-            CreateMap<Reservation, ReservationCreatedToReturnDto>()
-                .ForMember(dest => dest.ReservationId, opt => opt.MapFrom(src => src.Id))
-                .ForMember(dest => dest.Message, opt => opt.MapFrom(src => "Reservation successful"));
+
+            CreateMap<Reservation, ReservationToReturnDto>()
+                .ForMember(dest => dest.ReservationId, opt => opt.MapFrom(src => src.Id)).ReverseMap();
+
             CreateMap<ReservationDto, Reservation>();
 
-            CreateMap<Reservation, ReservationToReturnDto>();
+            CreateMap<Reservation, ReservationForPaymentToReturnDto>();
+
         }
     }
 }

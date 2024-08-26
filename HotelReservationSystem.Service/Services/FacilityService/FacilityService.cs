@@ -39,5 +39,12 @@ namespace HotelReservationSystem.Service.Services.FacilityService
 
             return mappedFacility;
         }
+        public async Task<decimal> CalculateFacilitiesPriceAsync(List<int> facilityIds)
+        {
+            var facilities = await _unitOfWork.Repository<Facility>()
+                     .GetAsync(f => facilityIds.Contains(f.Id));
+
+            return facilities.Sum(f => f.Price);
+        }
     }
 }

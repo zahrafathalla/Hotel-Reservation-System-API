@@ -56,7 +56,6 @@ namespace HotelReservationSystem.API
             builder.Services.AddScoped< IReservationMediator, ReservationMediator >();
             builder.Services.AddScoped<IInvoiceService,InvoiceService>();
 
-
             builder.Services.AddHostedService<ReservationStatusBackgroundService>();
 
             builder.Services.AddAutoMapper(typeof(MappingProfile));

@@ -33,10 +33,6 @@ namespace HotelReservationSystem.Service.Services.PaymentService
             if (reservation == null)
                 return null;
 
-            var room = await _unitOfWork.Repository<Room>().GetByIdAsync(reservation.RoomId);
-            if (room == null)
-                return null;
-
             var totalAmount = reservation.TotalAmount;
 
             PaymentIntent paymentIntent;

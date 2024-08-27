@@ -1,4 +1,5 @@
 ﻿using HotelReservationSystem.API.Errors;
+using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Service.Services.InvoiceService;
 using HotelReservationSystem.Service.Services.InvoiceService.Dtos;
 using Microsoft.AspNetCore.Mvc;
@@ -24,5 +25,14 @@ namespace HotelReservationSystem.API.Controllers
             return Ok(invoices);
         }
 
+        [HttpPost("{reservationId}")]
+        public async Task<ActionResult<InvoiceToReturnDto>> GenerateInvoice(int reservationId)
+        {
+            var invoice = await _invoiceService.GenerateInvoiceAsync(reservationId);
+            if (!invoice.IsSuccessful)
+                return BadRequest(new ApiResponse(400));
+
+            return Ok(invoice);
+        }
     }
 }

@@ -10,4 +10,8 @@
     <ProjectReference Include="..\HotelReservationSystem.Data\HotelReservationSystem.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Specification\InvoiceSpecification\" />
+  </ItemGroup>
+
 </Project>

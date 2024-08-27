@@ -16,8 +16,6 @@ namespace HotelReservationSystem.Data.Configuration
             builder.Property(i => i.Amount)
                .HasColumnType("decimal(12,2)");
 
-            builder.HasOne(i => i.Reservation)
-                .WithOne();
         }
     }
 }

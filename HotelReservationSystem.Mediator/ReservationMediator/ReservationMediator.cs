@@ -1,6 +1,4 @@
-﻿using AutoMapper;
-using HotelReservationSystem.Data.Entities;
-using HotelReservationSystem.Service.Services.FacilityService;
+﻿using HotelReservationSystem.Service.Services.FacilityService;
 using HotelReservationSystem.Service.Services.ReservationService;
 using HotelReservationSystem.Service.Services.ReservationService.Dtos;
 using HotelReservationSystem.Service.Services.RoomFacilityService;

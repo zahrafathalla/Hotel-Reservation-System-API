@@ -111,7 +111,7 @@ namespace HotelReservationSystem.Service.Services.ReservationService
         {
             var reservations = await _unitOfWork.Repository<Reservation>()
                         .GetAsync(r => r.Status == ReservationStatus.PaymentReceived &&
-                                       r.CheckInDate.Date == DateTime.Now.Date);
+                                       r.CheckInDate.Date <= DateTime.Now.Date);
 
             foreach (var reservation in reservations)
             {
@@ -127,16 +127,13 @@ namespace HotelReservationSystem.Service.Services.ReservationService
                 }
 
             }
-
             await _unitOfWork.CompleteAsync();
-
-
         }
         public async Task UpdateCheckOutStatusesAsync()
         {
             var reservations = await _unitOfWork.Repository<Reservation>()
                       .GetAsync(r => r.Status == ReservationStatus.CheckedIn &&
-                                     r.CheckOutDate.Date == DateTime.Now.Date);
+                                     r.CheckOutDate.Date <= DateTime.Now.Date);
 
             foreach (var reservation in reservations)
             {

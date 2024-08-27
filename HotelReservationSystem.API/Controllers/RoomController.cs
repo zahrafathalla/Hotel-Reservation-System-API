@@ -70,8 +70,8 @@ namespace HotelReservationSystem.API.Controllers
 
         [ProducesResponseType(typeof(RoomToReturnDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
-        [HttpGet]
-        public async Task<ActionResult<ResultViewModels<RoomToReturnDto>>> GetAllRoomsAvalibale([FromQuery] RoomSpecParams roomSpec)
+        [HttpGet("Available")]
+        public async Task<ActionResult<ResultViewModels<RoomToReturnDto>>> GetAllRoomsAvailable([FromQuery] RoomSpecParams roomSpec)
         {
             var rooms = await _roomService.GetAllRoomsIsAvaliableAsync();
             if (rooms is null) return NotFound(new ApiResponse(404));

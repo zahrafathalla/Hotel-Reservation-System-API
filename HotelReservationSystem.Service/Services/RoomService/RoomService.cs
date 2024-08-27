@@ -78,7 +78,7 @@ namespace HotelReservationSystem.Service.Services.RoomService
             _unitOfWork.Repository<Room>().Delete(room);
 
             var result = await _unitOfWork.CompleteAsync();
-            return result > 0;
+            return result > 0; 
         }
         public async Task<IEnumerable<RoomToReturnDto>> GetAllAsync(RoomSpecParams roomSpec)
         {

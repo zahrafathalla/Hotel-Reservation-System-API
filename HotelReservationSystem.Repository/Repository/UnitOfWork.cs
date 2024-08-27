@@ -1,6 +1,7 @@
 ﻿using HotelReservationSystem.Data.Context;
 using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Repository.Interface;
+using Microsoft.EntityFrameworkCore;
 using System.Collections;
 
 namespace HotelReservationSystem.Repository.Repository
@@ -31,7 +32,9 @@ namespace HotelReservationSystem.Repository.Repository
 
         public async Task<int> CompleteAsync()
         {
+
             return await _dbContext.SaveChangesAsync();
+
         }
 
         public void Dispose()

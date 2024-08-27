@@ -16,12 +16,20 @@ namespace HotelReservationSystem.Service.Services.BackgroundServices
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                using var scope = _serviceScopeFactory.CreateScope();
-                var reservationService = scope.ServiceProvider.GetRequiredService<IReservationService>();
-                await reservationService.UpdateCheckInStatusesAsync();
-                await reservationService.UpdateCheckOutStatusesAsync();
+                try
+                {
+                    using var scope = _serviceScopeFactory.CreateScope();
+                    var reservationService = scope.ServiceProvider.GetRequiredService<IReservationService>();
 
-                await Task.Delay(TimeSpan.FromDays(1), stoppingToken); 
+                    await reservationService.UpdateCheckInStatusesAsync();
+                    await reservationService.UpdateCheckOutStatusesAsync();
+
+                    await Task.Delay(TimeSpan.FromMinutes(2), stoppingToken);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"An error occurred: {ex.Message}");
+                }
             }
         }
     }

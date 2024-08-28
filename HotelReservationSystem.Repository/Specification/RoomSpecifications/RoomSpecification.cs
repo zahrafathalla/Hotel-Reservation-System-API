@@ -1,4 +1,5 @@
 ﻿using HotelReservationSystem.Data.Entities;
+using HotelReservationSystem.Repository.Specification.Specifications;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace HotelReservationSystem.Repository.Specification.RoomSpecifications
 {
     public class RoomSpecification : BaseSpecifications<Room>
     {
-        public RoomSpecification(RoomSpecParams spec) : base()
+        public RoomSpecification(SpecParams spec) : base()
         {
             Includes.Add(r => r.Include(r => r.RoomFacilities)
                            .ThenInclude(rf => rf.Facility));

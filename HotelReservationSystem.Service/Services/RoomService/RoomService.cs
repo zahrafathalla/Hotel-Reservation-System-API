@@ -2,6 +2,7 @@
 using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Repository.Interface;
 using HotelReservationSystem.Repository.Specification.RoomSpecifications;
+using HotelReservationSystem.Repository.Specification.Specifications;
 using HotelReservationSystem.Service.Services.Helper;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;
 
@@ -81,7 +82,7 @@ namespace HotelReservationSystem.Service.Services.RoomService
             return result > 0; 
         }
 
-        public async Task<IEnumerable<RoomToReturnDto>> GetAllRoomsIsAvaliableAsync(RoomSpecParams roomSpec, DateTime checkInDate, DateTime checkOutDate)
+        public async Task<IEnumerable<RoomToReturnDto>> GetAllRoomsIsAvaliableAsync(SpecParams roomSpec, DateTime checkInDate, DateTime checkOutDate)
         {
             var spec = new RoomAvailabilitySpecification(roomSpec, checkInDate, checkOutDate);
 
@@ -91,7 +92,7 @@ namespace HotelReservationSystem.Service.Services.RoomService
 
             return roomDtos;
         }
-        public async Task<int> GetAvailableRoomCount(RoomSpecParams roomSpec, DateTime checkInDate, DateTime checkOutDate)
+        public async Task<int> GetAvailableRoomCount(SpecParams roomSpec, DateTime checkInDate, DateTime checkOutDate)
         {
             var spec = new RoomAvailabilitySpecification(roomSpec, checkInDate, checkOutDate);
             var count = await _unitOfWork.Repository<Room>().GetCountWithSpecAsync(spec);

@@ -1,6 +1,6 @@
-﻿namespace HotelReservationSystem.Repository.Specification.RoomSpecifications
+﻿namespace HotelReservationSystem.Repository.Specification.Specifications
 {
-    public class RoomSpecParams
+    public class SpecParams
     {
         public string? Sort { get; set; }
 

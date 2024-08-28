@@ -1,11 +1,12 @@
 ﻿using HotelReservationSystem.Data.Entities;
+using HotelReservationSystem.Repository.Specification.Specifications;
 using Microsoft.EntityFrameworkCore;
 
 namespace HotelReservationSystem.Repository.Specification.RoomSpecifications
 {
     public class RoomAvailabilitySpecification : BaseSpecifications<Room>
     {
-        public RoomAvailabilitySpecification(RoomSpecParams spec, DateTime checkInDate, DateTime checkOutDate)
+        public RoomAvailabilitySpecification(SpecParams spec, DateTime checkInDate, DateTime checkOutDate)
             : base(r => r.Reservations.Any
             (
                 reservation => reservation.CheckInDate  < checkOutDate  &&

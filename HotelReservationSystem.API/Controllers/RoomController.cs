@@ -3,6 +3,7 @@ using HotelReservationSystem.API.Errors;
 using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Mediator.RoomMediator;
 using HotelReservationSystem.Repository.Specification.RoomSpecifications;
+using HotelReservationSystem.Repository.Specification.Specifications;
 using HotelReservationSystem.Service.Services.Helper.ResulteViewModel;
 using HotelReservationSystem.Service.Services.RoomService;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;
@@ -60,7 +61,7 @@ namespace HotelReservationSystem.API.Controllers
         [ProducesResponseType(typeof(RoomToReturnDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
         [HttpGet("Available")]
-        public async Task<ActionResult<Pagination<RoomToReturnDto>>> GetAllRoomsAvailable([FromQuery] RoomSpecParams roomSpec, DateTime checkInDate, DateTime checkOutDate)
+        public async Task<ActionResult<Pagination<RoomToReturnDto>>> GetAllRoomsAvailable([FromQuery] SpecParams roomSpec, DateTime checkInDate, DateTime checkOutDate)
         {
             var rooms = await _roomService.GetAllRoomsIsAvaliableAsync(roomSpec, checkInDate, checkOutDate);
             if (rooms is null) return NotFound(new ApiResponse(404));

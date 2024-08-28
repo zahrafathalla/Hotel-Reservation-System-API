@@ -1,10 +1,10 @@
-﻿using HotelReservationSystem.Data.Entities;
-using HotelReservationSystem.Service.Services.ReservationService.Dtos;
+﻿using HotelReservationSystem.Service.Services.ReservationService.Dtos;
+using HotelReservationSystem.Service.Services.RoomService.Dtos;
 
 namespace HotelReservationSystem.Service.Services.ReservationService
 {
     public interface IReservationService
-    {
+    { 
         Task<ReservationToReturnDto> MakeReservationAsync(ReservationDto reservationDto, decimal totalAmount);
         Task<bool> IsReservationConflictAsync(ReservationDto reservationDto);
         Task<bool> IsReservationConflictOnUpdateAsync(int reservationId, ReservationDto reservationDto);

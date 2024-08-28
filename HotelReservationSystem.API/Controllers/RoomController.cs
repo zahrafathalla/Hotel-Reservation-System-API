@@ -59,24 +59,13 @@ namespace HotelReservationSystem.API.Controllers
 
         [ProducesResponseType(typeof(RoomToReturnDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
-        [HttpGet]
-        public async Task<ActionResult<ResultViewModels<RoomToReturnDto>>> GetAllRooms([FromQuery] RoomSpecParams roomSpec)
-        {
-            var rooms = await _roomService.GetAllAsync(roomSpec);
-            if (rooms is null) return BadRequest(new ApiResponse(400));
-            var count =await _roomService.GetCount(roomSpec);
-            return Ok(new ResultViewModels<RoomToReturnDto>(roomSpec.PageSize ,roomSpec.PageIndex, count, rooms));
-        }
-
-        [ProducesResponseType(typeof(RoomToReturnDto), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
         [HttpGet("Available")]
-        public async Task<ActionResult<ResultViewModels<RoomToReturnDto>>> GetAllRoomsAvailable([FromQuery] RoomSpecParams roomSpec)
+        public async Task<ActionResult<Pagination<RoomToReturnDto>>> GetAllRoomsAvailable([FromQuery] RoomSpecParams roomSpec, DateTime checkInDate, DateTime checkOutDate)
         {
-            var rooms = await _roomService.GetAllRoomsIsAvaliableAsync();
+            var rooms = await _roomService.GetAllRoomsIsAvaliableAsync(roomSpec, checkInDate, checkOutDate);
             if (rooms is null) return NotFound(new ApiResponse(404));
-            var count = await _roomService.GetCount(roomSpec);
-            return Ok(new ResultViewModels<RoomToReturnDto>(roomSpec.PageSize, roomSpec.PageIndex, count, rooms));
+            var count = await _roomService.GetAvailableRoomCount(roomSpec, checkInDate, checkOutDate);
+            return Ok(new Pagination<RoomToReturnDto>(roomSpec.PageSize, roomSpec.PageIndex, count, rooms));
         }
 
         [HttpDelete("{id}")]

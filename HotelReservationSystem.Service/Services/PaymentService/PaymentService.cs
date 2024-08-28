@@ -24,7 +24,6 @@ namespace HotelReservationSystem.Service.Services.PaymentService
             _mapper = mapper;
         }
 
-
         public async Task<ReservationForPaymentToReturnDto> CreatePaymentIntentAsync(int reservationId)
         {
             StripeConfiguration.ApiKey = _configuration["Stripe:SecretKey"];
@@ -51,15 +50,6 @@ namespace HotelReservationSystem.Service.Services.PaymentService
 
                 reservation.PaymentIntentId = paymentIntent.Id;
                 reservation.ClientSecret = paymentIntent.ClientSecret;
-            }
-            else
-            {
-                var options = new PaymentIntentUpdateOptions
-                {
-                    Amount =(long)(totalAmount * 100)
-                };
-                await paymentIntentService.UpdateAsync(reservation.PaymentIntentId, options);
-
             }
 
             _unitOfWork.Repository<Reservation>().Update(reservation);

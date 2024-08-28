@@ -2,6 +2,7 @@
 using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Repository.Interface;
 using HotelReservationSystem.Service.Services.ReservationService.Dtos;
+using HotelReservationSystem.Service.Services.RoomService.Dtos;
 
 namespace HotelReservationSystem.Service.Services.ReservationService
 {
@@ -16,6 +17,7 @@ namespace HotelReservationSystem.Service.Services.ReservationService
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
+
         public async Task<bool> IsReservationConflictAsync(ReservationDto reservationDto)
         {
             var conflictingReservations = await _unitOfWork.Repository<Reservation>().GetAsync(r =>
@@ -115,17 +117,8 @@ namespace HotelReservationSystem.Service.Services.ReservationService
 
             foreach (var reservation in reservations)
             {
-
                 reservation.Status = ReservationStatus.CheckedIn;
                 _unitOfWork.Repository<Reservation>().Update(reservation);
-
-                var room = await _unitOfWork.Repository<Room>().GetByIdAsync(reservation.RoomId);
-                if (room != null)
-                {
-                    room.Status = RoomStatus.Occupied;
-                    _unitOfWork.Repository<Room>().Update(room);
-                }
-
             }
             await _unitOfWork.CompleteAsync();
         }
@@ -139,18 +132,8 @@ namespace HotelReservationSystem.Service.Services.ReservationService
             {
                 reservation.Status = ReservationStatus.CheckedOut;
                 _unitOfWork.Repository<Reservation>().Update(reservation);
-
-                var room = await _unitOfWork.Repository<Room>().GetByIdAsync(reservation.RoomId);
-                if (room != null)
-                {
-                    room.Status = RoomStatus.Available;
-                    _unitOfWork.Repository<Room>().Update(room);
-                }
             }
-
             await _unitOfWork.CompleteAsync();
         }
-       
-
     }
 }

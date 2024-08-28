@@ -9,11 +9,10 @@ namespace HotelReservationSystem.Service.Services.RoomService
         Task<Room> AddRoomAsync(RoomDto roomDto);
         Task<bool> AddPicturesToRoomAsync(PictureDto pictureDto);
         Task<Room> UpdateRoomAsync(int id, RoomDto room);
-        Task<IEnumerable<RoomToReturnDto>> GetAllAsync(RoomSpecParams specParams);
-        Task<IEnumerable<RoomToReturnDto>> GetAllRoomsIsAvaliableAsync();
+        Task<IEnumerable<RoomToReturnDto>> GetAllRoomsIsAvaliableAsync(RoomSpecParams roomSpec, DateTime checkInDate, DateTime checkOutDate);
+        Task<int> GetAvailableRoomCount(RoomSpecParams roomSpec, DateTime checkInDate, DateTime checkOutDate);
         Task<bool> DeleteRoomAsync(int id);
         Task<decimal> GetRoomPriceAsync(int id);
-        Task<int> GetCount(RoomSpecParams spec);
         Task<RoomToReturnDto> GetRoomByIDAsync(int id);
     }
 }

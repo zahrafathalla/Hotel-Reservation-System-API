@@ -15,37 +15,7 @@ namespace HotelReservationSystem.Repository.Specification.RoomSpecifications
             Includes.Add(r => r.Include(r => r.RoomFacilities)
                            .ThenInclude(rf => rf.Facility));
             Includes.Add(r => r.Include(r => r.PictureUrls));
-
-
-            if (!string.IsNullOrEmpty(spec.Sort))
-            {
-
-                switch (spec.Sort)
-                {
-                    case "priceAsc":
-                        AddOrderBy(R => R.Price);
-                        break;
-
-                    case "priceDesc":
-                        AddOrderByDesc(R => R.Price);
-                        break;
-
-                    default:
-                        AddOrderBy(R => R.IsDeleted==false);
-                        break;
-
-                }
-
-            }
-            else
-            {
-                AddOrderBy(R => R.IsDeleted == false);
-            }
-
-            ApplyPagination(spec.PageSize*(spec.PageIndex-1),spec.PageSize);
-
-
-           
+      
         }
 
         public RoomSpecification(int id) : base(R=>R.Id==id) 

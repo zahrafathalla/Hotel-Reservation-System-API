@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace HotelReservationSystem.Service.Services.Helper.ResulteViewModel
 {
-    public class ResultViewModels<T>
+    public class Pagination<T>
     {
-        private IEnumerable<RoomToReturnDto> rooms;
 
-        public ResultViewModels(int pageSize, int pageIndex,int count, IEnumerable<T> data)
+        public Pagination(int pageSize, int pageIndex,int count, IEnumerable<T> data)
         {
             PageSize = pageSize;
             PageIndex = pageIndex;

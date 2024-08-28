@@ -20,13 +20,6 @@ namespace HotelReservationSystem.Data.Configuration
                     type => (RoomType)Enum.Parse(typeof(RoomType), type)
                 );
 
-            builder.Property(r => r.Status)
-               .HasConversion
-                (
-                     status => status.ToString(),
-                     status => (RoomStatus)Enum.Parse(typeof(RoomStatus), status)
-                );
-
             builder.Property(r => r.Price)
                 .HasColumnType("decimal(12,2)");
         }

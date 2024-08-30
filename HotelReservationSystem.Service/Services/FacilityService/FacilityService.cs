@@ -3,16 +3,8 @@ using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Repository.Interface;
 using HotelReservationSystem.Repository.Specification.Facilitypecifications;
 using HotelReservationSystem.Repository.Specification.FacilitySpecifications;
-using HotelReservationSystem.Repository.Specification.RoomSpecifications;
 using HotelReservationSystem.Repository.Specification.Specifications;
 using HotelReservationSystem.Service.Services.FacilityService.Dtos;
-using HotelReservationSystem.Service.Services.Helper;
-using HotelReservationSystem.Service.Services.RoomService.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HotelReservationSystem.Service.Services.FacilityService
 {
@@ -50,7 +42,6 @@ namespace HotelReservationSystem.Service.Services.FacilityService
             var mappedFacility = _mapper.Map<FacilityDto>(OldFacility);
 
             return mappedFacility;
-
         }
         public async Task<decimal> CalculateFacilitiesPriceAsync(List<int> facilityIds)
         {

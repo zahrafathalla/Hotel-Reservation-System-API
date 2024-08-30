@@ -60,27 +60,7 @@ namespace HotelReservationSystem.Service.Services.InvoiceService
             return mappedInvoice;
 
         }
-        public async Task<InvoiceToReturnDto> UpdateInvoicAsync(int id , InvoiceDto invoiceDto)
-        {
-            var reservation = await _unitOfWork.Repository<Reservation>().GetByIdAsync(invoiceDto.ReservationId);
-            var TotalAmount = reservation.TotalAmount;
 
-            var Spec = new InvoicSpec(id);
-            var OldInvoic = await _unitOfWork.Repository<Invoice>().GetByIdWithSpecAsync(Spec);
-            if (OldInvoic == null) return null;
-
-            OldInvoic.InvoiceDate = invoiceDto.InvoiceDate;
-            OldInvoic.ReservationId= invoiceDto.ReservationId;
-            OldInvoic.Amount = TotalAmount;
-
-
-
-            _unitOfWork.Repository<Invoice>().Update(OldInvoic);
-            await _unitOfWork.CompleteAsync();
-            var mappedInvoic = _mapper.Map<InvoiceToReturnDto>(OldInvoic);
-
-            return mappedInvoic;
-        }
         public async Task<IEnumerable<InvoiceToReturnDto>> GetAllAsync(SpecParams Params)
         {
             var spec = new InvoicSpec(Params);

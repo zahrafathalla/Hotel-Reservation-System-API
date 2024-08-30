@@ -617,3 +617,4 @@ C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem
 C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.csproj.CopyComplete
 C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.API\obj\Debug\net8.0\HotelReservationSystem.API.genruntimeconfig.cache
 C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.API\obj\Debug\net8.0\ref\HotelReservationSystem.API.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

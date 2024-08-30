@@ -9,7 +9,6 @@ namespace HotelReservationSystem.Service.Services.InvoiceService
 {
     public interface IInvoiceService
     {
-        Task<InvoiceToReturnDto> UpdateInvoicAsync(int id, InvoiceDto invoiceDto);
         Task<InvoiceToReturnDto> GenerateInvoiceAsync(int reservationId);
         Task<IEnumerable<InvoiceToReturnDto>> GetAllAsync(SpecParams specParams);
         Task<InvoiceToReturnDto> GetInvoicByIdAsync(int id);

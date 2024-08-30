@@ -2,8 +2,6 @@
 using HotelReservationSystem.Repository.Interface;
 using HotelReservationSystem.Service.Services.TokenService;
 using HotelReservationSystem.Service.Services.UserService.Dtos;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Identity.Client;
 
 namespace HotelReservationSystem.Service.Services.UserService
 {
@@ -19,9 +17,24 @@ namespace HotelReservationSystem.Service.Services.UserService
             _unitOfWork = unitOfWork;
             _tokenService = tokenService;
         }
-        public Task<UserToReturnDto> LoginAsCustomer(LoginDto loginDto)
+        public async Task<UserToReturnDto> LoginAsCustomer(LoginDto loginDto)
         {
-            throw new NotImplementedException();
+            var result = new UserToReturnDto()
+            {
+                IsSuccessed = false,
+            };
+            var user = (await _unitOfWork.Repository<User>()
+                            .GetAsync(u => u.Email == loginDto.Email)).FirstOrDefault();
+
+            if (user == null || user.PasswordHash != loginDto.Password)
+                return result;
+
+            return new UserToReturnDto()
+            {
+                DisplayName = user.Displayname,
+                Email = user.Email,
+                Token = await _tokenService.GenerateTokenAsync(user)
+            };
         }
 
         public Task<UserToReturnDto> LoginAsStaff(LoginDto loginDto)

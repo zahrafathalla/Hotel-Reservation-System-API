@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1B677A5E-9E43-4266-B10C-207F79D20E7F}|HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj|c:\\marwy\\programming courses\\backend.net\\demos\\projects\\hotel-reservation-system-api\\hotelreservationsystem.service\\services\\roomservice\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B677A5E-9E43-4266-B10C-207F79D20E7F}|HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj|solutionrelative:hotelreservationsystem.service\\services\\roomservice\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3332D5F4-5205-4337-8A1C-4DB21EC1E372}|HotelReservationSystem.API\\HotelReservationSystem.API.csproj|c:\\marwy\\programming courses\\backend.net\\demos\\projects\\hotel-reservation-system-api\\hotelreservationsystem.api\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3332D5F4-5205-4337-8A1C-4DB21EC1E372}|HotelReservationSystem.API\\HotelReservationSystem.API.csproj|solutionrelative:hotelreservationsystem.api\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3332D5F4-5205-4337-8A1C-4DB21EC1E372}|HotelReservationSystem.API\\HotelReservationSystem.API.csproj|c:\\marwy\\programming courses\\backend.net\\demos\\projects\\hotel-reservation-system-api\\hotelreservationsystem.api\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3332D5F4-5205-4337-8A1C-4DB21EC1E372}|HotelReservationSystem.API\\HotelReservationSystem.API.csproj|solutionrelative:hotelreservationsystem.api\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RoomService.cs",
+              "DocumentMoniker": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Service\\Services\\RoomService\\RoomService.cs",
+              "RelativeDocumentMoniker": "HotelReservationSystem.Service\\Services\\RoomService\\RoomService.cs",
+              "ToolTip": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.Service\\Services\\RoomService\\RoomService.cs",
+              "RelativeToolTip": "HotelReservationSystem.Service\\Services\\RoomService\\RoomService.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T16:48:22.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RoomController.cs",
+              "DocumentMoniker": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\Controllers\\RoomController.cs",
+              "RelativeDocumentMoniker": "HotelReservationSystem.API\\Controllers\\RoomController.cs",
+              "ToolTip": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\Controllers\\RoomController.cs",
+              "RelativeToolTip": "HotelReservationSystem.API\\Controllers\\RoomController.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAEsAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T16:44:41.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReservationController.cs",
+              "DocumentMoniker": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\Controllers\\ReservationController.cs",
+              "RelativeDocumentMoniker": "HotelReservationSystem.API\\Controllers\\ReservationController.cs",
+              "ToolTip": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\Controllers\\ReservationController.cs",
+              "RelativeToolTip": "HotelReservationSystem.API\\Controllers\\ReservationController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T16:44:32.809Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

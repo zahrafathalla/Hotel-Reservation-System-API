@@ -1,7 +1,6 @@
 ﻿using HotelReservationSystem.API.Errors;
 using HotelReservationSystem.Service.Services.UserService;
 using HotelReservationSystem.Service.Services.UserService.Dtos;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelReservationSystem.API.Controllers

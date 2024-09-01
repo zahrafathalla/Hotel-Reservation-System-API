@@ -29,15 +29,9 @@ namespace HotelReservationSystem.Service.Services.TokenService
                 new Claim(ClaimTypes.Email, user.Email)
             };
 
-            var userRoles = await _unitOfWork.Repository<UserRole>()
-                                    .GetAsync(u => u.UserId == user.Id);
+            var roles = await GetRolesAsync(user.Id);
 
-            var roles = await _unitOfWork.Repository<Role>()
-                                    .GetAsync(r => userRoles.Select(ur => ur.RoleId).Contains(r.Id));
-
-            var roleNames = roles.Select(r => r.Name).ToList();
-
-            foreach(var role in roleNames)
+            foreach (var role in roles)
             {
                 claims.Add(new Claim(ClaimTypes.Role, role));
             }
@@ -55,5 +49,18 @@ namespace HotelReservationSystem.Service.Services.TokenService
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+        private async Task<IEnumerable<string>> GetRolesAsync(int userId)
+        {
+            var userRoles = await _unitOfWork.Repository<UserRole>()
+                .GetAsync(ur => ur.UserId == userId);
+
+            var roleIds = userRoles.Select(ur => ur.RoleId).ToList();
+
+            var roles = await _unitOfWork.Repository<Role>()
+                .GetAsync(r => roleIds.Contains(r.Id));
+
+            return roles.Select(r => r.Name);
+        }
+
     }
 }

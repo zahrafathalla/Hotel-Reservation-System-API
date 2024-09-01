@@ -1,13 +1,7 @@
 ﻿using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Repository.Specification.RoomSpecifications;
+using HotelReservationSystem.Repository.Specification.Specifications;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;
-using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HotelReservationSystem.Service.Services.RoomService
 {
@@ -16,11 +10,10 @@ namespace HotelReservationSystem.Service.Services.RoomService
         Task<Room> AddRoomAsync(RoomDto roomDto);
         Task<bool> AddPicturesToRoomAsync(PictureDto pictureDto);
         Task<Room> UpdateRoomAsync(int id, RoomDto room);
-        Task<IEnumerable<RoomToReturnDto>> GetAllAsync(RoomSpecParams specParams);
-        Task<IEnumerable<RoomToReturnDto>> GetAllRoomsIsAvaliableAsync();
+        Task<IEnumerable<RoomToReturnDto>> GetAllRoomsIsAvaliableAsync(SpecParams roomSpec, DateTime checkInDate, DateTime checkOutDate);
+        Task<int> GetAvailableRoomCount(SpecParams roomSpec, DateTime checkInDate, DateTime checkOutDate);
         Task<bool> DeleteRoomAsync(int id);
         Task<decimal> GetRoomPriceAsync(int id);
-        Task<int> GetCount(RoomSpecParams spec);
         Task<RoomToReturnDto> GetRoomByIDAsync(int id);
     }
 }

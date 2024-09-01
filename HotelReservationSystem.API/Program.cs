@@ -16,6 +16,12 @@ using HotelReservationSystem.Service.Services.InvoiceService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using HotelReservationSystem.Service.Services.TokenService;
+using HotelReservationSystem.Service.Services.UserService;
+using HotelReservationSystem.Service.Services.FeedBackService;
 
 namespace HotelReservationSystem.API
 {
@@ -55,6 +61,9 @@ namespace HotelReservationSystem.API
             builder.Services.AddScoped<IReservationService, ReservationService>();
             builder.Services.AddScoped< IReservationMediator, ReservationMediator >();
             builder.Services.AddScoped<IInvoiceService,InvoiceService>();
+            builder.Services.AddScoped<ITokenService, TokenService>();
+            builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IFeedBackService, FeedBackService>();
 
 
             builder.Services.AddHostedService<ReservationStatusBackgroundService>();
@@ -81,7 +90,31 @@ namespace HotelReservationSystem.API
 
 
 
-            }); 
+            });
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(option =>
+            {
+                option.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ValidateIssuer = true,
+                    ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
+                    ValidateAudience = true,
+                    ValidAudience = builder.Configuration["JWT:ValidAudience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:AuthKey"])),
+                    ValidateLifetime = true,
+                    ClockSkew = TimeSpan.Zero,
+                };
+            });
+
+            builder.Services.AddAuthorization(opts =>
+            {
+
+            });
+
             #endregion
 
 
@@ -114,6 +147,11 @@ namespace HotelReservationSystem.API
             }
             app.UseStatusCodePagesWithReExecute("/Errors/{0}");
             app.UseHttpsRedirection();
+
+            app.UseAuthentication();
+
+            app.UseAuthorization();
+
             app.UseStaticFiles();
             app.UseAuthorization();
             app.MapControllers(); 

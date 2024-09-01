@@ -1,6 +1,4 @@
 ﻿using HotelReservationSystem.Data.Entities;
-using Microsoft.EntityFrameworkCore;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace HotelReservationSystem.Repository.Specification
 {

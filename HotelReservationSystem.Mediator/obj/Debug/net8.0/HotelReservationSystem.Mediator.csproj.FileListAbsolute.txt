@@ -78,3 +78,23 @@ C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System
 C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\refint\HotelReservationSystem.Mediator.dll
 C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.pdb
 C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\ref\HotelReservationSystem.Mediator.dll
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Mediator.deps.json
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Mediator.dll
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Mediator.pdb
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Data.dll
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Repository.dll
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Service.dll
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Service.pdb
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Data.pdb
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\bin\Debug\net8.0\HotelReservationSystem.Repository.pdb
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.csproj.AssemblyReference.cache
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.AssemblyInfoInputs.cache
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.AssemblyInfo.cs
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.csproj.CoreCompileInputs.cache
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.sourcelink.json
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.csproj.CopyComplete
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.dll
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\refint\HotelReservationSystem.Mediator.dll
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\HotelReservationSystem.Mediator.pdb
+C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Mediator\obj\Debug\net8.0\ref\HotelReservationSystem.Mediator.dll

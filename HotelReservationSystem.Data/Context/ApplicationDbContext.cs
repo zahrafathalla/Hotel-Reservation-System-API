@@ -26,6 +26,8 @@ namespace HotelReservationSystem.Data.Context
         public DbSet<Staff> staff { get; set; }
         public DbSet<Invoice> invoices { get; set; }
         public DbSet<FeedBack> feedBacks { get; set; }
+        public DbSet<User> users { get; set; }
+        public DbSet<Role> roles { get; set; }
 
     }
 }

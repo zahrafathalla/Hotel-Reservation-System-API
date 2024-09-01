@@ -1,4 +1,5 @@
 ﻿using HotelReservationSystem.Data.Entities;
+using HotelReservationSystem.Repository.Specification.Specifications;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace HotelReservationSystem.Repository.Specification.RoomSpecifications
 {
     public class CountRoomWithSpec: BaseSpecifications<Room>
     {
-        public CountRoomWithSpec(RoomSpecParams roomSpec) : base(R=>!R.IsDeleted) 
+        public CountRoomWithSpec(SpecParams roomSpec) : base(R=>!R.IsDeleted) 
         {
             
         }

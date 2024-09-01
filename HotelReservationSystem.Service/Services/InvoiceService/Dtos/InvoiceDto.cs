@@ -8,5 +8,7 @@ namespace HotelReservationSystem.Service.Services.InvoiceService.Dtos
 {
     public class InvoiceDto
     {
+        public DateTime InvoiceDate { get; set; }
+        public int ReservationId { get; set;}
     }
 }

@@ -24,17 +24,12 @@ namespace HotelReservationSystem.Service.Services.PaymentService
             _mapper = mapper;
         }
 
-
         public async Task<ReservationForPaymentToReturnDto> CreatePaymentIntentAsync(int reservationId)
         {
             StripeConfiguration.ApiKey = _configuration["Stripe:SecretKey"];
 
             var reservation = await _unitOfWork.Repository<Reservation>().GetByIdAsync(reservationId);
             if (reservation == null)
-                return null;
-
-            var room = await _unitOfWork.Repository<Room>().GetByIdAsync(reservation.RoomId);
-            if (room == null)
                 return null;
 
             var totalAmount = reservation.TotalAmount;
@@ -55,15 +50,6 @@ namespace HotelReservationSystem.Service.Services.PaymentService
 
                 reservation.PaymentIntentId = paymentIntent.Id;
                 reservation.ClientSecret = paymentIntent.ClientSecret;
-            }
-            else
-            {
-                var options = new PaymentIntentUpdateOptions
-                {
-                    Amount =(long)(totalAmount * 100)
-                };
-                await paymentIntentService.UpdateAsync(reservation.PaymentIntentId, options);
-
             }
 
             _unitOfWork.Repository<Reservation>().Update(reservation);

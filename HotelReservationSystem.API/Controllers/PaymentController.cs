@@ -1,9 +1,7 @@
 ﻿using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Service.Services.PaymentService;
 using HotelReservationSystem.Service.Services.PaymentService.Dtos;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Stripe.Climate;
 using Stripe;
 
 namespace HotelReservationSystem.API.Controllers

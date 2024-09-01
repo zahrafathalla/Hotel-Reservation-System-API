@@ -1,29 +1,3 @@
-C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.Data\bin\Debug\net8.0\HotelReservationSystem.Data.deps.json
-C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.Data\bin\Debug\net8.0\HotelReservationSystem.Data.dll
-C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.Data\bin\Debug\net8.0\HotelReservationSystem.Data.pdb
-C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.csproj.AssemblyReference.cache
-C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.AssemblyInfoInputs.cache
-C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.AssemblyInfo.cs
-C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.csproj.CoreCompileInputs.cache
-C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.sourcelink.json
-C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.dll
-C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\refint\HotelReservationSystem.Data.dll
-C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.pdb
-C:\Users\almagd\Source\Repos\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\ref\HotelReservationSystem.Data.dll
-C:\Users\20100\Desktop\FinalHotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\bin\Debug\net8.0\HotelReservationSystem.Data.deps.json
-C:\Users\20100\Desktop\FinalHotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\bin\Debug\net8.0\HotelReservationSystem.Data.dll
-C:\Users\20100\Desktop\FinalHotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\bin\Debug\net8.0\HotelReservationSystem.Data.pdb
-C:\Users\20100\Desktop\FinalHotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.csproj.AssemblyReference.cache
-C:\Users\20100\Desktop\FinalHotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\20100\Desktop\FinalHotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.AssemblyInfoInputs.cache
-C:\Users\20100\Desktop\FinalHotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.AssemblyInfo.cs
-C:\Users\20100\Desktop\FinalHotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.csproj.CoreCompileInputs.cache
-C:\Users\20100\Desktop\FinalHotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.sourcelink.json
-C:\Users\20100\Desktop\FinalHotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.dll
-C:\Users\20100\Desktop\FinalHotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\refint\HotelReservationSystem.Data.dll
-C:\Users\20100\Desktop\FinalHotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.pdb
-C:\Users\20100\Desktop\FinalHotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\ref\HotelReservationSystem.Data.dll
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Data\bin\Debug\net8.0\HotelReservationSystem.Data.deps.json
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Data\bin\Debug\net8.0\HotelReservationSystem.Data.dll
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Data\bin\Debug\net8.0\HotelReservationSystem.Data.pdb
@@ -37,29 +11,3 @@ C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Data\
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Data\obj\Debug\net8.0\refint\HotelReservationSystem.Data.dll
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.pdb
 C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Data\obj\Debug\net8.0\ref\HotelReservationSystem.Data.dll
-C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Data\bin\Debug\net8.0\HotelReservationSystem.Data.deps.json
-C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Data\bin\Debug\net8.0\HotelReservationSystem.Data.dll
-C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Data\bin\Debug\net8.0\HotelReservationSystem.Data.pdb
-C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.csproj.AssemblyReference.cache
-C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.AssemblyInfoInputs.cache
-C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.AssemblyInfo.cs
-C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.csproj.CoreCompileInputs.cache
-C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.sourcelink.json
-C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.dll
-C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\refint\HotelReservationSystem.Data.dll
-C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.pdb
-C:\Marwy\Programming Courses\Backend.Net\Demos\Projects\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\ref\HotelReservationSystem.Data.dll
-C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\bin\Debug\net8.0\HotelReservationSystem.Data.deps.json
-C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\bin\Debug\net8.0\HotelReservationSystem.Data.dll
-C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\bin\Debug\net8.0\HotelReservationSystem.Data.pdb
-C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.csproj.AssemblyReference.cache
-C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.AssemblyInfoInputs.cache
-C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.AssemblyInfo.cs
-C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.csproj.CoreCompileInputs.cache
-C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.sourcelink.json
-C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.dll
-C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\refint\HotelReservationSystem.Data.dll
-C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\HotelReservationSystem.Data.pdb
-C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Data\obj\Debug\net8.0\ref\HotelReservationSystem.Data.dll

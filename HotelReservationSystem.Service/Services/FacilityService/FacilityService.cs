@@ -38,7 +38,7 @@ namespace HotelReservationSystem.Service.Services.FacilityService
             OldFacility.Name = facilityDto.Name;
 
             _unitOfWork.Repository<Facility>().Update(OldFacility);
-            await _unitOfWork.CompleteAsync();
+            await _unitOfWork.SaveChangesAsync();
             var mappedFacility = _mapper.Map<FacilityDto>(OldFacility);
 
             return mappedFacility;
@@ -60,7 +60,7 @@ namespace HotelReservationSystem.Service.Services.FacilityService
             };
 
             await _unitOfWork.Repository<Facility>().AddAsync(newFacility);
-            await _unitOfWork.CompleteAsync();
+            await _unitOfWork.SaveChangesAsync();
 
             var mappedFacility = _mapper.Map<FacilityDto>(newFacility);
 
@@ -81,7 +81,7 @@ namespace HotelReservationSystem.Service.Services.FacilityService
             if (Facility == null) return false;
 
             _unitOfWork.Repository<Facility>().Delete(Facility);
-            var Result = await _unitOfWork.CompleteAsync();
+            var Result = await _unitOfWork.SaveChangesAsync();
 
             return Result > 0;
         }

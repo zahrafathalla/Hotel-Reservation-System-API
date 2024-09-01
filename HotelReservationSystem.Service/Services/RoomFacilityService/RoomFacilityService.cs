@@ -44,7 +44,7 @@ namespace HotelReservationSystem.Service.Services.RoomFacilityService
             }
 
             _unitOfWork.Repository<Room>().Update(room);
-            await _unitOfWork.CompleteAsync();
+            await _unitOfWork.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<Facility>> GetFacilitiesByRoomIdAsync(int roomId)
@@ -69,7 +69,7 @@ namespace HotelReservationSystem.Service.Services.RoomFacilityService
                 roomFacilityRepository.Delete(facility);
             }
 
-            var result = await _unitOfWork.CompleteAsync();
+            var result = await _unitOfWork.SaveChangesAsync();
             return result > 0;
         }
     }

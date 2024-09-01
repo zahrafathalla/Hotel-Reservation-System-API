@@ -54,7 +54,7 @@ namespace HotelReservationSystem.Service.Services.InvoiceService
 
             await _unitOfWork.Repository<Invoice>().AddAsync(newInvoic);
 
-            await _unitOfWork.CompleteAsync();
+            await _unitOfWork.SaveChangesAsync();
 
             var mappedInvoice = _mapper.Map<InvoiceToReturnDto>(newInvoic);
             return mappedInvoice;
@@ -89,7 +89,7 @@ namespace HotelReservationSystem.Service.Services.InvoiceService
             if (Invoice == null) return false;
 
             _unitOfWork.Repository<Invoice>().Delete(Invoice);
-            var Result = await _unitOfWork.CompleteAsync();
+            var Result = await _unitOfWork.SaveChangesAsync();
 
             return Result > 0;
         }

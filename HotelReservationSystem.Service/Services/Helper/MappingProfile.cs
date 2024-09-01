@@ -6,6 +6,7 @@ using HotelReservationSystem.Service.Services.InvoiceService.Dtos;
 using HotelReservationSystem.Service.Services.PaymentService.Dtos;
 using HotelReservationSystem.Service.Services.ReservationService.Dtos;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;
+using HotelReservationSystem.Service.Services.UserService.Dtos;
 
 namespace HotelReservationSystem.Service.Services.Helper
 {
@@ -37,8 +38,6 @@ namespace HotelReservationSystem.Service.Services.Helper
 
             CreateMap<Invoice, InvoiceToReturnDto>();
 
-
-
             CreateMap<FeedBackDto, FeedBack>()
                   .ForMember(dest => dest.DateSubmitted, opt => opt.MapFrom(src => DateTime.UtcNow))
                   .ForMember(dest => dest.FeedBackReplys, opt => opt.Ignore());
@@ -49,6 +48,8 @@ namespace HotelReservationSystem.Service.Services.Helper
 
             CreateMap<FeedbackReplyDto, FeedbackReply>();
             CreateMap<FeedbackReply, FeedbackReplayToReturnDto>();
+
+            CreateMap<User, UserToReturnDto>();
         }
     }
 }

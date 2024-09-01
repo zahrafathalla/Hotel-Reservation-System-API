@@ -33,7 +33,7 @@ namespace HotelReservationSystem.Service.Services.FeedBackService
             var feedback = _mapper.Map<FeedBack>(feedBackDto);
 
             await _unitOfWork.Repository<FeedBack>().AddAsync(feedback);
-            await _unitOfWork.CompleteAsync();
+            await _unitOfWork.SaveChangesAsync();
 
             var returnedFeedBack = _mapper.Map<FeedBackToReturnDto>(feedback);
             return returnedFeedBack;
@@ -62,7 +62,7 @@ namespace HotelReservationSystem.Service.Services.FeedBackService
             var feedbackReply = _mapper.Map<FeedbackReply>(feedbackReplyDto);
 
             await _unitOfWork.Repository<FeedbackReply>().AddAsync(feedbackReply);
-            await _unitOfWork.CompleteAsync();
+            await _unitOfWork.SaveChangesAsync();
 
             var returnedFeedbackReply = _mapper.Map<FeedbackReplayToReturnDto>(feedbackReply);
 
@@ -92,7 +92,7 @@ namespace HotelReservationSystem.Service.Services.FeedBackService
                 return false;
 
             _unitOfWork.Repository<FeedBack>().Delete(feedback);
-            await _unitOfWork.CompleteAsync();
+            await _unitOfWork.SaveChangesAsync();
 
             return true;
         }
@@ -105,7 +105,7 @@ namespace HotelReservationSystem.Service.Services.FeedBackService
                 return false;
 
             _unitOfWork.Repository<FeedbackReply>().Delete(reply);
-            await _unitOfWork.CompleteAsync();
+            await _unitOfWork.SaveChangesAsync();
 
             return true;
         }

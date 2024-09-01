@@ -53,7 +53,7 @@ namespace HotelReservationSystem.Service.Services.PaymentService
             }
 
             _unitOfWork.Repository<Reservation>().Update(reservation);
-            await _unitOfWork.CompleteAsync();
+            await _unitOfWork.SaveChangesAsync();
 
             var mappedReservation = _mapper.Map<ReservationForPaymentToReturnDto>(reservation);
             return mappedReservation;
@@ -99,7 +99,7 @@ namespace HotelReservationSystem.Service.Services.PaymentService
             }
 
             reservationRepo.Update(reservation);
-            await _unitOfWork.CompleteAsync();
+            await _unitOfWork.SaveChangesAsync();
 
             return reservation;
 

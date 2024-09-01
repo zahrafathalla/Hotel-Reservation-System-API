@@ -30,7 +30,7 @@ namespace HotelReservationSystem.Repository.Repository
             return _repository[key] as IGenericRepository<T>;
         }
 
-        public async Task<int> CompleteAsync()
+        public async Task<int> SaveChangesAsync()
         {
 
             return await _dbContext.SaveChangesAsync();

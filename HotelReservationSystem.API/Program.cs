@@ -22,12 +22,17 @@ using System.Text;
 using HotelReservationSystem.Service.Services.TokenService;
 using HotelReservationSystem.Service.Services.UserService;
 using HotelReservationSystem.Service.Services.FeedBackService;
+using HotelReservationSystem.Mediator.StaffMediator;
+using HotelReservationSystem.Service.Services.StaffService;
+using HotelReservationSystem.Service.Services.RoleUserService;
+using HotelReservationSystem.Repository;
+using HotelReservationSystem.API.Extensions;
 
 namespace HotelReservationSystem.API
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -64,6 +69,10 @@ namespace HotelReservationSystem.API
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IFeedBackService, FeedBackService>();
+            builder.Services.AddScoped<IStaffService, StaffService>();
+            builder.Services.AddScoped<IUserRoleService, UserRoleService>();
+
+            builder.Services.AddScoped<IStaffMediator, StaffMediator>();
 
 
             builder.Services.AddHostedService<ReservationStatusBackgroundService>();
@@ -115,6 +124,7 @@ namespace HotelReservationSystem.API
 
             });
 
+            builder.Services.AddSwaggerDocumentation();
             #endregion
 
 
@@ -126,9 +136,11 @@ namespace HotelReservationSystem.API
             var services = scoped.ServiceProvider;
             var _dbcontext = services.GetRequiredService<ApplicationDBContext>();
             var loggerFactory = services.GetRequiredService<ILoggerFactory>();
+            var _unitOfWork = services.GetRequiredService<IunitOfWork>();
             try
             {
-                _dbcontext.Database.MigrateAsync();
+                await _dbcontext.Database.MigrateAsync();
+                await ApplicationContextSeed.SeedRolesAsync(_unitOfWork);
             }
             catch (Exception ex)
             {
@@ -152,7 +164,7 @@ namespace HotelReservationSystem.API
 
             app.UseAuthorization();
 
-            app.UseStaticFiles();
+            //app.UseStaticFiles();
             app.UseAuthorization();
             app.MapControllers(); 
             #endregion

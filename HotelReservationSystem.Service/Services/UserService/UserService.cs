@@ -64,15 +64,13 @@ namespace HotelReservationSystem.Service.Services.UserService
             var user = await CreateUserAsync(registerDto);
             await CreateCustomerAsync(user);
 
-            await _unitOfWork.CompleteAsync();
-
-            var token = await _tokenService.GenerateTokenAsync(user);
+            await _unitOfWork.SaveChangesAsync();
 
             return new UserToReturnDto()
             {
                 DisplayName = user.Displayname,
                 Email = user.Email,
-                Token = token
+                Token = await _tokenService.GenerateTokenAsync(user)
             };
         }
         private async Task<User> CreateUserAsync(RegisterDto registerDto)
@@ -99,14 +97,7 @@ namespace HotelReservationSystem.Service.Services.UserService
             };
 
             await _unitOfWork.Repository<Customer>().AddAsync(customer);
-            await _unitOfWork.CompleteAsync();
-
-            return new UserToReturnDto()
-            {
-                DisplayName = user.Displayname,
-                Email = user.Email,
-                Token = await _tokenService.GenerateTokenAsync(user)
-            };
+            await _unitOfWork.SaveChangesAsync();
 
         }
     }

@@ -37,7 +37,7 @@ namespace HotelReservationSystem.Service.Services.ReservationService
             reservation.TotalAmount = totalAmount;
 
             await _unitOfWork.Repository<Reservation>().AddAsync(reservation);
-            await _unitOfWork.CompleteAsync();
+            await _unitOfWork.SaveChangesAsync();
 
             var mappedReservation = _mapper.Map<ReservationToReturnDto>(reservation);
             return mappedReservation;
@@ -63,7 +63,7 @@ namespace HotelReservationSystem.Service.Services.ReservationService
             reservation.Status = ReservationStatus.Cancelled;
             reservationRepo.Update(reservation);
 
-            await _unitOfWork.CompleteAsync();
+            await _unitOfWork.SaveChangesAsync();
 
             return true;
         }
@@ -103,7 +103,7 @@ namespace HotelReservationSystem.Service.Services.ReservationService
             oldReservation.TotalAmount = totalAmount;
 
             _unitOfWork.Repository<Reservation>().Update(oldReservation);
-            await _unitOfWork.CompleteAsync();
+            await _unitOfWork.SaveChangesAsync();
 
             var mappedReservation = _mapper.Map<ReservationToReturnDto>(oldReservation);
             return mappedReservation;
@@ -120,7 +120,7 @@ namespace HotelReservationSystem.Service.Services.ReservationService
                 reservation.Status = ReservationStatus.CheckedIn;
                 _unitOfWork.Repository<Reservation>().Update(reservation);
             }
-            await _unitOfWork.CompleteAsync();
+            await _unitOfWork.SaveChangesAsync();
         }
         public async Task UpdateCheckOutStatusesAsync()
         {
@@ -133,7 +133,7 @@ namespace HotelReservationSystem.Service.Services.ReservationService
                 reservation.Status = ReservationStatus.CheckedOut;
                 _unitOfWork.Repository<Reservation>().Update(reservation);
             }
-            await _unitOfWork.CompleteAsync();
+            await _unitOfWork.SaveChangesAsync();
         }
     }
 }

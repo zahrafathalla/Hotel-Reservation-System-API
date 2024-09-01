@@ -25,7 +25,7 @@ namespace HotelReservationSystem.Service.Services.RoomService
 
             await _unitOfWork.Repository<Room>().AddAsync(room);
 
-            await _unitOfWork.CompleteAsync();
+            await _unitOfWork.SaveChangesAsync();
             return room;
         }
         public async Task<bool> AddPicturesToRoomAsync(PictureDto pictureDto)
@@ -47,7 +47,7 @@ namespace HotelReservationSystem.Service.Services.RoomService
                 await _unitOfWork.Repository<Picture>().AddAsync(picture);
             }
 
-            var result = await _unitOfWork.CompleteAsync();
+            var result = await _unitOfWork.SaveChangesAsync();
             return result > 0;
         }
         public async Task<Room> UpdateRoomAsync(int id, RoomDto roomDto)
@@ -60,7 +60,7 @@ namespace HotelReservationSystem.Service.Services.RoomService
             _mapper.Map(roomDto, room); 
 
             _unitOfWork.Repository<Room>().Update(room);
-            await _unitOfWork.CompleteAsync();
+            await _unitOfWork.SaveChangesAsync();
             return room;
         }
         public async Task<bool> DeleteRoomAsync(int id)
@@ -78,7 +78,7 @@ namespace HotelReservationSystem.Service.Services.RoomService
 
             _unitOfWork.Repository<Room>().Delete(room);
 
-            var result = await _unitOfWork.CompleteAsync();
+            var result = await _unitOfWork.SaveChangesAsync();
             return result > 0; 
         }
 

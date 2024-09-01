@@ -12,7 +12,7 @@ namespace HotelReservationSystem.Data.Entities
         public DateTime DateResponded { get; set; }
         public int FeedbackId { get; set; }
         public FeedBack FeedBack { get; set; }
-        public int? StaffId { get; set; }
-        public Staff? staff { get; set; }
+        public int StaffId { get; set; }
+        public Staff Staff { get; set; }
     }
 }

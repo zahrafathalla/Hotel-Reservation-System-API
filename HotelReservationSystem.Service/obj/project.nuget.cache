@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EQvMfZ5eI1GB/HDRA/nAvArWDLYF5DnOK99gPs9MtIHBjrw0aO6pp2hl1mbxqASuDJyKskApMAlvmguLft3yRw==",
+  "dgSpecHash": "elWHEulOgkxaMFplsSlZnVGcNlOoit9bWfY86/fEwehWmkD6bEiQnYj1D0tXIlzJlrruKJcqs/ixcg6pW7IQTg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj",
+  "projectFilePath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Service\\HotelReservationSystem.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\almagd\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\almagd\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

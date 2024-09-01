@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj": {}
+    "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj": {
+    "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj",
+        "projectUniqueName": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj",
         "projectName": "HotelReservationSystem.Data",
-        "projectPath": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj",
+        "projectPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj",
         "packagesPath": "C:\\Users\\almagd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Data\\obj\\",
+        "outputPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\almagd\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj": {
+    "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj",
         "projectName": "HotelReservationSystem.Repository",
-        "projectPath": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj",
+        "projectPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Repository\\HotelReservationSystem.Repository.csproj",
         "packagesPath": "C:\\Users\\almagd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Repository\\obj\\",
+        "outputPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\almagd\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -93,8 +93,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj": {
-                "projectPath": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj"
+              "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj": {
+                "projectPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj"
               }
             }
           }

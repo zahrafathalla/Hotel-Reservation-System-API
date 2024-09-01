@@ -46,6 +46,9 @@ namespace HotelReservationSystem.Service.Services.Helper
             CreateMap<FeedBack, FeedBackToReturnDto>()
                   .ForMember(dest => dest.FeedbackId, opt => opt.MapFrom(src => src.Id));
 
+
+            CreateMap<FeedbackReplyDto, FeedbackReply>();
+            CreateMap<FeedbackReply, FeedbackReplayToReturnDto>();
         }
     }
 }

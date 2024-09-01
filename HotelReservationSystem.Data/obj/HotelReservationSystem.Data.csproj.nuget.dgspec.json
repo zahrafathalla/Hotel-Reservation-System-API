@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj": {}
+    "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj": {
+    "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj",
+        "projectUniqueName": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj",
         "projectName": "HotelReservationSystem.Data",
-        "projectPath": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj",
+        "projectPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Data\\HotelReservationSystem.Data.csproj",
         "packagesPath": "C:\\Users\\almagd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.Data\\obj\\",
+        "outputPath": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\almagd\\AppData\\Roaming\\NuGet\\NuGet.Config",

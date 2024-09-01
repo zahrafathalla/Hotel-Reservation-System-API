@@ -84,19 +84,16 @@ namespace HotelReservationSystem.Data.Migrations
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("DateSubmitted")
+                        .HasColumnType("datetime2");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<int>("Rating")
                         .HasColumnType("int");
 
-                    b.Property<string>("Reply")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("ReservationId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("StaffId")
                         .HasColumnType("int");
 
                     b.Property<string>("Text")
@@ -109,9 +106,40 @@ namespace HotelReservationSystem.Data.Migrations
 
                     b.HasIndex("ReservationId");
 
+                    b.ToTable("feedBacks");
+                });
+
+            modelBuilder.Entity("HotelReservationSystem.Data.Entities.FeedbackReply", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DateResponded")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("FeedbackId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("StaffId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StaffResponse")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FeedbackId");
+
                     b.HasIndex("StaffId");
 
-                    b.ToTable("feedBacks");
+                    b.ToTable("FeedbackReply");
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.Invoice", b =>
@@ -394,13 +422,24 @@ namespace HotelReservationSystem.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Customer");
+
+                    b.Navigation("Reservation");
+                });
+
+            modelBuilder.Entity("HotelReservationSystem.Data.Entities.FeedbackReply", b =>
+                {
+                    b.HasOne("HotelReservationSystem.Data.Entities.FeedBack", "FeedBack")
+                        .WithMany("FeedBackReplys")
+                        .HasForeignKey("FeedbackId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("HotelReservationSystem.Data.Entities.Staff", "staff")
                         .WithMany()
                         .HasForeignKey("StaffId");
 
-                    b.Navigation("Customer");
-
-                    b.Navigation("Reservation");
+                    b.Navigation("FeedBack");
 
                     b.Navigation("staff");
                 });
@@ -502,6 +541,11 @@ namespace HotelReservationSystem.Data.Migrations
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.Facility", b =>
                 {
                     b.Navigation("RoomFacilities");
+                });
+
+            modelBuilder.Entity("HotelReservationSystem.Data.Entities.FeedBack", b =>
+                {
+                    b.Navigation("FeedBackReplys");
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.Role", b =>

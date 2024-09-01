@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JN2FOim8gQwsojJwvavJunTw87nPQQcL4melP/zrcAI=",
+  "Hash": "9TTptkv5AzAMCB9LsOpVVmmVIufeHPh1mKq8wjE8Bpg=",
   "Source": "HotelReservationSystem.API",
   "BasePath": "_content/HotelReservationSystem.API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "HotelReservationSystem.API\\wwwroot",
       "Source": "HotelReservationSystem.API",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\01768db7-0e21-44fd-84d3-724319089dcc-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\01768db7-0e21-44fd-84d3-724319089dcc-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/01768db7-0e21-44fd-84d3-724319089dcc-.jpg",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\01768db7-0e21-44fd-84d3-724319089dcc-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\28b6202f-bd2a-48a2-ac6f-38e09792957a-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\28b6202f-bd2a-48a2-ac6f-38e09792957a-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/28b6202f-bd2a-48a2-ac6f-38e09792957a-.jpg",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\28b6202f-bd2a-48a2-ac6f-38e09792957a-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\3dc5b031-62f7-43e3-bb68-5b8b22e71acf-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\3dc5b031-62f7-43e3-bb68-5b8b22e71acf-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/3dc5b031-62f7-43e3-bb68-5b8b22e71acf-.jpg",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\3dc5b031-62f7-43e3-bb68-5b8b22e71acf-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\41401f61-00ff-4f68-add6-a59bacf19914-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\41401f61-00ff-4f68-add6-a59bacf19914-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/41401f61-00ff-4f68-add6-a59bacf19914-.jpg",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\41401f61-00ff-4f68-add6-a59bacf19914-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\42a3433a-8b99-40f9-8000-115fc07783e2-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\42a3433a-8b99-40f9-8000-115fc07783e2-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/42a3433a-8b99-40f9-8000-115fc07783e2-.jpg",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\42a3433a-8b99-40f9-8000-115fc07783e2-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\48bb6b94-102a-41cc-a3f9-9e0f22a41159-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\48bb6b94-102a-41cc-a3f9-9e0f22a41159-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/48bb6b94-102a-41cc-a3f9-9e0f22a41159-.jpg",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\48bb6b94-102a-41cc-a3f9-9e0f22a41159-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\5203e561-c650-4225-95d0-d32b0658b304-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\5203e561-c650-4225-95d0-d32b0658b304-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/5203e561-c650-4225-95d0-d32b0658b304-.jpg",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\5203e561-c650-4225-95d0-d32b0658b304-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\58b22c06-b174-42b4-994f-937b49e61e8c-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\58b22c06-b174-42b4-994f-937b49e61e8c-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/58b22c06-b174-42b4-994f-937b49e61e8c-.jpg",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\58b22c06-b174-42b4-994f-937b49e61e8c-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\5a7dcb23-326b-47d1-822f-943288b5b719-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\5a7dcb23-326b-47d1-822f-943288b5b719-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/5a7dcb23-326b-47d1-822f-943288b5b719-.jpg",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\5a7dcb23-326b-47d1-822f-943288b5b719-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\62d221f0-440e-4c4c-889d-58c319d75abe-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\62d221f0-440e-4c4c-889d-58c319d75abe-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/62d221f0-440e-4c4c-889d-58c319d75abe-.jpg",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\62d221f0-440e-4c4c-889d-58c319d75abe-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\6c2b2ec3-2a3d-4f9b-a17c-554d9368b107-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\6c2b2ec3-2a3d-4f9b-a17c-554d9368b107-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/6c2b2ec3-2a3d-4f9b-a17c-554d9368b107-.jpg",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\6c2b2ec3-2a3d-4f9b-a17c-554d9368b107-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\731432ca-c5e4-4d07-a12c-804de2e624fb-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\731432ca-c5e4-4d07-a12c-804de2e624fb-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/731432ca-c5e4-4d07-a12c-804de2e624fb-.jpg",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\731432ca-c5e4-4d07-a12c-804de2e624fb-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\76d33751-e463-441c-94b8-caaba5c5470f-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\76d33751-e463-441c-94b8-caaba5c5470f-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/76d33751-e463-441c-94b8-caaba5c5470f-.jpg",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\76d33751-e463-441c-94b8-caaba5c5470f-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\809e7196-27bc-47cb-8b29-cf0d63ce9fdf-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\809e7196-27bc-47cb-8b29-cf0d63ce9fdf-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/809e7196-27bc-47cb-8b29-cf0d63ce9fdf-.jpg",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\809e7196-27bc-47cb-8b29-cf0d63ce9fdf-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\8d387f81-199d-4e04-a298-363f7308485a-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\8d387f81-199d-4e04-a298-363f7308485a-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/8d387f81-199d-4e04-a298-363f7308485a-.jpg",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\8d387f81-199d-4e04-a298-363f7308485a-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\9edcea0e-d11d-45f4-be04-0dca7d6ddc39-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\9edcea0e-d11d-45f4-be04-0dca7d6ddc39-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/9edcea0e-d11d-45f4-be04-0dca7d6ddc39-.jpg",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\9edcea0e-d11d-45f4-be04-0dca7d6ddc39-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\b36b5a06-694a-4eab-88d4-556fc29a052f-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\b36b5a06-694a-4eab-88d4-556fc29a052f-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/b36b5a06-694a-4eab-88d4-556fc29a052f-.jpg",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\b36b5a06-694a-4eab-88d4-556fc29a052f-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\b7c71cb6-a475-4994-8a34-31672e789a5b-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\b7c71cb6-a475-4994-8a34-31672e789a5b-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/b7c71cb6-a475-4994-8a34-31672e789a5b-.jpg",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\b7c71cb6-a475-4994-8a34-31672e789a5b-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\c6ab279c-1513-4b00-8084-d81f542458fd-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\c6ab279c-1513-4b00-8084-d81f542458fd-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/c6ab279c-1513-4b00-8084-d81f542458fd-.jpg",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\c6ab279c-1513-4b00-8084-d81f542458fd-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\c9cb19d5-3fcb-4789-a627-76c57edb35a6-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\c9cb19d5-3fcb-4789-a627-76c57edb35a6-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/c9cb19d5-3fcb-4789-a627-76c57edb35a6-.jpg",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\c9cb19d5-3fcb-4789-a627-76c57edb35a6-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\cebd2caa-91a5-4fed-ba0c-73cbefbe27b6-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\cebd2caa-91a5-4fed-ba0c-73cbefbe27b6-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/cebd2caa-91a5-4fed-ba0c-73cbefbe27b6-.jpg",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\cebd2caa-91a5-4fed-ba0c-73cbefbe27b6-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\da946ddd-7f71-4466-9de6-e3798add2701-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\da946ddd-7f71-4466-9de6-e3798add2701-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/da946ddd-7f71-4466-9de6-e3798add2701-.jpg",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\da946ddd-7f71-4466-9de6-e3798add2701-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\df0cf01e-4140-4862-a425-187bf54e0d84-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\df0cf01e-4140-4862-a425-187bf54e0d84-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/df0cf01e-4140-4862-a425-187bf54e0d84-.jpg",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\df0cf01e-4140-4862-a425-187bf54e0d84-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\eb11579f-3b07-44d4-9af9-122a546b1dec-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\eb11579f-3b07-44d4-9af9-122a546b1dec-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/eb11579f-3b07-44d4-9af9-122a546b1dec-.jpg",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\eb11579f-3b07-44d4-9af9-122a546b1dec-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\ebdd555c-cc03-4860-be9f-96b7945f6fc1-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\ebdd555c-cc03-4860-be9f-96b7945f6fc1-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/ebdd555c-cc03-4860-be9f-96b7945f6fc1-.jpg",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\ebdd555c-cc03-4860-be9f-96b7945f6fc1-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\f1b51005-b39d-4cca-a262-7cea57e9ca1e-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\f1b51005-b39d-4cca-a262-7cea57e9ca1e-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/f1b51005-b39d-4cca-a262-7cea57e9ca1e-.jpg",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\f1b51005-b39d-4cca-a262-7cea57e9ca1e-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\f45a8e8b-f769-4cd3-8fb2-eb49b024b9db-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\f45a8e8b-f769-4cd3-8fb2-eb49b024b9db-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/f45a8e8b-f769-4cd3-8fb2-eb49b024b9db-.jpg",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\f45a8e8b-f769-4cd3-8fb2-eb49b024b9db-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\f9f9c219-4fc3-4ec7-ac02-87cd38598633-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\f9f9c219-4fc3-4ec7-ac02-87cd38598633-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/f9f9c219-4fc3-4ec7-ac02-87cd38598633-.jpg",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\f9f9c219-4fc3-4ec7-ac02-87cd38598633-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\fd2b98c5-e783-436d-a4f8-6774dcb85190-.jpg",
+      "Identity": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\fd2b98c5-e783-436d-a4f8-6774dcb85190-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/fd2b98c5-e783-436d-a4f8-6774dcb85190-.jpg",
       "AssetKind": "All",

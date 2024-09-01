@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Service.Services.FacilityService.Dtos;
+using HotelReservationSystem.Service.Services.FeedBackService.Dtos;
 using HotelReservationSystem.Service.Services.InvoiceService.Dtos;
 using HotelReservationSystem.Service.Services.PaymentService.Dtos;
 using HotelReservationSystem.Service.Services.ReservationService.Dtos;
@@ -35,6 +36,16 @@ namespace HotelReservationSystem.Service.Services.Helper
             CreateMap<Reservation, ReservationForPaymentToReturnDto>();
 
             CreateMap<Invoice, InvoiceToReturnDto>();
+
+
+
+            CreateMap<FeedBackDto, FeedBack>()
+                  .ForMember(dest => dest.DateSubmitted, opt => opt.MapFrom(src => DateTime.UtcNow))
+                  .ForMember(dest => dest.FeedBackReplys, opt => opt.Ignore());
+
+            CreateMap<FeedBack, FeedBackToReturnDto>()
+                  .ForMember(dest => dest.FeedbackId, opt => opt.MapFrom(src => src.Id));
+
         }
     }
 }

@@ -21,6 +21,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using HotelReservationSystem.Service.Services.TokenService;
 using HotelReservationSystem.Service.Services.UserService;
+using HotelReservationSystem.Service.Services.FeedBackService;
 
 namespace HotelReservationSystem.API
 {
@@ -62,6 +63,7 @@ namespace HotelReservationSystem.API
             builder.Services.AddScoped<IInvoiceService,InvoiceService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IFeedBackService, FeedBackService>();
 
 
             builder.Services.AddHostedService<ReservationStatusBackgroundService>();

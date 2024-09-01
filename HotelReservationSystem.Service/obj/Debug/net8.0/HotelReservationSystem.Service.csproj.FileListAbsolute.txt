@@ -79,3 +79,15 @@ C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem
 C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Data.pdb
 C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Service\obj\Debug\net8.0\HotelReservationSystem.Service.csproj.CopyComplete
 C:\Users\20100\Desktop\Hotel\Hotel-Reservation-System-API\HotelReservationSystem.Service\obj\Debug\net8.0\ref\HotelReservationSystem.Service.dll
+<<<<<<< HEAD
+=======
+C:\Users\almagd\source\repos\Hotel-Reservation-System-API\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Service.deps.json
+C:\Users\almagd\source\repos\Hotel-Reservation-System-API\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Service.dll
+C:\Users\almagd\source\repos\Hotel-Reservation-System-API\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Service.pdb
+C:\Users\almagd\source\repos\Hotel-Reservation-System-API\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Data.dll
+C:\Users\almagd\source\repos\Hotel-Reservation-System-API\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Repository.dll
+C:\Users\almagd\source\repos\Hotel-Reservation-System-API\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Repository.pdb
+C:\Users\almagd\source\repos\Hotel-Reservation-System-API\HotelReservationSystem.Service\bin\Debug\net8.0\HotelReservationSystem.Data.pdb
+C:\Users\almagd\source\repos\Hotel-Reservation-System-API\HotelReservationSystem.Service\obj\Debug\net8.0\HotelReservationSystem.Service.csproj.CopyComplete
+C:\Users\almagd\source\repos\Hotel-Reservation-System-API\HotelReservationSystem.Service\obj\Debug\net8.0\ref\HotelReservationSystem.Service.dll
+>>>>>>> 72e523e29d729178a41f054dc01175deef816687

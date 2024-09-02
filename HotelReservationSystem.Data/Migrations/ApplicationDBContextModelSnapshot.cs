@@ -43,7 +43,7 @@ namespace HotelReservationSystem.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("customers", (string)null);
+                    b.ToTable("customers");
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.Facility", b =>
@@ -70,7 +70,7 @@ namespace HotelReservationSystem.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("facilities", (string)null);
+                    b.ToTable("facilities");
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.FeedBack", b =>
@@ -166,7 +166,58 @@ namespace HotelReservationSystem.Data.Migrations
 
                     b.HasIndex("ReservationId");
 
-                    b.ToTable("invoices", (string)null);
+                    b.ToTable("invoices");
+                });
+
+            modelBuilder.Entity("HotelReservationSystem.Data.Entities.Offer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<double>("Discount")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("offers");
+                });
+
+            modelBuilder.Entity("HotelReservationSystem.Data.Entities.OfferRoom", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("OfferId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RoomId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OfferId");
+
+                    b.HasIndex("RoomId");
+
+                    b.ToTable("OfferRoms");
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.Picture", b =>
@@ -191,7 +242,7 @@ namespace HotelReservationSystem.Data.Migrations
 
                     b.HasIndex("RoomId");
 
-                    b.ToTable("Picture", (string)null);
+                    b.ToTable("Picture");
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.Reservation", b =>
@@ -236,7 +287,7 @@ namespace HotelReservationSystem.Data.Migrations
 
                     b.HasIndex("RoomId");
 
-                    b.ToTable("reservations", (string)null);
+                    b.ToTable("reservations");
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.Role", b =>
@@ -279,7 +330,7 @@ namespace HotelReservationSystem.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("rooms", (string)null);
+                    b.ToTable("rooms");
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.RoomFacility", b =>
@@ -305,7 +356,7 @@ namespace HotelReservationSystem.Data.Migrations
 
                     b.HasIndex("RoomId");
 
-                    b.ToTable("RoomFacility", (string)null);
+                    b.ToTable("RoomFacility");
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.Staff", b =>
@@ -333,79 +384,7 @@ namespace HotelReservationSystem.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("staff", (string)null);
-                });
-
-            modelBuilder.Entity("HotelReservationSystem.Data.Entities.User", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("CustomerId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Displayname")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("PasswordHash")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("StaffId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CustomerId");
-
-                    b.HasIndex("StaffId");
-
-                    b.ToTable("users", (string)null);
-                });
-
-            modelBuilder.Entity("HotelReservationSystem.Data.Entities.UserRole", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RoleId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserRole", (string)null);
+                    b.ToTable("staff");
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.User", b =>
@@ -529,6 +508,25 @@ namespace HotelReservationSystem.Data.Migrations
                     b.Navigation("Reservation");
                 });
 
+            modelBuilder.Entity("HotelReservationSystem.Data.Entities.OfferRoom", b =>
+                {
+                    b.HasOne("HotelReservationSystem.Data.Entities.Offer", "offer")
+                        .WithMany("OfferRoms")
+                        .HasForeignKey("OfferId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HotelReservationSystem.Data.Entities.Room", "Room")
+                        .WithMany()
+                        .HasForeignKey("RoomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Room");
+
+                    b.Navigation("offer");
+                });
+
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.Picture", b =>
                 {
                     b.HasOne("HotelReservationSystem.Data.Entities.Room", "Room")
@@ -620,6 +618,11 @@ namespace HotelReservationSystem.Data.Migrations
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.FeedBack", b =>
                 {
                     b.Navigation("FeedBackReplys");
+                });
+
+            modelBuilder.Entity("HotelReservationSystem.Data.Entities.Offer", b =>
+                {
+                    b.Navigation("OfferRoms");
                 });
 
             modelBuilder.Entity("HotelReservationSystem.Data.Entities.Role", b =>

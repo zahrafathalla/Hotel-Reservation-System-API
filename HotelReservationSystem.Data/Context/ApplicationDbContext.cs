@@ -28,6 +28,8 @@ namespace HotelReservationSystem.Data.Context
         public DbSet<FeedBack> feedBacks { get; set; }
         public DbSet<User> users { get; set; }
         public DbSet<Role> roles { get; set; }
+        public DbSet<Offer> offers { get; set; }
+        public DbSet<OfferRoom> OfferRoms { get; set; }
 
     }
 }

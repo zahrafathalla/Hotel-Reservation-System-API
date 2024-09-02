@@ -13,5 +13,7 @@ namespace HotelReservationSystem.Service.Services.OfferServices
         Task<OfferDto> AddOfferAsync(OfferDto offerDto);
         Task<OfferDto> UpdateOfferAsync(int id , OfferToReturnDto offerDto );
         Task<bool> DeleteOfferAsync(int id);
+        Task<IEnumerable<OfferToReturnDto>> GetAllOffersAsync();
+        Task<decimal> ApplyOfferAsync(int offerId, decimal amount);
     }
 }

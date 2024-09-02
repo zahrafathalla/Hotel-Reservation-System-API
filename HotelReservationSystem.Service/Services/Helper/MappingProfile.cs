@@ -3,7 +3,6 @@ using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Service.Services.FacilityService.Dtos;
 using HotelReservationSystem.Service.Services.FeedBackService.Dtos;
 using HotelReservationSystem.Service.Services.InvoiceService.Dtos;
-using HotelReservationSystem.Service.Services.OfferRoomsServices.Dtos;
 using HotelReservationSystem.Service.Services.OfferServices.Dtos;
 using HotelReservationSystem.Service.Services.PaymentService.Dtos;
 using HotelReservationSystem.Service.Services.ReservationService.Dtos;
@@ -54,7 +53,7 @@ namespace HotelReservationSystem.Service.Services.Helper
             CreateMap<User, UserToReturnDto>();
 
             CreateMap<Offer, OfferDto>();
-            CreateMap<OfferRoom, OfferRoomsDto>();
+
         }
     }
 }

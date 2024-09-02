@@ -1,15 +1,7 @@
 ﻿using AutoMapper;
 using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Repository.Interface;
-using HotelReservationSystem.Repository.Repository;
-using HotelReservationSystem.Service.Services.FacilityService.Dtos;
 using HotelReservationSystem.Service.Services.OfferServices.Dtos;
-using Stripe.Climate;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HotelReservationSystem.Service.Services.OfferServices
 {
@@ -58,6 +50,25 @@ namespace HotelReservationSystem.Service.Services.OfferServices
             return mappedOffer;
 
         }
+
+        public async Task<IEnumerable<OfferToReturnDto>> GetAllOffersAsync()
+        {
+            var offers = await _unitOfWork.Repository<Offer>().GetAllAsync();
+            var mappedOffers = _mapper.Map<IEnumerable<OfferToReturnDto>>(offers);
+            return mappedOffers;
+        }
+        public async Task<decimal> ApplyOfferAsync(int offerId, decimal amount)
+        {
+            var offer = await _unitOfWork.Repository<Offer>().GetByIdAsync(offerId);
+            if (offer == null || DateTime.Now < offer.StartDate || DateTime.Now > offer.EndDate)
+            {
+                return amount; 
+            }
+
+            var discountedAmount = amount - (amount * offer.Discount / 100);
+            return discountedAmount;
+        }
+
 
         public async Task<bool> DeleteOfferAsync(int id)
         {

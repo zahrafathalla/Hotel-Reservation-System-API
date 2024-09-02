@@ -1,4 +1,5 @@
 ﻿using HotelReservationSystem.Service.Services.FacilityService;
+using HotelReservationSystem.Service.Services.OfferServices;
 using HotelReservationSystem.Service.Services.ReservationService;
 using HotelReservationSystem.Service.Services.ReservationService.Dtos;
 using HotelReservationSystem.Service.Services.RoomFacilityService;
@@ -12,17 +13,20 @@ namespace HotelReservationSystem.Mediator.ReservationMediator
         private readonly IRoomService _roomService;
         private readonly IRoomFacilityService _roomFacilityService;
         private readonly IFacilityService _facilityService;
+        private readonly IOfferService _offerService;
+
         public ReservationMediator
             (IReservationService reservationService,
             IRoomService roomService, 
             IRoomFacilityService roomFacilityService,
-            IFacilityService facilityService)
+            IFacilityService facilityService,
+            IOfferService offerService)
         {
             _reservationService = reservationService;
             _roomService = roomService;
             _roomFacilityService = roomFacilityService;
             _facilityService = facilityService;
-
+            _offerService = offerService;
         }
         public async Task<ReservationToReturnDto> CreateReservationAsync(ReservationDto reservationDto)
         {
@@ -42,9 +46,11 @@ namespace HotelReservationSystem.Mediator.ReservationMediator
 
             var totalAmount = await CalculateTotalAmountAsync(reservationDto);
 
+            if (reservationDto.OfferId.HasValue)
+            {
+                totalAmount = await _offerService.ApplyOfferAsync(reservationDto.OfferId.Value, totalAmount);
+            }
             var reservation = await _reservationService.MakeReservationAsync(reservationDto, totalAmount);
-
-            var room = await _roomService.GetRoomByIDAsync(reservationDto.RoomId);
 
             return reservation;
 

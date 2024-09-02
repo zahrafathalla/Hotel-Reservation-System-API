@@ -19,5 +19,7 @@ namespace HotelReservationSystem.Data.Entities
         public Room Room { get; set; }
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
+        public int? OfferId { get; set; }
+        public Offer Offer { get; set; }
     }
 }

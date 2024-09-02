@@ -9,9 +9,10 @@ namespace HotelReservationSystem.Service.Services.OfferServices.Dtos
     public class OfferToReturnDto
     {
         public int Id { get; set; }
-        public double Discount { get; set; }
+        public decimal Discount { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public List<int> RoomIds { get; set; } = new List<int>();
+        public bool IsSuccess { get; set; } = true;
     }
 }

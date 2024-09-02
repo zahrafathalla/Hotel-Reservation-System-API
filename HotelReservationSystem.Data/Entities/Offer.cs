@@ -8,9 +8,9 @@ namespace HotelReservationSystem.Data.Entities
 {
     public class Offer : BaseEntity
     {
-        public double Discount { get; set; }
+        public decimal Discount { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public ICollection<OfferRoom> OfferRoms { get; set; } = new HashSet<OfferRoom>();
+        public ICollection<Reservation> Reservations { get; set; }
     }
 }

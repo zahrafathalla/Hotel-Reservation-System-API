@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hWyf56ctZORJhKp1ZTOczZTLLBZ171LPce0FWIIs2nE=",
+  "Hash": "3pJ4TU/SJ6vkH+5MSulwpUVhYzooAs4mN+ianr9NxUY=",
   "Source": "HotelReservationSystem.API",
   "BasePath": "_content/HotelReservationSystem.API",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "HotelReservationSystem.API\\wwwroot",
       "Source": "HotelReservationSystem.API",
-      "ContentRoot": "C:\\Users\\20100\\Desktop\\FinalHotel\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "Pattern": "**"
     }

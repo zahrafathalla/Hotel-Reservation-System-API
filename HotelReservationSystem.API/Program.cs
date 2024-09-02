@@ -27,7 +27,6 @@ using HotelReservationSystem.Service.Services.StaffService;
 using HotelReservationSystem.Service.Services.RoleUserService;
 using HotelReservationSystem.Repository;
 using HotelReservationSystem.API.Extensions;
-using HotelReservationSystem.Service.Services.OfferRoomsServices;
 using HotelReservationSystem.Service.Services.OfferServices;
 
 namespace HotelReservationSystem.API
@@ -76,7 +75,6 @@ namespace HotelReservationSystem.API
 
             builder.Services.AddScoped<IStaffMediator, StaffMediator>();
             builder.Services.AddScoped<IOfferService, OfferService>();
-            builder.Services.AddScoped<IOfferRooms, OfferRomsService>();
 
             builder.Services.AddHostedService<ReservationStatusBackgroundService>();
 

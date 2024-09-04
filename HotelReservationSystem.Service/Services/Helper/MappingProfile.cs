@@ -59,7 +59,20 @@ namespace HotelReservationSystem.Service.Services.Helper
             CreateMap<OfferDto, Offer>()
                 .ForMember(dest => dest.Discount, opt => opt.MapFrom(src => src.DiscountPercentage));
 
+            CreateMap<Reservation, BookingReport>()
+              .ForMember(dst => dst.RoomType, opt => opt.MapFrom(src => src.Room.Type.ToString()))
+               .ForMember(dst => dst.ReservationStatus, opt => opt.MapFrom(src => src.Status.ToString()))
+              .ForMember(dst => dst.Username, opt => opt.MapFrom(src => src.Customer.FirstName));
 
+            CreateMap<Reservation, RevenueReport>()
+                .ForMember(dst => dst.RoomType, opt => opt.MapFrom(src => src.Room.Type.ToString()))
+                 .ForMember(dst => dst.ReservationStatus, opt => opt.MapFrom(src => src.Status.ToString()))
+                .ForMember(dst => dst.Username, opt => opt.MapFrom(src => src.Customer.FirstName));
+
+            CreateMap<Reservation, CustomerReport>()
+                .ForMember(dst => dst.RoomType, opt => opt.MapFrom(src => src.Room.Type.ToString()))
+                 .ForMember(dst => dst.ReservationStatus, opt => opt.MapFrom(src => src.Status.ToString()))
+                .ForMember(dst => dst.Username, opt => opt.MapFrom(src => src.Customer.FirstName));
         }
     }
 }

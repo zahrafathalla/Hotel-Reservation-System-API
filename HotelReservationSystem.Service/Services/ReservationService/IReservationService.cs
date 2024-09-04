@@ -1,4 +1,5 @@
-﻿using HotelReservationSystem.Service.Services.ReservationService.Dtos;
+﻿using HotelReservationSystem.Data.Entities;
+using HotelReservationSystem.Service.Services.ReservationService.Dtos;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;
 
 namespace HotelReservationSystem.Service.Services.ReservationService
@@ -13,6 +14,10 @@ namespace HotelReservationSystem.Service.Services.ReservationService
         Task<ReservationToReturnDto> UpdateReservationAsync(int id, ReservationDto reservation,decimal totalAmount);
         Task UpdateCheckInStatusesAsync();
         Task UpdateCheckOutStatusesAsync();
+        Task<IEnumerable<BookingReport>> GetAllReservationForBookingReport(DateTime firstDate, DateTime secondDate);
+        Task<IEnumerable<RevenueReport>> GetAllReservationForRevenueReport(DateTime firstDate, DateTime secondDate);
+        Task<IEnumerable<CustomerReport>> GetAllReservationForCustomerReport(int customerID, DateTime firstDate, DateTime secondDate);
+    
 
     }
 }

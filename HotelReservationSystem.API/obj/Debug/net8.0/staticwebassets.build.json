@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XrWZBTlcXSuaIzBxAP+8hk1mTu1hAsrfEodFzrm2U0M=",
+  "Hash": "LBrp1ZBiVq23eASTZ8cOzIrSrT9G+eZF9PoPPzTWQRY=",
   "Source": "HotelReservationSystem.API",
   "BasePath": "_content/HotelReservationSystem.API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "HotelReservationSystem.API\\wwwroot",
       "Source": "HotelReservationSystem.API",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\3cccc162-62ad-485c-ad53-024fa2079756-.jpg",
+      "Identity": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\3cccc162-62ad-485c-ad53-024fa2079756-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/3cccc162-62ad-485c-ad53-024fa2079756-.jpg",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\Files\\RoomImages\\3cccc162-62ad-485c-ad53-024fa2079756-.jpg"
     },
     {
-      "Identity": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\cfff06ff-a6d8-4e12-8c65-040ad5826982-.jpg",
+      "Identity": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\cfff06ff-a6d8-4e12-8c65-040ad5826982-.jpg",
       "SourceId": "HotelReservationSystem.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\",
+      "ContentRoot": "C:\\Marwy\\Programming Courses\\Backend.Net\\Demos\\Projects\\Hotel-Reservation-System-API\\HotelReservationSystem.API\\wwwroot\\",
       "BasePath": "_content/HotelReservationSystem.API",
       "RelativePath": "Files/RoomImages/cfff06ff-a6d8-4e12-8c65-040ad5826982-.jpg",
       "AssetKind": "All",

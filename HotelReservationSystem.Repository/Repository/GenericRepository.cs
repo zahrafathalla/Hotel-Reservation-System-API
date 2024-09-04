@@ -69,5 +69,11 @@ namespace HotelReservationSystem.Repository.Repository
         {
             return await ApplySpecification(Spec).CountAsync();
         }
+        public IQueryable<T> GetAllAsync(Expression<Func<T, bool>> expression)
+        {
+            var entities = _dBContext.Set<T>().Where(x => !x.IsDeleted).Where(expression);
+            return entities;
+
+        }
     }
 }

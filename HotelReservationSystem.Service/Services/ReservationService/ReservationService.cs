@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Repository.Interface;
 using HotelReservationSystem.Service.Services.ReservationService.Dtos;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;
+using Microsoft.EntityFrameworkCore;
 
 namespace HotelReservationSystem.Service.Services.ReservationService
 {
@@ -134,6 +136,33 @@ namespace HotelReservationSystem.Service.Services.ReservationService
                 _unitOfWork.Repository<Reservation>().Update(reservation);
             }
             await _unitOfWork.SaveChangesAsync();
+        }
+        public async Task<IEnumerable<BookingReport>> GetAllReservationForBookingReport(DateTime firstDate, DateTime secondDate)
+        {
+            var reservations = _unitOfWork.Repository<Reservation>()
+                                 .GetAllAsync(res => res.CheckInDate >= firstDate && res.CheckInDate <= secondDate);
+            var mappedReservations = await reservations.
+                                 ProjectTo<BookingReport>(_mapper.ConfigurationProvider).ToListAsync();
+            return mappedReservations;
+
+        }
+        public async Task<IEnumerable<RevenueReport>> GetAllReservationForRevenueReport(DateTime firstDate, DateTime secondDate)
+        {
+            var reservations = _unitOfWork.Repository<Reservation>()
+                                 .GetAllAsync(res => res.CheckInDate >= firstDate && res.CheckInDate <= secondDate);
+            var mappedReservations = await reservations.ProjectTo<RevenueReport>(_mapper.ConfigurationProvider).ToListAsync();
+       
+            return mappedReservations;
+
+        }
+        public async Task<IEnumerable<CustomerReport>> GetAllReservationForCustomerReport(int customerID, DateTime firstDate, DateTime secondDate)
+        {
+            var reservations = _unitOfWork.Repository<Reservation>()
+                                 .GetAllAsync(res => res.CheckInDate >= firstDate && res.CheckInDate <= secondDate && res.CustomerId == customerID);
+            var mappedReservations = await reservations.
+                                 ProjectTo<CustomerReport>(_mapper.ConfigurationProvider).ToListAsync();
+            return mappedReservations;
+
         }
     }
 }

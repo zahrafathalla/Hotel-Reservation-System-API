@@ -15,5 +15,6 @@ namespace HotelReservationSystem.Repository.Interface
         Task AddAsync(T entity);
         void Update(T entity);
         void Delete(T entity);
+        IQueryable<T> GetAllAsync(Expression<Func<T, bool>> expression);
     }
 }

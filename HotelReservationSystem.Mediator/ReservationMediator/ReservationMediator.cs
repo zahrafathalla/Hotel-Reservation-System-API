@@ -74,6 +74,10 @@ namespace HotelReservationSystem.Mediator.ReservationMediator
 
             var totalAmount = await CalculateTotalAmountAsync(reservationDto);
 
+            if (reservationDto.OfferId.HasValue)
+            {
+                totalAmount = await _offerService.ApplyOfferAsync(reservationDto.OfferId.Value, totalAmount);
+            }
             var updatedReservation = await _reservationService.UpdateReservationAsync(id, reservationDto, totalAmount);
 
             return updatedReservation;

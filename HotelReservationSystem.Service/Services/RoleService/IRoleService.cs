@@ -9,6 +9,6 @@ namespace HotelReservationSystem.Service.Services.RoleService
     public interface IRoleService
     {
         Task<bool> AddRoleAsync(string roleName);
-        Task<bool> RemoveRoleAsync(string roleName);
+        Task<bool> RemoveRoleAsync(int roleId);
     }
 }

@@ -23,9 +23,9 @@ namespace HotelReservationSystem.Service.Services.RoleService
             return true;
         }
 
-        public async Task<bool> RemoveRoleAsync(string roleName)
+        public async Task<bool> RemoveRoleAsync(int roleId)
         {
-            var role = (await _unitOfWork.Repository<Role>().GetAsync(r => r.Name == roleName)).FirstOrDefault();
+            var role = (await _unitOfWork.Repository<Role>().GetAsync(r => r.Id == roleId)).FirstOrDefault();
             if (role == null)
                 return false;
 

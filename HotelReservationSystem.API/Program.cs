@@ -28,6 +28,7 @@ using HotelReservationSystem.Service.Services.RoleUserService;
 using HotelReservationSystem.Repository;
 using HotelReservationSystem.API.Extensions;
 using HotelReservationSystem.Service.Services.OfferServices;
+using HotelReservationSystem.Service.Services.RoleService;
 
 namespace HotelReservationSystem.API
 {
@@ -65,14 +66,14 @@ namespace HotelReservationSystem.API
             builder.Services.AddScoped<IRoomMediator, RoomMediator>();
             builder.Services.AddScoped<IPaymentService, PaymentService>();
             builder.Services.AddScoped<IReservationService, ReservationService>();
-            builder.Services.AddScoped< IReservationMediator, ReservationMediator >();
+            builder.Services.AddScoped<IReservationMediator, ReservationMediator >();
             builder.Services.AddScoped<IInvoiceService,InvoiceService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IFeedBackService, FeedBackService>();
             builder.Services.AddScoped<IStaffService, StaffService>();
             builder.Services.AddScoped<IUserRoleService, UserRoleService>();
-
+            builder.Services.AddScoped<IRoleService, RoleService>();
             builder.Services.AddScoped<IStaffMediator, StaffMediator>();
             builder.Services.AddScoped<IOfferService, OfferService>();
 
@@ -159,13 +160,13 @@ namespace HotelReservationSystem.API
                 app.UseSwaggerUI();
             }
             app.UseStatusCodePagesWithReExecute("/Errors/{0}");
-            app.UseHttpsRedirection();
+           // app.UseHttpsRedirection();
 
             app.UseAuthentication();
 
             app.UseAuthorization();
 
-            //app.UseStaticFiles();
+            app.UseStaticFiles();
             app.UseAuthorization();
             app.MapControllers(); 
             #endregion

@@ -19,27 +19,25 @@ namespace HotelReservationSystem.Service.Services.FacilityService
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<FacilityDto>> GetAllFacilitiesAsync(SpecParams Params)
+        public async Task<IEnumerable<FacilityToReturnDto>> GetAllFacilitiesAsync(SpecParams Params)
         {
             var spec = new FacilitySpec(Params);
             var facility = await _unitOfWork.Repository<Facility>().GetAllWithSpecAsync(spec);
-            var facilityMapped = _mapper.Map<IEnumerable<FacilityDto>>(facility);
+            var facilityMapped = _mapper.Map<IEnumerable<FacilityToReturnDto>>(facility);
 
             return facilityMapped;
         }
-        public async Task<FacilityDto> UpdateFacilityAsync(int id, FacilityDto facilityDto)
+        public async Task<FacilityToReturnDto> UpdateFacilityAsync(int id, FacilityDto facilityDto)
         {
             var Spec = new FacilitySpec(id);
             var OldFacility = await _unitOfWork.Repository<Facility>().GetByIdWithSpecAsync(Spec);
             if (OldFacility == null) return null;
 
-            OldFacility.Price = facilityDto.Price;
-            OldFacility.Description = facilityDto.Description;
-            OldFacility.Name = facilityDto.Name;
+            _mapper.Map(facilityDto, OldFacility);
 
             _unitOfWork.Repository<Facility>().Update(OldFacility);
             await _unitOfWork.SaveChangesAsync();
-            var mappedFacility = _mapper.Map<FacilityDto>(OldFacility);
+            var mappedFacility = _mapper.Map<FacilityToReturnDto>(OldFacility);
 
             return mappedFacility;
         }
@@ -50,27 +48,22 @@ namespace HotelReservationSystem.Service.Services.FacilityService
 
             return facilities.Sum(f => f.Price);
         }
-        public async Task<FacilityDto> CreateFacilityAsync(FacilityDto facilityDto)
+        public async Task<FacilityToReturnDto> CreateFacilityAsync(FacilityDto facilityDto)
         {
-            var newFacility = new Facility
-            {
-                Name = facilityDto.Name,
-                Description = facilityDto.Description,
-                Price = facilityDto.Price
-            };
+            var newFacility = _mapper.Map<Facility>(facilityDto);
 
             await _unitOfWork.Repository<Facility>().AddAsync(newFacility);
             await _unitOfWork.SaveChangesAsync();
 
-            var mappedFacility = _mapper.Map<FacilityDto>(newFacility);
+            var mappedFacility = _mapper.Map<FacilityToReturnDto>(newFacility);
 
             return mappedFacility;
         }
-        public async Task<FacilityDto> GetFacilitiesByIdAsync(int id)
+        public async Task<FacilityToReturnDto> GetFacilitiesByIdAsync(int id)
         {
             var spec = new FacilitySpec(id);
             var facility = await _unitOfWork.Repository<Facility>().GetByIdWithSpecAsync(spec);
-            var facilityMapped = _mapper.Map<FacilityDto>(facility);
+            var facilityMapped = _mapper.Map<FacilityToReturnDto>(facility);
 
             return facilityMapped;
         }

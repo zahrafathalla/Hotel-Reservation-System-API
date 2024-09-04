@@ -22,17 +22,19 @@ namespace HotelReservationSystem.API.Controllers
         }
 
         [HttpPost("{reservationId}")]
-        public async Task<ActionResult<ReservationForPaymentToReturnDto>> CreatePaymentAsync(int reservationId)
+        public async Task<ActionResult<ReservationForPaymentToReturnDto>> CreatePaymentIntent(int reservationId)
         {
             var reservation = await _paymentService.CreatePaymentIntentAsync(reservationId);
             return Ok(reservation);
         }
-        [HttpPost("confirm-payment/{paymentIntentId}")]
-        public async Task<IActionResult> ConfirmPayment(string paymentIntentId, string paymentMethodId)
-        {
-            await _paymentService.ConfirmPaymentAsync(paymentIntentId, paymentMethodId);
-            return Ok();
+
+
+        [HttpPost("confirm")]
+        public async Task<ActionResult<bool>> ConfirmPayment(string paymentIntentId, string paymentMethodId)
+        {         
+            return Ok(await _paymentService.ConfirmPaymentAsync(paymentIntentId, paymentMethodId));
         }
+
 
         [HttpPost("webhook")]
         public async Task<IActionResult> Index()

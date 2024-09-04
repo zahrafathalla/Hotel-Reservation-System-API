@@ -5,6 +5,7 @@ using HotelReservationSystem.Repository.Interface;
 using HotelReservationSystem.Repository.Repository;
 using HotelReservationSystem.Service.Services.Helper;
 using HotelReservationSystem.Service.Services.StaffService.Dtos;
+using HotelReservationSystem.Service.Services.TokenService;
 using HotelReservationSystem.Service.Services.UserService.Dtos;
 
 namespace HotelReservationSystem.Service.Services.StaffService
@@ -13,13 +14,16 @@ namespace HotelReservationSystem.Service.Services.StaffService
     {
         private readonly IunitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+        private readonly ITokenService _tokenService;
 
         public StaffService(
             IunitOfWork unitOfWork,
-            IMapper mapper)
+            IMapper mapper,
+            ITokenService tokenService)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _tokenService = tokenService;
         }
         public async Task<UserToReturnDto> RegisterStaffAsync(RegisterStaffDto registerDto)
         {
@@ -35,8 +39,13 @@ namespace HotelReservationSystem.Service.Services.StaffService
 
             await _unitOfWork.SaveChangesAsync();
 
-            
-            return _mapper.Map<UserToReturnDto>(user);
+            var mappedUser = _mapper.Map<UserToReturnDto>(user);
+
+            mappedUser.Token = await _tokenService.GenerateTokenAsync(user);
+
+            return mappedUser;
+
+
         }
         private async Task<User> CreateUserAsync(RegisterStaffDto registerDto)
         {

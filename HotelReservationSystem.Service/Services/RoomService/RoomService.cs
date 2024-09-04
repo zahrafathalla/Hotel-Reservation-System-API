@@ -5,6 +5,7 @@ using HotelReservationSystem.Repository.Specification.RoomSpecifications;
 using HotelReservationSystem.Repository.Specification.Specifications;
 using HotelReservationSystem.Service.Services.Helper;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;
+using Microsoft.AspNetCore.Http;
 
 namespace HotelReservationSystem.Service.Services.RoomService
 {
@@ -28,20 +29,20 @@ namespace HotelReservationSystem.Service.Services.RoomService
             await _unitOfWork.SaveChangesAsync();
             return room;
         }
-        public async Task<bool> AddPicturesToRoomAsync(PictureDto pictureDto)
+        public async Task<bool> AddPicturesToRoomAsync(List<IFormFile> pictureUrls, int roomId)
         {
-            var room = await _unitOfWork.Repository<Room>().GetByIdAsync(pictureDto.RoomId);
+            var room = await _unitOfWork.Repository<Room>().GetByIdAsync(roomId);
             if (room == null)
                 return false;
 
-            foreach (var file in pictureDto.pictureUrls)
+            foreach (var file in pictureUrls)
             {
                 var fileName = DocumentSetting.UploadFile(file, "RoomImages");
 
                 var picture = new Picture
                 {
                     Url = fileName,
-                    RoomId = pictureDto.RoomId,
+                    RoomId = roomId,
                 };
 
                 await _unitOfWork.Repository<Picture>().AddAsync(picture);
@@ -92,9 +93,9 @@ namespace HotelReservationSystem.Service.Services.RoomService
 
             return roomDtos;
         }
-        public async Task<int> GetAvailableRoomCount(SpecParams roomSpec, DateTime checkInDate, DateTime checkOutDate)
+        public async Task<int> GetAvailableRoomCount(DateTime checkInDate, DateTime checkOutDate)
         {
-            var spec = new RoomAvailabilitySpecification(roomSpec, checkInDate, checkOutDate);
+            var spec = new CountRoomWithSpec(checkInDate, checkOutDate);
             var count = await _unitOfWork.Repository<Room>().GetCountWithSpecAsync(spec);
             return count;
         }

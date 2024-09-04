@@ -20,14 +20,13 @@ namespace HotelReservationSystem.Service.Services.FeedBackService
         }
         public async Task<FeedBackToReturnDto> SubmitFeedbackAsync(FeedBackDto feedBackDto)
         {
-            var reservation = await _unitOfWork.Repository<Reservation>().GetByIdAsync(feedBackDto.ReservationId);
 
             var result = new FeedBackToReturnDto
             {
                 IsSuccessful = false,
             };
 
-            if (reservation == null)
+            if (! await IsValidFeedback(feedBackDto))
                 return result;
 
             var feedback = _mapper.Map<FeedBack>(feedBackDto);
@@ -39,7 +38,6 @@ namespace HotelReservationSystem.Service.Services.FeedBackService
             return returnedFeedBack;
         }
 
-
         public async Task<FeedBackToReturnDto> GetFeedBackByIdAsync(int id)
         {
             var feedback = await _unitOfWork.Repository<FeedBack>().GetByIdAsync(id);
@@ -48,15 +46,13 @@ namespace HotelReservationSystem.Service.Services.FeedBackService
         }
 
         public async Task<FeedbackReplayToReturnDto> ResponseToFeedbackAsync(FeedbackReplyDto feedbackReplyDto)
-        {
-            var feedback = await _unitOfWork.Repository<FeedBack>().GetByIdAsync(feedbackReplyDto.FeedbackId);
-
+        {          
             var result = new FeedbackReplayToReturnDto
             {
                 IsSuccessful = false,
             };
 
-            if (feedback == null)
+            if (!await IsValidFeedbackReply(feedbackReplyDto))
                 return result;
 
             var feedbackReply = _mapper.Map<FeedbackReply>(feedbackReplyDto);
@@ -84,28 +80,29 @@ namespace HotelReservationSystem.Service.Services.FeedBackService
             var Count = await _unitOfWork.Repository<FeedBack>().GetCountWithSpecAsync(CountFeedback);
             return Count;
         }
-        public async Task<bool> DeleteFeedbackAsync(int feedbackId)
+
+        private async Task<bool> IsValidFeedback(FeedBackDto feedBackDto)
         {
-            var feedback = await _unitOfWork.Repository<FeedBack>().GetByIdAsync(feedbackId);
+            var reservation = await _unitOfWork.Repository<Reservation>().GetByIdAsync(feedBackDto.ReservationId);
 
-            if (feedback == null)
+            if (reservation == null ||
+                (reservation.Status != ReservationStatus.CheckedIn && reservation.Status != ReservationStatus.CheckedOut))
+            {
                 return false;
+            }
 
-            _unitOfWork.Repository<FeedBack>().Delete(feedback);
-            await _unitOfWork.SaveChangesAsync();
+            if (reservation.CustomerId != feedBackDto.CustomerId)
+                return false;
 
             return true;
         }
 
-        public async Task<bool> DeleteFeedbackReplyAsync(int replyId)
+        private async Task<bool> IsValidFeedbackReply(FeedbackReplyDto feedbackReplyDto)
         {
-            var reply = await _unitOfWork.Repository<FeedbackReply>().GetByIdAsync(replyId);
+            var feedback = await _unitOfWork.Repository<FeedBack>().GetByIdAsync(feedbackReplyDto.FeedbackId);
 
-            if (reply == null)
+            if (feedback == null)
                 return false;
-
-            _unitOfWork.Repository<FeedbackReply>().Delete(reply);
-            await _unitOfWork.SaveChangesAsync();
 
             return true;
         }

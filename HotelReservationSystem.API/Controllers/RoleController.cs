@@ -19,10 +19,10 @@ namespace HotelReservationSystem.API.Controllers
             return Ok(await _roleService.AddRoleAsync(roleName));
         }
 
-        [HttpDelete]
-        public async Task<ActionResult> DeleteRole(string roleName)
+        [HttpDelete("{roleId}")]
+        public async Task<ActionResult<bool>> DeleteRole(int roleId)
         {
-            return Ok(await _roleService.RemoveRoleAsync(roleName));
+            return Ok(await _roleService.RemoveRoleAsync(roleId));
         }
     }
 }

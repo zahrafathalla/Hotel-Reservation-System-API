@@ -10,8 +10,9 @@ namespace HotelReservationSystem.Service.Services.UserService
     public interface IUserService
     {
         Task<UserToReturnDto> LoginAsCustomer(LoginDto loginDto);
-        Task<UserToReturnDto> StaffLogin(LoginDto loginDto);
-        Task<UserToReturnDto> Register(RegisterDto registerDto);
+        Task<UserToReturnDto> LoginAsStaff(LoginDto loginDto);
+        Task<UserToReturnDto> LoginAsAdmin(LoginDto loginDto);
+        Task<UserToReturnDto> RegisterAsCustomer(RegisterDto registerDto);
 
     }
 }

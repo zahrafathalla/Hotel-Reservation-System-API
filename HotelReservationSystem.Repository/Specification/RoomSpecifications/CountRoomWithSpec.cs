@@ -10,7 +10,13 @@ namespace HotelReservationSystem.Repository.Specification.RoomSpecifications
 {
     public class CountRoomWithSpec: BaseSpecifications<Room>
     {
-        public CountRoomWithSpec(SpecParams roomSpec) : base(R=>!R.IsDeleted) 
+        public CountRoomWithSpec(DateTime checkInDate, DateTime checkOutDate)
+            : base(r => r.Reservations.Any
+            (
+                reservation => reservation.CheckInDate < checkOutDate &&
+                               reservation.CheckOutDate > checkInDate
+
+            ))
         {
             
         }

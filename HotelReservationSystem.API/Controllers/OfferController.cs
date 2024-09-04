@@ -19,7 +19,7 @@ namespace HotelReservationSystem.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<OfferDto>> AddOffer(OfferDto offerDto)
+        public async Task<ActionResult<OfferToReturnDto>> AddOffer(OfferDto offerDto)
         {
             var Offer = await _offerService.AddOfferAsync(offerDto);
             if (Offer == null)
@@ -27,8 +27,8 @@ namespace HotelReservationSystem.API.Controllers
             return Ok(Offer);
         }
 
-        [HttpPut]
-        public async Task<ActionResult<OfferDto>> UpdateOffer(int id, OfferToReturnDto offerDto)
+        [HttpPut("{id}")]
+        public async Task<ActionResult<OfferToReturnDto>> UpdateOffer(int id, OfferDto offerDto)
         {
             var Offer = await _offerService.UpdateOfferAsync(id, offerDto);
             if (Offer == null)

@@ -59,7 +59,7 @@ namespace HotelReservationSystem.Service.Services.PaymentService
             return mappedReservation;
         }
 
-        public async Task ConfirmPaymentAsync(string paymentIntentId , string paymentMethodId)
+        public async Task<bool> ConfirmPaymentAsync(string paymentIntentId , string paymentMethodId)
         {
             StripeConfiguration.ApiKey = _configuration["Stripe:SecretKey"];
 
@@ -70,6 +70,11 @@ namespace HotelReservationSystem.Service.Services.PaymentService
             };
 
             PaymentIntent paymentIntent = await service.ConfirmAsync(paymentIntentId, options);
+
+            if (paymentIntent.Status != "succeeded" || paymentIntent == null)
+                return false;
+
+            return true;
         }
 
 

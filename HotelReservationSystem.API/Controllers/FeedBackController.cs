@@ -20,7 +20,7 @@ namespace HotelReservationSystem.API.Controllers
         public async Task <ActionResult<FeedBackToReturnDto>>SubmitFeedback(FeedBackDto feedBackDto)
         {
             var result = await _feedBackService.SubmitFeedbackAsync(feedBackDto);
-            if (result == null)
+            if (!result.IsSuccessful)
                 return BadRequest(new ApiResponse(400));
             return Ok(result);
         }
@@ -55,18 +55,6 @@ namespace HotelReservationSystem.API.Controllers
                 return NotFound(new ApiResponse(404));
 
             return Ok(feedback);
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<bool>> DeleteFeedback(int id)
-        {
-            return Ok(await _feedBackService.DeleteFeedbackAsync(id));
-        }
-
-        [HttpDelete("reply/{id}")]
-        public async Task<ActionResult<bool>> DeleteFeedbackReply(int id)
-        {
-            return Ok(await _feedBackService.DeleteFeedbackReplyAsync(id));
         }
 
     }

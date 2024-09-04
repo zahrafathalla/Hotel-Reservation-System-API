@@ -16,36 +16,34 @@ namespace HotelReservationSystem.Service.Services.OfferServices
             _mapper = mapper;
         }
 
-        public async Task<OfferDto> AddOfferAsync(OfferDto offerDto)
+        public async Task<OfferToReturnDto> AddOfferAsync(OfferDto offerDto)
         {
 
-            var newOffer = new Offer
-            {
-                StartDate = offerDto.StartDate,
-                EndDate = offerDto.EndDate,
-                Discount = offerDto.Discount
-            };
+            var newOffer = _mapper.Map<Offer>(offerDto);
 
             await _unitOfWork.Repository<Offer>().AddAsync(newOffer);
             await _unitOfWork.SaveChangesAsync();
-            var mappedOffer = _mapper.Map<OfferDto>(newOffer);
+            var mappedOffer = _mapper.Map<OfferToReturnDto>(newOffer);
 
             return mappedOffer;
         }
 
-        public async Task<OfferDto> UpdateOfferAsync(int id, OfferToReturnDto offerDto)
+        public async Task<OfferToReturnDto> UpdateOfferAsync(int id, OfferDto offerDto)
         {
+            var result = new OfferToReturnDto()
+            {
+                IsSuccess = false
+            };
             var OldOffer = await _unitOfWork.Repository<Offer>().GetByIdAsync(id);
-            if (OldOffer == null) return null;
+            if (OldOffer == null)
+                return result;
 
-            OldOffer.StartDate = offerDto.StartDate;
-            OldOffer.EndDate = offerDto.EndDate;
-            OldOffer.Discount = offerDto.Discount;
+            _mapper.Map(offerDto, OldOffer);
 
 
             _unitOfWork.Repository<Offer>().Update(OldOffer);
             await _unitOfWork.SaveChangesAsync();
-            var mappedOffer = _mapper.Map<OfferDto>(OldOffer);
+            var mappedOffer = _mapper.Map<OfferToReturnDto>(OldOffer);
 
             return mappedOffer;
 

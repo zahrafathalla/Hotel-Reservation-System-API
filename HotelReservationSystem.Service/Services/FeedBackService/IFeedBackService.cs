@@ -9,7 +9,5 @@ namespace HotelReservationSystem.Service.Services.FeedBackService
         Task<IEnumerable<FeedBackToReturnDto>> GetAllAsync(SpecParams Params);
         Task<FeedBackToReturnDto> GetFeedBackByIdAsync(int id);
         Task<int> GetCount(SpecParams spec);
-        Task<bool> DeleteFeedbackAsync(int feedbackId);
-        Task<bool> DeleteFeedbackReplyAsync(int replyId);
     }
 }

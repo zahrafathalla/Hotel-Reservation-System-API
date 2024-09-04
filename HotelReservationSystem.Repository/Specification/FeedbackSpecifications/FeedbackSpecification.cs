@@ -18,6 +18,22 @@ namespace HotelReservationSystem.Repository.Specification.FeedbackSpecifications
             Includes.Add(f => f.Include(f => f.FeedBackReplys));
             Includes.Add(f => f.Include(f => f.Reservation));
 
+            if (!string.IsNullOrEmpty(spec.Sort))
+            {
+
+                switch (spec.Sort)
+                {
+                    case "ratingAsc":
+                        AddOrderBy(R => R.Rating);
+                        break;
+
+                    case "ratingDesc":
+                        AddOrderByDesc(R => R.Rating);
+                        break;
+                }
+
+            }
+
             ApplyPagination(spec.PageSize * (spec.PageIndex - 1), spec.PageSize);
         }
         public FeedbackSpecification(int id) : base(f => f.Id == id)

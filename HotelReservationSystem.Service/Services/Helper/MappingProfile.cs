@@ -15,7 +15,8 @@ namespace HotelReservationSystem.Service.Services.Helper
     {
         public MappingProfile()
         {
-            CreateMap<Facility, FacilityDto>();
+            CreateMap<Facility, FacilityDto>().ReverseMap();
+            CreateMap<Facility, FacilityToReturnDto>();
 
             CreateMap<Room, RoomToReturnDto>()
                 .ForMember(d => d.Facility, opt => opt.MapFrom(s => s.RoomFacilities.Select(rf => rf.Facility)))
@@ -50,9 +51,14 @@ namespace HotelReservationSystem.Service.Services.Helper
             CreateMap<FeedbackReplyDto, FeedbackReply>();
             CreateMap<FeedbackReply, FeedbackReplayToReturnDto>();
 
-            CreateMap<User, UserToReturnDto>();
+            CreateMap<User, UserToReturnDto>()
+                 .ForMember(dest => dest.Token, opt => opt.Ignore());
 
-            CreateMap<Offer, OfferDto>();
+            CreateMap<Offer, OfferToReturnDto>();
+
+            CreateMap<OfferDto, Offer>()
+                .ForMember(dest => dest.Discount, opt => opt.MapFrom(src => src.DiscountPercentage));
+
 
         }
     }

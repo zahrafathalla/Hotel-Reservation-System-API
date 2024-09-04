@@ -1,5 +1,7 @@
 ﻿using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Repository.Interface;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace HotelReservationSystem.Repository
 {
@@ -7,7 +9,7 @@ namespace HotelReservationSystem.Repository
     {
         public static async Task SeedRolesAsync(IunitOfWork unitOfWork)
         {
-            var roles = new[] {"Admin" ,"Customer", "Staff" };
+            var roles = new[] { "Admin", "Customer", "Staff" };
 
             foreach (var role in roles)
             {
@@ -17,28 +19,47 @@ namespace HotelReservationSystem.Repository
                     await unitOfWork.Repository<Role>().AddAsync(new Role { Name = role });
                 }
             }
-            var adminEmail = "zahra@gmail.com";
 
-            var adminUser = (await unitOfWork.Repository<User>().GetAsync(u => u.Email == adminEmail)).FirstOrDefault();
+            var userRepository = unitOfWork.Repository<User>();
 
-            var adminRole = (await unitOfWork.Repository<Role>().GetAsync(r => r.Name == "Admin")).FirstOrDefault();
-
-            if (adminRole != null)
+            var existingUser = (await userRepository.GetAsync(u => true)).Any();
+            if (!existingUser)
             {
-                var userRoles = await unitOfWork.Repository<UserRole>().GetAsync(ur => ur.UserId == adminUser.Id && ur.RoleId == adminRole.Id);
-                if (!userRoles.Any())
+                var adminUser = new User
                 {
-                    await unitOfWork.Repository<UserRole>().AddAsync(new UserRole
+                    Displayname = "Zahra Gamal",
+                    Email = "zahra@gmail.com",
+                    Username = "zahra",
+                    PhoneNumber = "1234",
+                    PasswordHash = HashPassword("password123@")
+                };
+                await userRepository.AddAsync(adminUser);
+                await unitOfWork.SaveChangesAsync();
+
+                var adminRole = (await unitOfWork.Repository<Role>().GetAsync(r => r.Name == "Admin")).FirstOrDefault();
+                if (adminRole != null)
+                {
+                    var userRole = new UserRole
                     {
                         UserId = adminUser.Id,
                         RoleId = adminRole.Id
-                    });
+                    };
+                    await unitOfWork.Repository<UserRole>().AddAsync(userRole);
+                    await unitOfWork.SaveChangesAsync();
                 }
             }
 
-            await unitOfWork.SaveChangesAsync();
-
         }
 
-    }
+        public static string HashPassword(string password)
+        {
+            var sha256 = SHA256.Create();
+
+            var bytes = Encoding.UTF8.GetBytes(password);
+
+            var hashBytes = sha256.ComputeHash(bytes);
+
+            return BitConverter.ToString(hashBytes).Replace("-", "").ToLower();
+        }
+    } 
 }

@@ -8,10 +8,10 @@ namespace HotelReservationSystem.Service.Services.ReservationService
     { 
         Task<ReservationToReturnDto> MakeReservationAsync(ReservationDto reservationDto, decimal totalAmount);
         Task<bool> IsReservationConflictAsync(ReservationDto reservationDto);
-        Task<bool> IsReservationConflictOnUpdateAsync(int reservationId, ReservationDto reservationDto);
+        Task<bool> IsReservationConflictOnUpdateAsync(int reservationId, ReservationUpdatedDto reservationDto);
         Task<ReservationToReturnDto> ViewReservationDetailsAsync(int reservationId);
         Task<bool> CancelReservationAsync(int reservationId);
-        Task<ReservationToReturnDto> UpdateReservationAsync(int id, ReservationDto reservation,decimal totalAmount);
+        Task<ReservationToReturnDto> UpdateReservationAsync(int id, ReservationUpdatedDto reservationDto,decimal totalAmount);
         Task UpdateCheckInStatusesAsync();
         Task UpdateCheckOutStatusesAsync();
         Task<IEnumerable<BookingReport>> GetAllReservationForBookingReport(DateTime firstDate, DateTime secondDate);

@@ -121,9 +121,17 @@ namespace HotelReservationSystem.API
                 };
             });
 
-            builder.Services.AddAuthorization(opts =>
+            builder.Services.AddAuthorization(options =>
             {
+                options.AddPolicy("AdminOrStaffPolicy", policy =>
+                    policy.RequireRole("Admin", "Staff"));
 
+                options.AddPolicy("GeneralPolicy", policy =>
+                    policy.RequireRole("Staff","Admin","Customer"));
+
+
+                options.AddPolicy("CustomerPolicy", policy =>
+                    policy.RequireRole("Customer"));
             });
 
             builder.Services.AddSwaggerDocumentation();

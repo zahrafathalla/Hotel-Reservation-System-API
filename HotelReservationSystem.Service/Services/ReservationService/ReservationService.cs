@@ -69,7 +69,7 @@ namespace HotelReservationSystem.Service.Services.ReservationService
 
             return true;
         }
-        public async Task<bool> IsReservationConflictOnUpdateAsync(int reservationId, ReservationDto reservationDto)
+        public async Task<bool> IsReservationConflictOnUpdateAsync(int reservationId, ReservationUpdatedDto reservationDto)
         {
             var existingReservation = await _unitOfWork.Repository<Reservation>().GetByIdAsync(reservationId);
             if (existingReservation == null)
@@ -95,7 +95,7 @@ namespace HotelReservationSystem.Service.Services.ReservationService
 
             return conflictingReservations.Any();
         }
-        public async Task<ReservationToReturnDto> UpdateReservationAsync(int id, ReservationDto reservationDto, decimal totalAmount)
+        public async Task<ReservationToReturnDto> UpdateReservationAsync(int id, ReservationUpdatedDto reservationDto, decimal totalAmount)
         {
             var oldReservation = await _unitOfWork.Repository<Reservation>().GetByIdAsync(id);
             if (oldReservation == null)

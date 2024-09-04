@@ -55,7 +55,7 @@ namespace HotelReservationSystem.Mediator.ReservationMediator
             return reservation;
 
         }
-        public async Task<ReservationToReturnDto> UpdateReservationAsync(int id, ReservationDto reservationDto)
+        public async Task<ReservationToReturnDto> UpdateReservationAsync(int id, ReservationUpdatedDto reservationDto)
         {
 
             var isConflict = await _reservationService.IsReservationConflictOnUpdateAsync(id,reservationDto);
@@ -83,13 +83,34 @@ namespace HotelReservationSystem.Mediator.ReservationMediator
             return updatedReservation;
 
         }
-        private async Task<decimal> CalculateTotalAmountAsync(ReservationDto reservationDto)
+
+        private async Task<decimal> CalculateTotalAmountAsync(int roomId, List<int> facilityIds, DateTime checkInDate, DateTime checkOutDate)
         {
-            var facilityTotalPrice = await _facilityService.CalculateFacilitiesPriceAsync(reservationDto.Facilities);
-            var roomPrice = await _roomService.GetRoomPriceAsync(reservationDto.RoomId);
-            var stayingDays = (reservationDto.CheckOutDate - reservationDto.CheckInDate).Days;
+            var facilityTotalPrice = await _facilityService.CalculateFacilitiesPriceAsync(facilityIds);
+            var roomPrice = await _roomService.GetRoomPriceAsync(roomId);
+            var stayingDays = (checkOutDate - checkInDate).Days;
             stayingDays = stayingDays == 0 ? 1 : stayingDays;
             return stayingDays * roomPrice + facilityTotalPrice;
+        }
+        //overloading to use it in UpdateReservation method
+        private async Task<decimal> CalculateTotalAmountAsync(ReservationUpdatedDto reservationDto)
+        {
+            return await CalculateTotalAmountAsync(
+                reservationDto.RoomId,
+                reservationDto.Facilities,
+                reservationDto.CheckInDate,
+                reservationDto.CheckOutDate
+            );
+        }
+        //overloading to use it in MakeReservation method
+        private async Task<decimal> CalculateTotalAmountAsync(ReservationDto reservationDto)
+        {
+            return await CalculateTotalAmountAsync(
+                reservationDto.RoomId,
+                reservationDto.Facilities,
+                reservationDto.CheckInDate,
+                reservationDto.CheckOutDate
+            );
         }
 
     }

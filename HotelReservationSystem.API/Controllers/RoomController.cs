@@ -24,7 +24,7 @@ namespace HotelReservationSystem.API.Controllers
             _roomService = roomService;
         }
 
-        //[Authorize(Roles = "Staff")]
+        [Authorize(Policy = "AdminOrStaffPolicy")]
         [HttpPost]
         public async Task<ActionResult<RoomcreatedToReturnDto>> AddRoom(RoomDto roomDto)
         {
@@ -34,8 +34,7 @@ namespace HotelReservationSystem.API.Controllers
 
             return Ok(room);
         }
-
-        //[Authorize(Roles = "Staff")]
+        [Authorize(Policy = "AdminOrStaffPolicy")]
         [HttpPost("picture/{roomId}")]
         public async Task<ActionResult<bool>> AddPictures(List<IFormFile> pictureUrls, int roomId)
         {
@@ -43,7 +42,7 @@ namespace HotelReservationSystem.API.Controllers
             return Ok(picture);
         }
 
-        //[Authorize(Roles = "Staff")]
+        [Authorize(Policy = "AdminOrStaffPolicy")]
         [HttpPut("{id}")]
         public async Task<ActionResult<RoomcreatedToReturnDto>> UpdatRoom(int id, RoomDto roomDto)
         {
@@ -54,6 +53,7 @@ namespace HotelReservationSystem.API.Controllers
             return Ok(Room);
         }
 
+        //[Authorize(Policy = "GeneralPolicy")]
         [HttpGet("Available")]
         public async Task<ActionResult<Pagination<RoomToReturnDto>>> GetAllRoomsAvailable([FromQuery] SpecParams roomSpec, DateTime checkInDate, DateTime checkOutDate)
         {
@@ -66,8 +66,7 @@ namespace HotelReservationSystem.API.Controllers
 
             return Ok(new Pagination<RoomToReturnDto>(roomSpec.PageSize, roomSpec.PageIndex, count, rooms));
         }
-
-        //[Authorize(Roles = "Staff")]
+        [Authorize(Policy = "AdminOrStaffPolicy")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<bool>> DeleteRoom(int id)
         {

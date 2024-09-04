@@ -35,6 +35,7 @@ namespace HotelReservationSystem.Service.Services.Helper
                 .ForMember(dest => dest.ReservationId, opt => opt.MapFrom(src => src.Id)).ReverseMap();
 
             CreateMap<ReservationDto, Reservation>();
+            CreateMap<ReservationUpdatedDto, Reservation>();
 
             CreateMap<Reservation, ReservationForPaymentToReturnDto>();
 

@@ -2,7 +2,6 @@
 using HotelReservationSystem.Service.Services.ReservationService;
 using HotelReservationSystem.Mediator.ReservationMediator;
 using HotelReservationSystem.Service.Services.ReservationService.Dtos;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using HotelReservationSystem.Data.Entities;
 
@@ -42,7 +41,7 @@ namespace HotelReservationSystem.API.Controllers
             return Ok(await _reservationService.CancelReservationAsync(Id));
         }
         [HttpPut("{id}")]
-        public async Task<ActionResult<ReservationCreatedToReturnDto>> UpdateResevation(int id, ReservationDto reservationDto)
+        public async Task<ActionResult<ReservationCreatedToReturnDto>> UpdateResevation(int id, ReservationUpdatedDto reservationDto)
         {
             var reservation = await _reservationMediator.UpdateReservationAsync(id, reservationDto);
             if (reservation is null) return BadRequest();

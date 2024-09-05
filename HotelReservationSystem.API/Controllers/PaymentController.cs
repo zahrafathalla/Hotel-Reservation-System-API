@@ -1,6 +1,7 @@
 ﻿using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Service.Services.PaymentService;
 using HotelReservationSystem.Service.Services.PaymentService.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Stripe;
 
@@ -21,6 +22,7 @@ namespace HotelReservationSystem.API.Controllers
             _logger = logger;
         }
 
+        [Authorize(Roles = "Customer")]
         [HttpPost("{reservationId}")]
         public async Task<ActionResult<ReservationForPaymentToReturnDto>> CreatePaymentIntent(int reservationId)
         {
@@ -28,7 +30,7 @@ namespace HotelReservationSystem.API.Controllers
             return Ok(reservation);
         }
 
-
+        [Authorize(Roles = "Customer")]
         [HttpPost("confirm")]
         public async Task<ActionResult<bool>> ConfirmPayment(string paymentIntentId, string paymentMethodId)
         {         

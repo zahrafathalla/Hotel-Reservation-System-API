@@ -3,12 +3,13 @@ using HotelReservationSystem.Repository.Specification.Specifications;
 using HotelReservationSystem.Service.Services.FacilityService;
 using HotelReservationSystem.Service.Services.FacilityService.Dtos;
 using HotelReservationSystem.Service.Services.Helper.ResulteViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelReservationSystem.API.Controllers
 {
-
+    [Authorize(Policy = "AdminOrStaffPolicy")]
     public class FacilityController : BaseController
     {
         private readonly IFacilityService _facilityService;

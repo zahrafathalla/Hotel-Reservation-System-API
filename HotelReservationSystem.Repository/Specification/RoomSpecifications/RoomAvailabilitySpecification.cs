@@ -7,11 +7,12 @@ namespace HotelReservationSystem.Repository.Specification.RoomSpecifications
     public class RoomAvailabilitySpecification : BaseSpecifications<Room>
     {
         public RoomAvailabilitySpecification(SpecParams spec, DateTime checkInDate, DateTime checkOutDate)
-        : base(r => !r.Reservations.Any
-        (
-            reservation => reservation.CheckInDate < checkOutDate &&
-                           reservation.CheckOutDate > checkInDate
-        ))
+            : base(r => !r.Reservations.Any
+            (
+                reservation => reservation.CheckInDate < checkOutDate &&
+                               reservation.CheckOutDate > checkInDate
+
+            ))
         {
             Includes.Add(r => r.Include(r => r.RoomFacilities)
                .ThenInclude(rf => rf.Facility));
@@ -38,3 +39,4 @@ namespace HotelReservationSystem.Repository.Specification.RoomSpecifications
         }
     }
 }
+

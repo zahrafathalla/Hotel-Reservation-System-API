@@ -3,6 +3,7 @@ using HotelReservationSystem.Repository.Specification.Specifications;
 using HotelReservationSystem.Service.Services.FeedBackService;
 using HotelReservationSystem.Service.Services.FeedBackService.Dtos;
 using HotelReservationSystem.Service.Services.Helper.ResulteViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelReservationSystem.API.Controllers
@@ -16,6 +17,8 @@ namespace HotelReservationSystem.API.Controllers
             _feedBackService = feedBackService;
         }
 
+        [Authorize(Roles = "Customer")]
+
         [HttpPost]
         public async Task <ActionResult<FeedBackToReturnDto>>SubmitFeedback(FeedBackDto feedBackDto)
         {
@@ -24,6 +27,8 @@ namespace HotelReservationSystem.API.Controllers
                 return BadRequest(new ApiResponse(400));
             return Ok(result);
         }
+
+        [Authorize(Policy = "AdminOrStaffPolicy")]
 
         [HttpPost("reply")]
         public async Task<ActionResult<FeedbackReplayToReturnDto>> ResponseToFeedback([FromBody] FeedbackReplyDto feedbackReplyDto)
@@ -36,6 +41,7 @@ namespace HotelReservationSystem.API.Controllers
             return Ok(reply);
         }
 
+        [Authorize(Policy = "AdminOrStaffPolicy")]
         [HttpGet]
         public async Task<ActionResult<Pagination<FeedBackToReturnDto>>> GetAllAsync([FromQuery] SpecParams Params)
         {
@@ -46,6 +52,7 @@ namespace HotelReservationSystem.API.Controllers
             return Ok(new Pagination<FeedBackToReturnDto>(Params.PageSize, Params.PageIndex, count, feedbacks));
         }
 
+        [Authorize(Policy = "AdminOrStaffPolicy")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetFeedbackById(int id)
         {

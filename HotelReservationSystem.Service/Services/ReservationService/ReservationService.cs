@@ -148,12 +148,20 @@ namespace HotelReservationSystem.Service.Services.ReservationService
         }
         public async Task<IEnumerable<RevenueReport>> GetAllReservationForRevenueReport(DateTime firstDate, DateTime secondDate)
         {
+            var validStatuses = new[]
+            {
+                 ReservationStatus.PaymentReceived,
+                 ReservationStatus.CheckedIn,
+                 ReservationStatus.CheckedOut
+            };
+
             var reservations = _unitOfWork.Repository<Reservation>()
-                                 .GetAllAsync(res => res.CheckInDate >= firstDate && res.CheckInDate <= secondDate);
+                                 .GetAllAsync(res => res.CheckInDate >= firstDate && res.CheckInDate <= secondDate
+                                                   && validStatuses.Contains(res.Status));
+
             var mappedReservations = await reservations.ProjectTo<RevenueReport>(_mapper.ConfigurationProvider).ToListAsync();
        
             return mappedReservations;
-
         }
         public async Task<IEnumerable<CustomerReport>> GetAllReservationForCustomerReport(int customerID, DateTime firstDate, DateTime secondDate)
         {
@@ -162,7 +170,6 @@ namespace HotelReservationSystem.Service.Services.ReservationService
             var mappedReservations = await reservations.
                                  ProjectTo<CustomerReport>(_mapper.ConfigurationProvider).ToListAsync();
             return mappedReservations;
-
         }
     }
 }

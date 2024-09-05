@@ -3,6 +3,7 @@ using HotelReservationSystem.Repository.Specification.Specifications;
 using HotelReservationSystem.Service.Services.Helper.ResulteViewModel;
 using HotelReservationSystem.Service.Services.InvoiceService;
 using HotelReservationSystem.Service.Services.InvoiceService.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelReservationSystem.API.Controllers
@@ -15,6 +16,8 @@ namespace HotelReservationSystem.API.Controllers
         {
             _invoiceService = invoiceService;
         }
+
+        [Authorize(Roles = "Customer")]
 
         [HttpPost("{reservationId}")]
         public async Task<ActionResult<InvoiceToReturnDto>> GenerateInvoice(int reservationId)

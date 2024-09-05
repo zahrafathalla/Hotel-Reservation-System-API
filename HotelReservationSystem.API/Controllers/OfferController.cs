@@ -2,14 +2,15 @@
 using HotelReservationSystem.Service.Services.FacilityService.Dtos;
 using HotelReservationSystem.Service.Services.OfferServices;
 using HotelReservationSystem.Service.Services.OfferServices.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelReservationSystem.API.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class OfferController : ControllerBase
+
+    [Authorize(Policy = "AdminOrStaffPolicy")]
+    public class OfferController : BaseController
     {
         private readonly IOfferService _offerService;
 
@@ -17,6 +18,7 @@ namespace HotelReservationSystem.API.Controllers
         {
             _offerService = offerService;
         }
+
 
         [HttpPost]
         public async Task<ActionResult<OfferToReturnDto>> AddOffer(OfferDto offerDto)

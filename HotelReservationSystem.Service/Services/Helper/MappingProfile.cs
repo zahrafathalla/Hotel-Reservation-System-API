@@ -61,19 +61,26 @@ namespace HotelReservationSystem.Service.Services.Helper
                 .ForMember(dest => dest.Discount, opt => opt.MapFrom(src => src.DiscountPercentage));
 
             CreateMap<Reservation, BookingReport>()
-              .ForMember(dst => dst.RoomType, opt => opt.MapFrom(src => src.Room.Type.ToString()))
+                .ForMember(dst => dst.ReservationId, opt => opt.MapFrom(src => src.Id))
+               .ForMember(dst => dst.RoomId, opt => opt.MapFrom(src => src.RoomId))
+               .ForMember(dst => dst.RoomType, opt => opt.MapFrom(src => src.Room.Type.ToString()))
                .ForMember(dst => dst.ReservationStatus, opt => opt.MapFrom(src => src.Status.ToString()))
-              .ForMember(dst => dst.Username, opt => opt.MapFrom(src => src.Customer.FirstName));
+               .ForMember(dst => dst.CustomerName, opt => opt.MapFrom(src => $"{src.Customer.FirstName} {src.Customer.LastName}"));
 
             CreateMap<Reservation, RevenueReport>()
+                .ForMember(dst => dst.ReservationId, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dst => dst.RoomId, opt => opt.MapFrom(src => src.RoomId))
                 .ForMember(dst => dst.RoomType, opt => opt.MapFrom(src => src.Room.Type.ToString()))
-                 .ForMember(dst => dst.ReservationStatus, opt => opt.MapFrom(src => src.Status.ToString()))
-                .ForMember(dst => dst.Username, opt => opt.MapFrom(src => src.Customer.FirstName));
+                .ForMember(dst => dst.ReservationStatus, opt => opt.MapFrom(src => src.Status.ToString()))
+                .ForMember(dst => dst.CustomerName, opt => opt.MapFrom(src => $"{src.Customer.FirstName} {src.Customer.LastName}"));
+
 
             CreateMap<Reservation, CustomerReport>()
+                .ForMember(dst => dst.ReservationId, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dst => dst.RoomId, opt => opt.MapFrom(src => src.RoomId))
                 .ForMember(dst => dst.RoomType, opt => opt.MapFrom(src => src.Room.Type.ToString()))
-                 .ForMember(dst => dst.ReservationStatus, opt => opt.MapFrom(src => src.Status.ToString()))
-                .ForMember(dst => dst.Username, opt => opt.MapFrom(src => src.Customer.FirstName));
+                .ForMember(dst => dst.ReservationStatus, opt => opt.MapFrom(src => src.Status.ToString()))
+                 .ForMember(dst => dst.CustomerName, opt => opt.MapFrom(src => $"{src.Customer.FirstName} {src.Customer.LastName}"));
         }
     }
 }

@@ -29,6 +29,7 @@ using HotelReservationSystem.Repository;
 using HotelReservationSystem.API.Extensions;
 using HotelReservationSystem.Service.Services.OfferServices;
 using HotelReservationSystem.Service.Services.RoleService;
+using HotelReservationSystem.Mediator.UserMediator;
 
 namespace HotelReservationSystem.API
 {
@@ -76,6 +77,8 @@ namespace HotelReservationSystem.API
             builder.Services.AddScoped<IRoleService, RoleService>();
             builder.Services.AddScoped<IStaffMediator, StaffMediator>();
             builder.Services.AddScoped<IOfferService, OfferService>();
+            builder.Services.AddScoped<IUserMediator, UserMediator>();
+
 
             builder.Services.AddHostedService<ReservationStatusBackgroundService>();
 
@@ -129,9 +132,6 @@ namespace HotelReservationSystem.API
                 options.AddPolicy("GeneralPolicy", policy =>
                     policy.RequireRole("Staff","Admin","Customer"));
 
-
-                options.AddPolicy("CustomerPolicy", policy =>
-                    policy.RequireRole("Customer"));
             });
 
             builder.Services.AddSwaggerDocumentation();

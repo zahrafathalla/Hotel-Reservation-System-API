@@ -1,10 +1,11 @@
 ﻿using HotelReservationSystem.Service.Services.RoleUserService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelReservationSystem.API.Controllers
 {
-
+    [Authorize(Roles = "Admin")]
     public class UserRoleController : BaseController
     {
         private readonly IUserRoleService _userRoleService;

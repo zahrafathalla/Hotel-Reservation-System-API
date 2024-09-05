@@ -4,6 +4,7 @@ using HotelReservationSystem.Mediator.ReservationMediator;
 using HotelReservationSystem.Service.Services.ReservationService.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using HotelReservationSystem.Data.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HotelReservationSystem.API.Controllers
 {
@@ -18,6 +19,8 @@ namespace HotelReservationSystem.API.Controllers
             _reservationMediator = reservationMediator;
 
         }
+
+        [Authorize(Roles = "Customer")]
         [HttpPost]
         public async Task<ActionResult<ReservationCreatedToReturnDto>> MakeReservation(ReservationDto reservationDto)
         {
@@ -26,6 +29,8 @@ namespace HotelReservationSystem.API.Controllers
                 return BadRequest(new ApiResponse(400));
             return Ok(reservation);
         }
+
+        [Authorize(Policy = "GeneralPolicy")]
         [HttpGet("{Id}")]
         public async Task<ActionResult<Reservation>> GetReservaionDetails(int Id)
         {
@@ -35,11 +40,14 @@ namespace HotelReservationSystem.API.Controllers
             return Ok(reservation);
         }
 
+        [Authorize(Policy = "GeneralPolicy")]
         [HttpDelete("{Id}")]
         public async Task<ActionResult<bool>> CancelReservationAsync(int Id)
         {
             return Ok(await _reservationService.CancelReservationAsync(Id));
         }
+
+        [Authorize(Roles = "Customer")]
         [HttpPut("{id}")]
         public async Task<ActionResult<ReservationCreatedToReturnDto>> UpdateResevation(int id, ReservationUpdatedDto reservationDto)
         {

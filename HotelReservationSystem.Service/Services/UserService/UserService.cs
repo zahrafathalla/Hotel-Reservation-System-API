@@ -23,7 +23,7 @@ namespace HotelReservationSystem.Service.Services.UserService
             _tokenService = tokenService;
             _mapper = mapper;
         }
-        public async Task<UserToReturnDto> LoginAsCustomer(LoginDto loginDto)
+        public async Task<UserToReturnDto> LoginAsCustomerAsync(LoginDto loginDto)
         {
             var result = new UserToReturnDto()
             {
@@ -41,7 +41,7 @@ namespace HotelReservationSystem.Service.Services.UserService
             return mappedUser;
         }
 
-        public async Task<UserToReturnDto> LoginAsStaff(LoginDto loginDto)
+        public async Task<UserToReturnDto> LoginAsStaffAsync(LoginDto loginDto)
        
         {
             var result = new UserToReturnDto()
@@ -59,7 +59,7 @@ namespace HotelReservationSystem.Service.Services.UserService
 
             return mappedUser;
         }
-        public async Task<UserToReturnDto> LoginAsAdmin(LoginDto loginDto)
+        public async Task<UserToReturnDto> LoginAsAdminAsync(LoginDto loginDto)
         {
             var result = new UserToReturnDto()
             {
@@ -85,7 +85,7 @@ namespace HotelReservationSystem.Service.Services.UserService
         }
 
 
-        public async Task<UserToReturnDto> RegisterAsCustomer(RegisterDto registerDto)
+        public async Task<UserToReturnDto> RegisterAsCustomerAsync(RegisterDto registerDto)
         {
             var result = new UserToReturnDto()
             {

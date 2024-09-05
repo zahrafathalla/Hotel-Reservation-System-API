@@ -1,0 +1,16 @@
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\bin\Release\net8.0\HotelReservationSystem.Repository.deps.json
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\bin\Release\net8.0\HotelReservationSystem.Repository.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\bin\Release\net8.0\HotelReservationSystem.Repository.pdb
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\bin\Release\net8.0\HotelReservationSystem.Data.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\bin\Release\net8.0\HotelReservationSystem.Data.pdb
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Release\net8.0\HotelReservationSystem.Repository.csproj.AssemblyReference.cache
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Release\net8.0\HotelReservationSystem.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Release\net8.0\HotelReservationSystem.Repository.AssemblyInfoInputs.cache
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Release\net8.0\HotelReservationSystem.Repository.AssemblyInfo.cs
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Release\net8.0\HotelReservationSystem.Repository.csproj.CoreCompileInputs.cache
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Release\net8.0\HotelReservationSystem.Repository.sourcelink.json
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Release\net8.0\HotelReservationSystem.Repository.csproj.CopyComplete
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Release\net8.0\HotelReservationSystem.Repository.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Release\net8.0\refint\HotelReservationSystem.Repository.dll
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Release\net8.0\HotelReservationSystem.Repository.pdb
+C:\Users\almagd\source\repos\HotelReservationSystem\HotelReservationSystem.Repository\obj\Release\net8.0\ref\HotelReservationSystem.Repository.dll

@@ -2,9 +2,15 @@
 using AutoMapper.QueryableExtensions;
 using HotelReservationSystem.Data.Entities;
 using HotelReservationSystem.Repository.Interface;
+using HotelReservationSystem.Repository.Specification;
+using HotelReservationSystem.Repository.Specification.FeedbackSpecifications;
+using HotelReservationSystem.Repository.Specification.ReservationSpecifications;
+using HotelReservationSystem.Repository.Specification.Specifications;
 using HotelReservationSystem.Service.Services.ReservationService.Dtos;
 using HotelReservationSystem.Service.Services.RoomService.Dtos;
 using Microsoft.EntityFrameworkCore;
+using Stripe;
+using System.Collections.Generic;
 
 namespace HotelReservationSystem.Service.Services.ReservationService
 {
@@ -137,39 +143,58 @@ namespace HotelReservationSystem.Service.Services.ReservationService
             }
             await _unitOfWork.SaveChangesAsync();
         }
-        public async Task<IEnumerable<BookingReport>> GetAllReservationForBookingReport(DateTime firstDate, DateTime secondDate)
+        public async Task<IEnumerable<BookingReport>> GetAllReservationForBookingReport(SpecParams Params,DateTime firstDate, DateTime secondDate)
         {
-            var reservations = _unitOfWork.Repository<Reservation>()
-                                 .GetAllAsync(res => res.CheckInDate >= firstDate && res.CheckInDate <= secondDate);
-            var mappedReservations = await reservations.
-                                 ProjectTo<BookingReport>(_mapper.ConfigurationProvider).ToListAsync();
+            var spec = new ReservationSpecificationForReporting(Params, firstDate, secondDate);
+
+            var reservations =await _unitOfWork.Repository<Reservation>()
+                                 .GetAllWithSpecAsync(spec);
+
+            var mappedReservations = _mapper.Map<IEnumerable<BookingReport>>(reservations);
             return mappedReservations;
 
         }
-        public async Task<IEnumerable<RevenueReport>> GetAllReservationForRevenueReport(DateTime firstDate, DateTime secondDate)
+        public async Task<IEnumerable<RevenueReport>> GetAllReservationForRevenueReport(SpecParams Params, DateTime firstDate, DateTime secondDate)
         {
-            var validStatuses = new[]
-            {
-                 ReservationStatus.PaymentReceived,
-                 ReservationStatus.CheckedIn,
-                 ReservationStatus.CheckedOut
-            };
+            var spec = new ReservationSpecificationForRevenueReport(Params, firstDate, secondDate);
 
-            var reservations = _unitOfWork.Repository<Reservation>()
-                                 .GetAllAsync(res => res.CheckInDate >= firstDate && res.CheckInDate <= secondDate
-                                                   && validStatuses.Contains(res.Status));
+            var reservations = await _unitOfWork.Repository<Reservation>()
+                                  .GetAllWithSpecAsync(spec);
 
-            var mappedReservations = await reservations.ProjectTo<RevenueReport>(_mapper.ConfigurationProvider).ToListAsync();
-       
+            var mappedReservations = _mapper.Map<IEnumerable<RevenueReport>>(reservations);
             return mappedReservations;
         }
-        public async Task<IEnumerable<CustomerReport>> GetAllReservationForCustomerReport(int customerID, DateTime firstDate, DateTime secondDate)
+        public async Task<IEnumerable<CustomerReport>> GetAllReservationForCustomerReport(SpecParams Params,int customerID, DateTime firstDate, DateTime secondDate)
         {
-            var reservations = _unitOfWork.Repository<Reservation>()
-                                 .GetAllAsync(res => res.CheckInDate >= firstDate && res.CheckInDate <= secondDate && res.CustomerId == customerID);
-            var mappedReservations = await reservations.
-                                 ProjectTo<CustomerReport>(_mapper.ConfigurationProvider).ToListAsync();
+            var spec = new ReservationSpecificationForCustomerReporting(Params, firstDate, secondDate, customerID);
+
+            var reservations =await _unitOfWork.Repository<Reservation>()
+                                 .GetAllWithSpecAsync(spec);
+
+            var mappedReservations = _mapper.Map<IEnumerable<CustomerReport>>(reservations);
             return mappedReservations;
+        }
+
+        public async Task<int> GetCountForCustomerReport(SpecParams spec, int customerID, DateTime firstDate, DateTime secondDate)
+        {
+            var countReservationSpec = new CountReservationsForCustomerSpec(spec, customerID, firstDate, secondDate);
+            return await GetReservationCountAsync(countReservationSpec);
+        }
+
+        public async Task<int> GetCountForBookingReport(SpecParams spec, DateTime firstDate, DateTime secondDate)
+        {
+            var countReservationSpec = new CountReservationsForBookingSpec(spec, firstDate, secondDate);
+            return await GetReservationCountAsync(countReservationSpec);
+        }
+
+        public async Task<int> GetCountForRevenueReport(SpecParams spec, DateTime firstDate, DateTime secondDate)
+        {
+            var countReservationSpec = new CountReservationsForRevenueSpec(spec, firstDate, secondDate);
+            return await GetReservationCountAsync(countReservationSpec);
+        }
+        private async Task<int> GetReservationCountAsync(ISpecification<Reservation> spec)
+        {
+            return await _unitOfWork.Repository<Reservation>().GetCountWithSpecAsync(spec);
         }
     }
 }

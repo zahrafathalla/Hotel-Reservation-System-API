@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\3cccc162-62ad-485c-ad53-024fa2079756-.jpg",
+      "PackagePath": "staticwebassets\\Files\\RoomImages\\3cccc162-62ad-485c-ad53-024fa2079756-.jpg"
+    },
+    {
+      "Id": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\8c7236e4-8771-403f-aeec-e93897c6b26e-.jpg",
+      "PackagePath": "staticwebassets\\Files\\RoomImages\\8c7236e4-8771-403f-aeec-e93897c6b26e-.jpg"
+    },
+    {
+      "Id": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\956a0ae4-19e9-4839-907c-144cf9755348-.jpg",
+      "PackagePath": "staticwebassets\\Files\\RoomImages\\956a0ae4-19e9-4839-907c-144cf9755348-.jpg"
+    },
+    {
+      "Id": "C:\\Users\\almagd\\source\\repos\\HotelReservationSystem\\HotelReservationSystem.API\\wwwroot\\Files\\RoomImages\\cfff06ff-a6d8-4e12-8c65-040ad5826982-.jpg",
+      "PackagePath": "staticwebassets\\Files\\RoomImages\\cfff06ff-a6d8-4e12-8c65-040ad5826982-.jpg"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\win-x64\\staticwebassets\\msbuild.HotelReservationSystem.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\win-x64\\staticwebassets\\msbuild.build.HotelReservationSystem.API.props",
+      "PackagePath": "build\\HotelReservationSystem.API.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\win-x64\\staticwebassets\\msbuild.buildMultiTargeting.HotelReservationSystem.API.props",
+      "PackagePath": "buildMultiTargeting\\HotelReservationSystem.API.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\win-x64\\staticwebassets\\msbuild.buildTransitive.HotelReservationSystem.API.props",
+      "PackagePath": "buildTransitive\\HotelReservationSystem.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

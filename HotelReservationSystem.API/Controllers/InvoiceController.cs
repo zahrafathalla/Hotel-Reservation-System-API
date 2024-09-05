@@ -18,7 +18,6 @@ namespace HotelReservationSystem.API.Controllers
         }
 
         [Authorize(Roles = "Customer")]
-
         [HttpPost("{reservationId}")]
         public async Task<ActionResult<InvoiceToReturnDto>> GenerateInvoice(int reservationId)
         {

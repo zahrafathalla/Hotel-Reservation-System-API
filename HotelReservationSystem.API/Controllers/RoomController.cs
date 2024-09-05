@@ -53,7 +53,6 @@ namespace HotelReservationSystem.API.Controllers
             return Ok(Room);
         }
 
-        [Authorize(Policy = "GeneralPolicy")]
         [HttpGet("Available")]
         public async Task<ActionResult<Pagination<RoomToReturnDto>>> GetAllRoomsAvailable([FromQuery] SpecParams roomSpec, DateTime checkInDate, DateTime checkOutDate)
         {
